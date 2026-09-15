@@ -264,8 +264,31 @@ def load_bloc_d_sharpe_chart(_ver: str = CACHE_VER) -> pd.DataFrame:
         )
     return pd.DataFrame(rows)
 
+def _wealth_from_cache() -> pd.DataFrame:
+    """Courbes pré-calculées (déploiement cloud : évite de recharger tout le marché)."""
+    fig = REPORTS / "figures"
+    for path in (fig / "bloc_d_wealth_daily.parquet", fig / "bloc_d_wealth_daily.csv"):
+        if not path.is_file():
+            continue
+        if path.suffix == ".parquet":
+            wealth = pd.read_parquet(path)
+        else:
+            wealth = pd.read_csv(path, parse_dates=["date"])
+        if "date" not in wealth.columns:
+            wealth = wealth.reset_index().rename(columns={wealth.columns[0]: "date"})
+        wealth["date"] = pd.to_datetime(wealth["date"])
+        for col in [c for c in wealth.columns if c != "date" and not str(c).startswith("dd_")]:
+            wealth[f"dd_{col}"] = wealth[col] / wealth[col].cummax() - 1
+        return wealth.sort_values("date")
+    return pd.DataFrame()
+
+
 @st.cache_data(show_spinner="Construction courbes C1–C5…")
 def load_bloc_d_daily_wealth(_ver: str = CACHE_VER) -> pd.DataFrame:
+    cached = _wealth_from_cache()
+    if not cached.empty:
+        return cached
+
     if not BLOC_D_PARTS.is_dir():
         return pd.DataFrame()
 
