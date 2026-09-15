@@ -57,8 +57,12 @@ experiments/factorial_hybrid_adapt/outputs/reports/stage1_recommendations_*.parq
 experiments/factorial_hybrid_adapt/outputs/reports/rf_predictions.parquet
 experiments/factorial_hybrid_adapt/outputs/reports/stage2_inputs_*.parquet
 
-# Local market dumps / exports (app uses platform_mart + Supabase)
-bvc_recommender/data/
+# Local market dumps / exports (garder le package Python data/*.py)
+bvc_recommender/data/datasets/
+bvc_recommender/data/processed/
+bvc_recommender/data/features/
+bvc_recommender/data/agent_memory/
+bvc_recommender/data/templates/
 bvc_recommender/exports/
 bvc_recommender/**/__pycache__/
 

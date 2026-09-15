@@ -24,7 +24,6 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import Ridge
 
 from bvc_recommender.config import RANDOM_STATE
-from bvc_recommender.features.dataset_builder import TARGET_COLUMN
 from bvc_recommender.models.metrics import evaluate_scoring_model
 from experiments.factorial_hybrid_adapt.factorial_cells import (
     HYBRID_WEIGHT_RF,
@@ -38,6 +37,9 @@ from experiments.factorial_hybrid_adapt.random_forest_scorer import (
     fit_random_forest,
 )
 from experiments.factorial_hybrid_adapt.walk_forward_stage1 import DEFAULT_RF_PARAMS
+
+# Constante seule — évite d'importer le pipeline features au démarrage Streamlit.
+TARGET_COLUMN = "alpha_ajuste_risque"
 
 logger = logging.getLogger(__name__)
 
