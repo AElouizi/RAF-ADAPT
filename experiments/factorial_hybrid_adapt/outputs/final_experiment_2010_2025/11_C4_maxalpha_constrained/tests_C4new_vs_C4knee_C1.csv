@@ -1,0 +1,4 @@
+Comparaison,n_months,diff_moyenne_mensuelle,diff_mediane,pct_mois_A_gt_B,IC95_lo,IC95_hi,t_stat,p_ttest,p_wilcoxon,significatif_5pct,significatif_5pct_ttest,significatif_5pct_wilcoxon
+C4-new - C4-Knee,84,-0.002107,-0.00308,0.4167,-0.005587,0.00184,-1.1135,0.2687,0.0206,True,False,True
+C4-new - C1,84,-0.003814,-0.003061,0.4167,-0.00744,4.5e-05,-1.972,0.0519,0.0249,True,False,True
+C4-Knee - C1,84,-0.001707,0.001337,0.5238,-0.004192,0.000809,-1.3388,0.1843,0.5803,False,False,False

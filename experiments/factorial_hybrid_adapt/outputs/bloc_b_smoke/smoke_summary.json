@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-08-27T20:19:22.875957+00:00",
+  "mode": "smoke_1_fold",
+  "fold_id": 0,
+  "train": "2015-07->2018-06",
+  "test": "2018-07->2018-12",
+  "n_models": 5,
+  "model_ids": [
+    "c1_ridge",
+    "c2_rf",
+    "c3_lightgbm",
+    "c4_hybrid_tri",
+    "c5_hybrid_tri_regime"
+  ],
+  "groupes": [
+    "C1_ridge",
+    "C2_rf",
+    "C3_lightgbm",
+    "C4_hybrid_tri",
+    "C5_hybrid_tri_regime"
+  ],
+  "n_pred_rows": 29440,
+  "n_metric_rows": 50,
+  "elapsed_sec": 18.1,
+  "retune": false,
+  "lgbm_trials": null,
+  "lgbm_config_frozen_at": "2026-08-24",
+  "omnibus_smoke": {
+    "metric": "rank_ic",
+    "stat": NaN,
+    "pvalue": NaN,
+    "n_blocks": 1,
+    "n_groups": 0,
+    "note": "moins de 2 groupes disponibles"
+  },
+  "bootstrap_smoke": {
+    "metric": "rank_ic",
+    "model_id": "c1_ridge",
+    "mean": 0.2047196935596903,
+    "ci_low": 0.2047196935596903,
+    "ci_high": 0.2047196935596903,
+    "n_folds": 1,
+    "n_bootstrap": 50,
+    "block_size": 2.0
+  },
+  "tune_meta": {
+    "fold_id": 0,
+    "rf": {
+      "retuned": false,
+      "best_params": {
+        "n_estimators": 100,
+        "max_depth": 4,
+        "min_samples_leaf": 20,
+        "random_state": 42,
+        "n_jobs": -1
+      }
+    },
+    "lgbm": {
+      "retuned": false,
+      "best_params": {
+        "n_estimators": 200,
+        "max_depth": 5,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "min_child_samples": 20,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "random_state": 42,
+        "verbose": -1
+      }
+    }
+  },
+  "note": "Validation pipeline uniquement. Ne PAS interpréter omnibus/bootstrap sur 1 fold. Run OOS complet (81 folds / 14 blocs) non lancé."
+}

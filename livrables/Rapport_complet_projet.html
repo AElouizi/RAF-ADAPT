@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Rapport complet du projet — Système de recommandation d'actions BVC</title>
+  <style>
+    :root {
+      --ink: #1a2332;
+      --muted: #4b5563;
+      --line: #d5dde6;
+      --paper: #f7f5f1;
+      --accent: #0c3d4d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #e8ecef;
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      line-height: 1.55;
+      font-size: 16px;
+    }
+    .page {
+      max-width: 940px;
+      margin: 32px auto;
+      background: #fff;
+      padding: 56px 64px 72px;
+      box-shadow: 0 0 0 1px var(--line);
+    }
+    h1, h2, h3, h4 {
+      font-family: "Segoe UI", Calibri, "Helvetica Neue", sans-serif;
+      color: var(--accent);
+      line-height: 1.25;
+    }
+    h1 { font-size: 1.85rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.28rem;
+      margin: 2.2rem 0 0.7rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 2px solid var(--accent);
+    }
+    h3 { font-size: 1.05rem; margin: 1.4rem 0 0.45rem; }
+    p { margin: 0.55rem 0 0.85rem; }
+    .cover { border-bottom: 4px solid var(--accent); padding-bottom: 1.4rem; margin-bottom: 1.6rem; }
+    .kicker {
+      font-family: "Segoe UI", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0 0 1rem; }
+    .meta {
+      font-family: "Segoe UI", sans-serif;
+      font-size: 0.88rem;
+      color: var(--muted);
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 4px 12px;
+    }
+    .toc { background: var(--paper); padding: 1rem 1.2rem; margin: 1.4rem 0 2rem; }
+    .toc ol { margin: 0.3rem 0 0; padding-left: 1.3rem; }
+    .toc a { color: var(--accent); text-decoration: none; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "Segoe UI", sans-serif;
+      font-size: 0.84rem;
+      margin: 0.7rem 0 1.1rem;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 0.42rem 0.55rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #eef3f6; color: var(--accent); font-weight: 600; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .note { font-size: 0.9rem; color: var(--muted); }
+    ul, ol { margin: 0.3rem 0 0.9rem; }
+    li { margin: 0.22rem 0; }
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 1rem 0 1.3rem;
+    }
+    .kpi div {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 0.7rem 0.8rem;
+    }
+    .kpi span {
+      display: block;
+      font-family: "Segoe UI", sans-serif;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .kpi strong { font-family: "Segoe UI", sans-serif; font-size: 1.12rem; color: var(--accent); }
+    .box {
+      border-left: 4px solid var(--accent);
+      background: var(--paper);
+      padding: 0.7rem 1rem;
+      margin: 0.9rem 0 1.2rem;
+    }
+    .flow {
+      font-family: "Segoe UI", sans-serif;
+      font-size: 0.88rem;
+      background: #0c3d4d;
+      color: #f8fafc;
+      padding: 0.85rem 1rem;
+      margin: 0.8rem 0 1.2rem;
+    }
+    code { font-family: Consolas, "Courier New", monospace; font-size: 0.86em; }
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--line);
+      font-family: "Segoe UI", sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    pre.ascii {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.78rem;
+      background: #0c3d4d;
+      color: #f8fafc;
+      padding: 1rem 1.1rem;
+      overflow-x: auto;
+      line-height: 1.35;
+    }
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; box-shadow: none; max-width: none; padding: 16mm; }
+      table, .kpi, .box { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="cover">
+    <p class="kicker">Thèse / livrable scientifique · Bourse de Casablanca</p>
+    <h1>Rapport complet du projet</h1>
+    <p class="subtitle">Système de recommandation et d’allocation d’actions — scoring C1–C4, NSGA-III, plateforme investisseur et architecture multi-agents</p>
+    <div class="meta">
+      <span>Marché</span><span>Bourse de Casablanca (BVC) — univers actions, référence MASI</span>
+      <span>Fenêtre demandée</span><span>2010-01 → 2025-06</span>
+      <span>Fenêtre testable OOS</span><span>Décisions mensuelles 2018-07 → 2025-06 (84 mois). 2010-01 → 2018-06 impossible sans réentraîner le Stage 1</span>
+      <span>Modèle affiché (plateforme)</span><span>C2 — Ridge + régime (meilleur Sharpe 1,035 et richesse 202,3)</span>
+      <span>Spécification hybride</span><span>C3 — Ridge + Random Forest 50/50, sans régime (Sharpe 0,994, richesse 202,1)</span>
+      <span>Allocation</span><span>NSGA-III, 3 objectifs (Alpha ↑, CVaR ↓, Liquidité ↑), point genou, w<sub>i</sub> ≤ 10 %, SELL exclus, pas de filtre VMQ ≥ 500 k</span>
+      <span>Date</span><span>15 août 2026</span>
+      <span>Statut</span><span>Livrable expérimental FINAL figé · plateforme lecture seule · orchestration multi-agents sans recalcul scientifique</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <strong>Sommaire</strong>
+    <ol>
+      <li><a href="#s1">Synthèse exécutive</a></li>
+      <li><a href="#s2">Contexte et objectifs</a></li>
+      <li><a href="#s3">Gouvernance scientifique</a></li>
+      <li><a href="#s4">Données et features</a></li>
+      <li><a href="#s5">Étage 1 — Scoring C1–C4 et recommandations</a></li>
+      <li><a href="#s6">Étage 2 — Allocation NSGA-III</a></li>
+      <li><a href="#s7">Backtest, benchmarks et tests</a></li>
+      <li><a href="#s8">Résultats chiffrés</a></li>
+      <li><a href="#s9">Plateforme (investisseur et administration)</a></li>
+      <li><a href="#s10">Architecture multi-agents</a></li>
+      <li><a href="#s11">Limites et précautions</a></li>
+      <li><a href="#s12">Livrables, lancement et reproductibilité</a></li>
+      <li><a href="#s13">Annexe — Paramètres figés</a></li>
+    </ol>
+  </div>
+
+  <h2 id="s1">1. Synthèse exécutive</h2>
+  <p>
+    Le projet construit un <strong>système en deux étages</strong> pour le marché actions marocain :
+    (1) scorer chaque titre et produire une recommandation BUY / NEUTRAL / SELL ;
+    (2) allouer un portefeuille long-only multi-objectifs, puis le backtester hors échantillon.
+  </p>
+  <p>
+    Quatre cellules factorielles sont évaluées à protocoles identiques. La plateforme affiche
+    <strong>C2 (Ridge + régime)</strong> comme modèle principal, car c’est la meilleure configuration
+    en Sharpe et en richesse nette sur 84 mois. C3 (hybride) est quasi à égalité en richesse.
+    <strong>Aucun écart vs MASI n’est significatif au seuil de 5 %</strong>.
+  </p>
+  <div class="kpi">
+    <div><span>C2 rend. net ann.</span><strong>11,26 %</strong></div>
+    <div><span>C2 Sharpe</span><strong>1,035</strong></div>
+    <div><span>C2 richesse 100</span><strong>202,3</strong></div>
+    <div><span>MASI Sharpe</span><strong>0,661</strong></div>
+  </div>
+  <p class="note">
+    Coût de transaction 0,3 % × turnover L1. MASI : +7,69 % annualisé, richesse 167,2.
+    Equal Weight C3 : Sharpe 1,162 (contrôle « diversification simple »). Creux 2020–2022, rattrapage 2023–2025.
+  </p>
+  <p>
+    En août 2026, le pipeline a été <strong>refactorisé en architecture multi-agents</strong>
+    (Feature, Sélection, Allocation, Backtest, Évaluation, Orchestrateur) sans modifier les modèles,
+    hyperparamètres, NSGA-III ni résultats historiques. L’onglet Administration pilote cette chaîne ;
+    l’investisseur continue de voir le livrable figé.
+  </p>
+
+  <h2 id="s2">2. Contexte et objectifs</h2>
+  <p>
+    La Bourse de Casablanca est un marché frontière : liquidité hétérogène, historique plus court,
+    publication semestrielle, frictions de transaction. Un classement de rendement brut est insuffisant.
+  </p>
+  <ul>
+    <li>Recommandation mensuelle par titre (BUY / NEUTRAL / SELL) sur l’univers complet.</li>
+    <li>Portefeuille investissable : long-only, poids max 10 %, arbitrage alpha / risque de queue / liquidité.</li>
+    <li>Performance nette de frais vs MASI et vs équipondéré du même univers.</li>
+    <li>Plateforme de consultation + traçabilité scientifique (reproductibilité de thèse).</li>
+  </ul>
+  <p>
+    Le système <strong>ne prédit pas un cours brut</strong>, n’exécute pas d’ordres, et n’inclut pas le TFT
+    (exploré puis écarté du livrable opérationnel).
+  </p>
+
+  <h2 id="s3">3. Gouvernance scientifique</h2>
+  <div class="box">
+    <strong>Principes non négociables.</strong>
+    Point-in-time (aucune information future). Fondamentaux datés à la publication BVC
+    (S1 fin septembre, S2 fin avril N+1). Walk-forward 36 mois de train / 6 mois de test.
+    Graine <code>random_state = 42</code>. Poids et recommandations historiques figés :
+    la plateforme visualise, elle ne réentraîne pas.
+  </div>
+  <ul>
+    <li>Horizon de cible : 63 séances (~3 mois).</li>
+    <li>Rebalancement mensuel, fin de mois de décision.</li>
+    <li>Liquidité : objectif Pareto uniquement — <strong>pas</strong> de filtre VMQ ≥ 500 000 MAD.</li>
+  </ul>
+  <p class="flow">
+    Données BVC → Features → Score α (C1–C4) → BUY/NEUTRAL/SELL → NSGA-III (α, CVaR, L)
+    → Knee (w<sub>i</sub> ≤ 10 %) → Backtest net → Évaluation → Plateforme
+  </p>
+
+  <h2 id="s4">4. Données et features</h2>
+  <h3>4.1 Sources (Supabase)</h3>
+  <table>
+    <thead><tr><th>Famille</th><th>Tables / contenu</th><th>Rôle</th></tr></thead>
+    <tbody>
+      <tr><td>Cours</td><td><code>market_data_cours_historique</code> (dès 2010-01)</td><td>Techniques, rendements, liquidité</td></tr>
+      <tr><td>Indices</td><td><code>market_data_indices_historique</code> (MASI)</td><td>Benchmark, bêta, régime</td></tr>
+      <tr><td>Fondamentaux</td><td><code>fondamentaux_rs_bis</code>, financiers</td><td>Ratios, qualité</td></tr>
+      <tr><td>Univers</td><td><code>histo_const_ind</code>, volumes / titres échangés</td><td>Noms, VMQ</td></tr>
+      <tr><td>Features calculées</td><td><code>features_techniques</code>, <code>features_fondamentales</code>, <code>features_indices</code></td><td>Entrées ML et régime</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Features fondamentales à partir du <strong>3 juin 2015</strong>. Volumes 2010–2022 complétés depuis
+    <code>histo_volume</code> sans écraser l’existant. Splits et valeurs aberrantes (PE/PB ≤ 0, ROE extrême) traités en NA.
+  </p>
+  <h3>4.2 Indicateurs</h3>
+  <p>
+    <strong>Techniques :</strong> momentum 1/3/6/12 mois, RSI 14, distances MA20/50/200, vol 20/60 j,
+    vol baissière 20 j, bêta MASI, VMQ 20/60 j.
+    <strong>Fondamentales :</strong> PE, PB, EV/EBITDA (hors financiers), ROE, marges, croissances, gearing, Piotroski, score santé.
+    <strong>Marché :</strong> momentum 3 mois MASI, dispersion, breadth MA50.
+  </p>
+  <div class="box">
+    <strong>Cible :</strong>
+    α ajusté au risque = (rendement à terme titre − rendement à terme MASI) / volatilité baissière 20 j.
+    Features continues en z-score cross-sectionnel par date.
+  </div>
+  <h3>4.3 Régime</h3>
+  <p>
+    HMM abandonné (état haussier trop rare). Règle à seuils à trois états, terciles calibrés
+    <strong>uniquement sur 2015–2020</strong> puis figés : momentum −1,67 % / +4,29 % ; breadth 39,3 % / 59,6 %.
+    Haussier = les deux au-dessus du tercile haut ; baissier = les deux en dessous ; sinon neutre.
+    Indicatrices <code>is_bull</code> / <code>is_neutral</code> / <code>is_bear</code> pour C2 et C4.
+  </p>
+
+  <h2 id="s5">5. Étage 1 — Scoring C1–C4 et recommandations</h2>
+  <table>
+    <thead><tr><th>Cellule</th><th>Modèle</th><th>Régime</th><th>Lecture</th></tr></thead>
+    <tbody>
+      <tr><td>C1</td><td>Ridge (α = 1, graine 42)</td><td>Non</td><td>Référence linéaire</td></tr>
+      <tr><td>C2</td><td>Ridge</td><td>Oui</td><td><strong>Affiché sur la plateforme</strong> (meilleur Sharpe)</td></tr>
+      <tr><td>C3</td><td>Ridge + RF 50/50 (z-scores du jour)</td><td>Non</td><td>Spécification hybride</td></tr>
+      <tr><td>C4</td><td>Ridge + RF 50/50</td><td>Oui</td><td>Hybride + régime (moins bon Sharpe)</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Walk-forward : train 36 mois glissants, test 6 mois, pas mensuel ; 14 blocs non chevauchants pour l’allocation
+    et les tests. Hyperparamètres RF choisis sur validation (Rank-IC), jamais retunés sur le test.
+  </p>
+  <h3>5.1 Règle BUY / NEUTRAL / SELL</h3>
+  <ul>
+    <li>Benchmark interne = 0 (battre le marché ⇔ α &gt; 0).</li>
+    <li>τ = quantile 33 % des |prédictions| des plis <em>passés</em> (expanding, anti look-ahead).</li>
+    <li>BUY si α &gt; +τ ; SELL si α &lt; −τ ; NEUTRAL sinon.</li>
+    <li>À l’étage 2 : SELL exclus ; BUY × 1 ; NEUTRAL × 0,5.</li>
+  </ul>
+
+  <h2 id="s6">6. Étage 2 — Allocation NSGA-III</h2>
+  <table>
+    <thead><tr><th>Élément</th><th>Spécification validée</th></tr></thead>
+    <tbody>
+      <tr><td>Univers</td><td>BUY + NEUTRAL du mois (SELL exclus) — pas de filtre VMQ</td></tr>
+      <tr><td>Objectifs</td><td>Max α portefeuille ; min CVaR 95 % ; max L = sigmoid(VMQ 20 j)</td></tr>
+      <tr><td>Contraintes</td><td>Σ w = 1 ; w<sub>i</sub> ∈ [0 ; 10 %]</td></tr>
+      <tr><td>CVaR</td><td>Historique journalier ≤ t, lookback 504 séances</td></tr>
+      <tr><td>NSGA-III</td><td>Population 36, 30 générations</td></tr>
+      <tr><td>Sélection</td><td>Point genou : distance euclidienne à l’utopie après min-max des objectifs minimisés</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Variante « éligibilité VMQ ≥ 500 k + 2 objectifs » : protocole antérieur, <strong>non retenu</strong>.
+    Variante A (α + CVaR) vs B (α + CVaR + L) : B est le livrable (sauf C4 où A a un Sharpe un peu plus élevé).
+  </p>
+
+  <h2 id="s7">7. Backtest, benchmarks et tests</h2>
+  <ul>
+    <li>Poids figés à t ; appliqués sur (t , t<sub>next</sub>] ; dernier mois 2025-06 détenu jusqu’au 2025-07-31.</li>
+    <li>Coût 0,003 × Σ |Δw| le premier jour de détention.</li>
+    <li>Benchmarks : MASI (même calendrier) ; Equal Weight de l’univers BUY+NEUTRAL <em>de la même cellule</em>.</li>
+    <li>Tests : bootstrap IC 95 %, t apparié, Wilcoxon ; significatif seulement si les deux tests &lt; 5 %.</li>
+  </ul>
+
+  <h2 id="s8">8. Résultats chiffrés (84 mois, net de frais)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Stratégie</th>
+        <th class="num">Rend. ann.</th>
+        <th class="num">Vol.</th>
+        <th class="num">Sharpe</th>
+        <th class="num">Sortino</th>
+        <th class="num">CVaR</th>
+        <th class="num">Max DD</th>
+        <th class="num">Richesse</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>C1 Ridge</td><td class="num">10,09 %</td><td class="num">10,76 %</td><td class="num">0,948</td><td class="num">1,426</td><td class="num">1,59 %</td><td class="num">−22,2 %</td><td class="num">188,6</td></tr>
+      <tr><td>EW C1</td><td class="num">11,67 %</td><td class="num">9,96 %</td><td class="num">1,159</td><td class="num">1,697</td><td class="num">1,52 %</td><td class="num">−23,4 %</td><td class="num">207,3</td></tr>
+      <tr><td><strong>C2 Ridge + régime</strong></td><td class="num"><strong>11,26 %</strong></td><td class="num">10,89 %</td><td class="num"><strong>1,035</strong></td><td class="num">1,575</td><td class="num">1,60 %</td><td class="num">−22,6 %</td><td class="num"><strong>202,3</strong></td></tr>
+      <tr><td>EW C2</td><td class="num">11,11 %</td><td class="num">10,03 %</td><td class="num">1,101</td><td class="num">1,612</td><td class="num">1,53 %</td><td class="num">−24,1 %</td><td class="num">200,5</td></tr>
+      <tr><td>C3 Hybrid</td><td class="num">11,25 %</td><td class="num">11,39 %</td><td class="num">0,994</td><td class="num">1,511</td><td class="num">1,65 %</td><td class="num">−24,2 %</td><td class="num">202,1</td></tr>
+      <tr><td>EW C3</td><td class="num">12,36 %</td><td class="num">10,51 %</td><td class="num">1,162</td><td class="num">1,733</td><td class="num">1,57 %</td><td class="num">−22,6 %</td><td class="num">215,9</td></tr>
+      <tr><td>C4 Hybrid + régime</td><td class="num">9,43 %</td><td class="num">11,46 %</td><td class="num">0,844</td><td class="num">1,282</td><td class="num">1,67 %</td><td class="num">−24,3 %</td><td class="num">181,3</td></tr>
+      <tr><td>EW C4</td><td class="num">11,95 %</td><td class="num">10,46 %</td><td class="num">1,132</td><td class="num">1,689</td><td class="num">1,56 %</td><td class="num">−22,5 %</td><td class="num">210,7</td></tr>
+      <tr><td>MASI</td><td class="num">7,69 %</td><td class="num">12,38 %</td><td class="num">0,661</td><td class="num">0,979</td><td class="num">1,88 %</td><td class="num">−30,5 %</td><td class="num">167,2</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Turnover L1 moyen C2 ≈ 0,97 ; L moyenne ≈ 0,70 ; ~39 positions. Poids max réalisé = 10 %.</p>
+  <h3>8.1 Tests (n = 84)</h3>
+  <table>
+    <thead>
+      <tr><th>Comparaison</th><th class="num">Écart mensuel</th><th class="num">p Student</th><th class="num">p Wilcoxon</th><th>Significatif 5 %</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>C3 − MASI</td><td class="num">+0,21 pp</td><td class="num">0,476</td><td class="num">0,279</td><td>Non</td></tr>
+      <tr><td>C3 − EW C3</td><td class="num">−0,07 pp</td><td class="num">0,599</td><td class="num">0,982</td><td>Non</td></tr>
+      <tr><td>C3 − C1 / C2 / C4</td><td class="num">≈ 0 à +0,13 pp</td><td class="num">&gt; 0,18</td><td class="num">&gt; 0,36</td><td>Non</td></tr>
+      <tr><td>C4 − MASI</td><td class="num">+0,08 pp</td><td class="num">0,775</td><td class="num">0,538</td><td>Non</td></tr>
+    </tbody>
+  </table>
+  <h3>8.2 Sous-périodes (rendement annualisé / Sharpe)</h3>
+  <table>
+    <thead>
+      <tr><th>Période</th><th class="num">n</th><th class="num">C1</th><th class="num">C2</th><th class="num">C3</th><th class="num">C4</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2010–2014</td><td class="num">0</td><td colspan="4">Impossible (pas de Stage 1)</td></tr>
+      <tr><td>2015–2019 (dès 2018-07)</td><td class="num">18</td><td class="num">5,2 % / 0,75</td><td class="num">5,6 % / 0,77</td><td class="num">4,8 % / 0,66</td><td class="num">4,8 % / 0,63</td></tr>
+      <tr><td>2020–2022</td><td class="num">36</td><td class="num">−2,2 % / −0,15</td><td class="num">−2,7 % / −0,18</td><td class="num">−4,4 % / −0,32</td><td class="num">−6,4 % / −0,49</td></tr>
+      <tr><td>2023–2025</td><td class="num">30</td><td class="num">30,5 % / 2,29</td><td class="num">34,9 % / 2,63</td><td class="num">38,3 % / 2,65</td><td class="num">35,6 % / 2,50</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="s9">9. Plateforme</h2>
+  <p>
+    Application Streamlit : <code>experiments/factorial_hybrid_adapt/web/app_c4.py</code>
+    — <code>http://localhost:8501</code>. Source : mart lecture seule
+    <code>outputs/platform_mart/</code> (principal = C2).
+  </p>
+  <table>
+    <thead><tr><th>Onglet</th><th>Public</th><th>Contenu</th></tr></thead>
+    <tbody>
+      <tr><td>Recommandations</td><td>Investisseur</td><td>Titres du mois, BUY/NEUTRAL/SELL, alpha, régime, L, VMQ, poids</td></tr>
+      <tr><td>Portefeuille</td><td>Investisseur</td><td>Composition, objectifs du mois, turnover, brut/net</td></tr>
+      <tr><td>Historique</td><td>Investisseur</td><td>84 mois, rendements, richesse</td></tr>
+      <tr><td>Performance</td><td>Investisseur</td><td>C1–C4 vs MASI, drawdowns, Sharpe</td></tr>
+      <tr><td>C1–C4 &amp; tests</td><td>Investisseur</td><td>KPI, tests, sous-périodes, robustesse liquidité</td></tr>
+      <tr><td>Marché depuis 2010</td><td>Investisseur</td><td>MASI base 100 ; bande verte = fenêtre des recos</td></tr>
+      <tr><td>Administration / Agents</td><td>Opérateur</td><td>Lancer le workflow, période, C1–C4, statuts, logs, erreurs, reprise</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Les six premiers onglets <strong>ne changent pas</strong> quand on lance les agents en mode
+    <code>ingest_frozen</code> : ils lisent le mart scientifique figé.
+  </p>
+
+  <h2 id="s10">10. Architecture multi-agents</h2>
+  <p>
+    Objectif : transformer le pipeline de scripts en <strong>chaîne d’agents</strong> avec mémoire partagée
+    (Supabase, repli JSON local), sans nouvelle expérimentation.
+  </p>
+  <pre class="ascii">ADMINISTRATEUR
+      │  onglet Administration / Agents
+      ▼
+ ORCHESTRATEUR  (PENDING / RUNNING / SUCCESS / FAILED)
+      │
+      ├─ Feature Agent      → FEATURES_READY
+      ├─ Selection Agent    → SELECTION_READY     C1–C4 inchangés
+      ├─ Allocation Agent   → ALLOCATION_READY    NSGA-III inchangé
+      ├─ Backtest Agent     → BACKTEST_READY
+      └─ Evaluation Agent   → EVALUATION_READY
+              │
+              ▼
+     tables agent_* (run_id, période, cellule, version, paramètres)
+              │
+              ▼
+     dashboard investisseur (mart figé)</pre>
+  <h3>10.1 Principe</h3>
+  <p>
+    Chaque agent a une responsabilité, des entrées, des sorties, un statut et des logs.
+    Ils ne s’appellent pas en dur : l’orchestrateur attend le SUCCESS (événement <code>*_READY</code>)
+    avant de lancer le suivant. Un FAILED arrête tout.
+  </p>
+  <h3>10.2 Mode par défaut <code>ingest_frozen</code></h3>
+  <p>
+    Publication traçable du livrable 2018-07 → 2025-06. <strong>Aucun réentraînement.</strong>
+    <code>compute_new</code> est refusé sur cette fenêtre pour protéger la thèse.
+  </p>
+  <h3>10.3 Fiche agents</h3>
+  <table>
+    <thead><tr><th>Agent</th><th>Entrées</th><th>Traitement</th><th>Sorties / tables</th></tr></thead>
+    <tbody>
+      <tr><td>Feature</td><td>Supabase / features locales / livrable FINAL</td><td>Vérifie la disponibilité ; optionnellement step2/3/4 hors fenêtre figée</td><td><code>FEATURES_READY</code></td></tr>
+      <tr><td>Selection</td><td>Recos Stage 1 / mart / holdings</td><td>Score + BUY/NEUTRAL/SELL par titre-mois-cellule</td><td><code>agent_recommendations</code></td></tr>
+      <tr><td>Allocation</td><td>Holdings knee C1–C4</td><td>Contrôle w<sub>i</sub> ≤ 10 %</td><td><code>agent_portfolio_holdings</code></td></tr>
+      <tr><td>Backtest</td><td>CSV mensuels / journaliers 05_backtest</td><td>Rendements, turnover, coûts, richesse</td><td><code>agent_backtest_monthly</code></td></tr>
+      <tr><td>Evaluation</td><td><code>kpi_C1C4.csv</code>, tests, sous-périodes</td><td>Sharpe, Sortino, CVaR, MDD, vs MASI/EW</td><td><code>agent_evaluation_kpis</code></td></tr>
+      <tr><td>Orchestrator</td><td>Période, cellules, mode</td><td>Séquence + stop sur erreur</td><td><code>agent_jobs</code>, <code>agent_logs</code>, <code>agent_events</code></td></tr>
+    </tbody>
+  </table>
+  <p>
+    Traçabilité : agent, timestamp, période, C1–C4, <code>model_version = frozen_final_201807_202506_wmax10_pareto_knee</code>,
+    paramètres lus dans les modules existants (pas recopiés à la main).
+  </p>
+  <h3>10.4 Validation architecture</h3>
+  <p>
+    Tests : <code>py -3 bvc_recommender/agents/test_orchestrator.py</code> — réussis le 15 août 2026.
+    Checksums du livrable FINAL et du mart identiques après ingest ; Feature FAILED bloque la suite ;
+    recalcul figé interdit.
+  </p>
+  <p>
+    SQL une fois : <code>bvc_recommender/scripts/sql/create_agent_tables.sql</code>.
+    CLI : <code>py -m bvc_recommender.agents --mode ingest_frozen --cells 1,2,3,4</code>.
+  </p>
+
+  <h2 id="s11">11. Limites et précautions</h2>
+  <ul>
+    <li>Pas de recommandations avant juillet 2018 (36 mois de train après panel 2015).</li>
+    <li>Volumes 2023+ encore partiellement incomplets.</li>
+    <li>NSGA stochastique (graine fixe) ; turnover élevé (~1 en L1).</li>
+    <li>L’équipondéré du même univers est souvent compétitif : l’allocation n’est pas un « alpha gratuit ».</li>
+    <li>2020–2022 difficile ; la surperformance 2023–2025 pèse sur la moyenne.</li>
+    <li>Écarts vs MASI non significatifs à 5 % : lecture économique, pas preuve statistique.</li>
+    <li>L’administrateur reste responsable de l’alimentation des tables marché / fondamentaux.</li>
+  </ul>
+
+  <h2 id="s12">12. Livrables, lancement et reproductibilité</h2>
+  <table>
+    <thead><tr><th>Livrable</th><th>Emplacement</th></tr></thead>
+    <tbody>
+      <tr><td>Expérience FINAL</td><td><code>experiments/factorial_hybrid_adapt/outputs/final_experiment_2010_2025/</code></td></tr>
+      <tr><td>Mart plateforme</td><td><code>experiments/factorial_hybrid_adapt/outputs/platform_mart/</code></td></tr>
+      <tr><td>Rapport expérimental</td><td><code>.../10_reports/Rapport_final_experimental.md</code></td></tr>
+      <tr><td>Rapport client (antérieur)</td><td><code>livrables/Rapport_client_systeme_recommandation_actions.html</code></td></tr>
+      <tr><td>Le présent rapport</td><td><code>livrables/Rapport_complet_projet.html</code></td></tr>
+      <tr><td>Architecture agents</td><td><code>livrables/architecture_multi_agents.md</code></td></tr>
+      <tr><td>Validation agents</td><td><code>livrables/rapport_validation_agents.md</code></td></tr>
+      <tr><td>Code agents</td><td><code>bvc_recommender/agents/</code></td></tr>
+    </tbody>
+  </table>
+  <p>
+    Plateforme : <code>py -3 -m streamlit run experiments/factorial_hybrid_adapt/web/app_c4.py</code>
+  </p>
+
+  <h2 id="s13">13. Annexe — Paramètres figés (ne pas modifier)</h2>
+  <table>
+    <thead><tr><th>Paramètre</th><th>Valeur</th></tr></thead>
+    <tbody>
+      <tr><td>random_state</td><td>42</td></tr>
+      <tr><td>Ridge α</td><td>1,0</td></tr>
+      <tr><td>Hybride</td><td>0,5 Ridge + 0,5 RF (z-score cross-sectionnel)</td></tr>
+      <tr><td>Train / test WF</td><td>36 mois / 6 mois</td></tr>
+      <tr><td>Horizon cible</td><td>63 séances</td></tr>
+      <tr><td>τ</td><td>quantile 0,33 expanding des |pred| passées</td></tr>
+      <tr><td>pref BUY / NEUTRAL / SELL</td><td>1,0 / 0,5 / exclusion</td></tr>
+      <tr><td>NSGA pop / gen</td><td>36 / 30</td></tr>
+      <tr><td>w_max</td><td>10 %</td></tr>
+      <tr><td>Liquidité</td><td>objectif Pareto ; L = sigmoid(VMQ) inchangée</td></tr>
+      <tr><td>Transaction</td><td>0,003 × turnover L1</td></tr>
+    </tbody>
+  </table>
+
+  <p class="footer">
+    Rapport complet du projet — 15 août 2026. Les chiffres des sections 8 proviennent du mart
+    <code>kpi_C1C4.csv</code> et des tests statistiques du livrable FINAL. Toute modification de C1–C4,
+    de NSGA-III ou du protocole Stage 2 constituerait une nouvelle expérience, hors périmètre de l’orchestration multi-agents.
+  </p>
+</div>
+</body>
+</html>

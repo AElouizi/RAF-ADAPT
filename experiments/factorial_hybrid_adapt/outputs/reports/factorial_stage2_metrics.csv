@@ -1,0 +1,5 @@
+cellule,portfolio,sharpe,sortino,CVaR,liquidite_moy,turnover,total_return,ann_return,max_drawdown,vol_ann,n_days,n_rebalances
+1,P_equilibre,2.029,3.649,0.0158,0.573372,0.7924,1.0058,0.26,-0.0893,0.1173,759,32
+2,P_equilibre,1.96,3.487,0.0159,0.576859,0.8253,0.9658,0.2516,-0.0962,0.1181,759,32
+3,P_equilibre,1.987,3.509,0.0158,0.544094,0.8595,0.9511,0.2485,-0.1052,0.115,759,32
+4,P_equilibre,1.945,3.495,0.015,0.546153,0.878,0.8922,0.2358,-0.1006,0.1121,759,32

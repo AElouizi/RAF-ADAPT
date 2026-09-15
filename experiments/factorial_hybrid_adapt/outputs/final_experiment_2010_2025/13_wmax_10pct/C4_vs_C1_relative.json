@@ -1,0 +1,7 @@
+{
+  "C4_minus_C1_mean_month_w40": -0.001707,
+  "C4_minus_C1_mean_month_w10": 0.000188,
+  "change_in_C4_vs_C1": 0.001896,
+  "relative_C4_vs_C1": "improved",
+  "note": "positive change_in_C4_vs_C1 = C4 closer to / further ahead of C1"
+}

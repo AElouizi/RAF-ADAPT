@@ -1,0 +1,14 @@
+{
+  "fold_id": 48,
+  "model_id": "rf",
+  "groupe": "classique",
+  "ann_return": 0.168,
+  "sharpe": 1.266,
+  "sortino": 2.187,
+  "cvar_95_realized": 0.0178,
+  "max_drawdown": -0.1709,
+  "turnover_mean": 0.8297755664182773,
+  "liquidity_mean": 0.9999035136150067,
+  "total_return_block": 0.7565903565208869,
+  "n_days": 914
+}

@@ -1,0 +1,87 @@
+========================================================================
+DIAGNOSTIC PLAUSIBILITE REGIME HMM vs MASI
+========================================================================
+Mois charges : 132 | export regime_plausibility_months.csv
+Distribution : {'sideways': 75, 'bear': 53, 'bull': 4}
+
+========================================================================
+2. STATISTIQUES AGREGEES PAR REGIME
+========================================================================
+bear: n=53 ret_1m_mean=-0.0163 ret_3m_fwd_mean=0.0163 pct_neg=69.81132075471697 pct_pos=30.18867924528302
+sideways: n=74 ret_1m_mean=0.0189 ret_3m_fwd_mean=0.0194 pct_neg=32.432432432432435 pct_pos=67.56756756756756
+bull: n=4 ret_1m_mean=0.0537 ret_3m_fwd_mean=-0.0152 pct_neg=0.0 pct_pos=100.0
+
+========================================================================
+3. CAS SUSPECTS (incoherence regime vs ret_1m MASI)
+========================================================================
+
+Bear avec ret_1m >= -0.2% (positif ou ~0) : 16/53
+  - 2020-05: ret_1m=+4.81%  ret_3m_prev=-24.99%  ret_3m_fwd=+2.86%
+  - 2016-07: ret_1m=+3.96%  ret_3m_prev=+1.91%  ret_3m_fwd=+6.91%
+  - 2025-10: ret_1m=+3.22%  ret_3m_prev=+3.98%  ret_3m_fwd=n/a
+  - 2018-11: ret_1m=+2.84%  ret_3m_prev=-7.04%  ret_3m_fwd=-0.83%
+  - 2019-04: ret_1m=+2.57%  ret_3m_prev=-3.98%  ret_3m_fwd=+3.79%
+  - 2022-04: ret_1m=+2.49%  ret_3m_prev=-4.04%  ret_3m_fwd=-10.03%
+  - 2017-04: ret_1m=+2.27%  ret_3m_prev=-2.27%  ret_3m_fwd=+4.84%
+  - 2017-10: ret_1m=+1.92%  ret_3m_prev=+1.04%  ret_3m_fwd=+5.68%
+  - 2015-07: ret_1m=+1.69%  ret_3m_prev=-6.73%  ret_3m_fwd=-6.76%
+  - 2023-10: ret_1m=+1.32%  ret_3m_prev=+2.47%  ret_3m_fwd=+3.69%
+  - 2023-04: ret_1m=+1.29%  ret_3m_prev=-3.07%  ret_3m_fwd=+14.80%
+  - 2018-12: ret_1m=+1.20%  ret_3m_prev=-2.75%  ret_3m_fwd=-3.98%
+  - 2022-11: ret_1m=+0.82%  ret_3m_prev=-8.43%  ret_3m_fwd=-0.03%
+  - 2020-07: ret_1m=+0.58%  ret_3m_prev=+4.78%  ret_3m_fwd=+2.27%
+  - 2015-11: ret_1m=+0.13%  ret_3m_prev=-6.76%  ret_3m_fwd=-2.03%
+  - 2016-02: ret_1m=+0.11%  ret_3m_prev=-2.01%  ret_3m_fwd=+9.54%
+
+Bull avec ret_1m < 0 : 0/4
+  (aucun)
+
+========================================================================
+4. PERSISTANCE DES EPISODES
+========================================================================
+  bear: 20 episodes | duree moyenne=2.65 mois | mediane=2.0 | max=11 | isolés (1 mois)=5/20 (25%)
+  Sequences bear :
+    2015-04 → 2016-02  (11 mois)
+    2016-06 → 2016-08  (3 mois)
+    2017-03 → 2017-04  (2 mois)
+    2017-10 → 2017-10  (1 mois)
+    2018-04 → 2018-05  (2 mois)
+    2018-07 → 2018-08  (2 mois)
+    2018-10 → 2018-12  (3 mois)
+    2019-02 → 2019-02  (1 mois)
+    2019-04 → 2019-05  (2 mois)
+    2019-09 → 2019-10  (2 mois)
+    2020-03 → 2020-05  (3 mois)
+    2020-07 → 2020-09  (3 mois)
+    2021-11 → 2021-11  (1 mois)
+    2022-02 → 2022-07  (6 mois)
+    2022-09 → 2022-11  (3 mois)
+    2023-01 → 2023-01  (1 mois)
+    2023-03 → 2023-04  (2 mois)
+    2023-10 → 2023-11  (2 mois)
+    2024-10 → 2024-10  (1 mois)
+    2025-09 → 2025-10  (2 mois)
+  bull: 4 episodes | duree moyenne=1.00 mois | mediane=1.0 | max=1 | isolés (1 mois)=4/4 (100%)
+  sideways: 24 episodes | duree moyenne=3.12 mois | mediane=2.0 | max=13 | isolés (1 mois)=9/24 (38%)
+
+========================================================================
+5. VISUALISATION
+========================================================================
+
+========================================================================
+6. RESUME / VERDICT
+========================================================================
+
+1) % mois bear avec ret_1m MASI negatif : 69.8% (37/53)
+   ret_1m moyen bear=-1.63% | ret_3m_fwd moyen bear=+1.63%
+   (bull) % ret_1m positif : 100.0% | ret_1m moyen=+5.37%
+
+2) Episodes bear : duree moyenne=2.65 mois, isoles=25% des episodes
+   → Sequences plutot groupees (coherent marche frontiere).
+
+3) Cas suspects : 16 bear incoherents, 0 bull incoherents
+   Bear suspects : 2015-07, 2015-11, 2016-02, 2016-07, 2017-04, 2017-10, 2018-11, 2018-12, 2019-04, 2020-05, 2020-07, 2022-04, 2022-11, 2023-04, 2023-10, 2025-10
+
+4) Verdict global :
+>>> Regime plausible, pret pour reentrainement du TFT
+    Les mois bear coïncident majoritairement avec des baisses MASI, les episodes sont groupes, et bull n'est pas systematiqueement incoherent.

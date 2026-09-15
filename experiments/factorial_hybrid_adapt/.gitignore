@@ -1,0 +1,4 @@
+# Sorties locales de l'expérience factorial_hybrid_adapt (ne pas versionner les modèles lourds)
+outputs/models/
+*.joblib
+__pycache__/

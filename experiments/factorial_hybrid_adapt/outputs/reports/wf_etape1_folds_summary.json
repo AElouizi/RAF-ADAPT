@@ -1,0 +1,17 @@
+{
+  "data_first_month": "2015-07",
+  "data_last_month": "2025-08",
+  "n_months_available": 122,
+  "train_months": 36,
+  "test_months": 6,
+  "step_months_overlapping": 1,
+  "step_months_nonoverlapping": 6,
+  "n_folds_overlapping": 81,
+  "n_blocks_nonoverlapping": 14,
+  "expected_overlapping_approx": 78,
+  "expected_blocks_approx": 13,
+  "delta_overlapping_vs_expected": 3,
+  "delta_blocks_vs_expected": 1,
+  "alert_overlapping": false,
+  "alert_blocks": false
+}

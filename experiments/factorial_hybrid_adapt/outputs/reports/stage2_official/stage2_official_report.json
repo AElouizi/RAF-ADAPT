@@ -1,0 +1,284 @@
+{
+  "generated_at": "2026-08-13T17:01:07.756706+00:00",
+  "protocol": {
+    "window": "2023-01 → 2025-06",
+    "min_vmq": 500000.0,
+    "l_min": 0.9820137900379085,
+    "sell": "exclude",
+    "nsga_objectives": [
+      "alpha",
+      "CVaR"
+    ],
+    "liquidity_role": "eligibility_only"
+  },
+  "controls": {
+    "n_months_executed": 30,
+    "n_month_cell_ok": 120,
+    "n_fallbacks": 0,
+    "n_empty_universe": 0,
+    "n_month_cell_with_portfolio": 120,
+    "n_month_cell_expected": 120,
+    "mean_n_candidates_nsga": 29.808333333333334,
+    "mean_n_positions_final": 24.575,
+    "mean_n_positions_from_monthly": 24.575,
+    "n_held_rows_vmq_below_500k": 0,
+    "weight_sum_vmq_below_500k": 0.0,
+    "n_held_SELL": 0,
+    "weight_sum_SELL": 0.0,
+    "vmq_constraint_ok": true,
+    "no_sell_ok": true,
+    "min_vmq_in_holdings": 502017.1,
+    "mean_n_after_sell_exclude": 30.008333333333333,
+    "mean_n_liquid": 34.166666666666664
+  },
+  "performance": [
+    {
+      "Configuration": "C1 Ridge",
+      "cell": 1,
+      "Return annuel": 0.3876,
+      "Volatilité": 0.1349,
+      "Sharpe": 2.498,
+      "Sortino": 4.286,
+      "CVaR": 0.0182,
+      "Max DD": -0.0976,
+      "Turnover": 0.9081,
+      "Liquidité (L pondéré)": 0.9993,
+      "Nb positions": 25.13,
+      "Total return": 1.6894,
+      "Alpha ann. vs MASI": 0.1413,
+      "Tracking error": 0.0938,
+      "n_months": 30,
+      "n_days": 761
+    },
+    {
+      "Configuration": "C2 Ridge + régime",
+      "cell": 2,
+      "Return annuel": 0.4084,
+      "Volatilité": 0.1402,
+      "Sharpe": 2.514,
+      "Sortino": 4.291,
+      "CVaR": 0.019,
+      "Max DD": -0.1082,
+      "Turnover": 0.8993,
+      "Liquidité (L pondéré)": 0.9993,
+      "Nb positions": 25.57,
+      "Total return": 1.8129,
+      "Alpha ann. vs MASI": 0.1569,
+      "Tracking error": 0.0979,
+      "n_months": 30,
+      "n_days": 761
+    },
+    {
+      "Configuration": "C3 Hybrid",
+      "cell": 3,
+      "Return annuel": 0.3746,
+      "Volatilité": 0.1488,
+      "Sharpe": 2.214,
+      "Sortino": 3.779,
+      "CVaR": 0.0203,
+      "Max DD": -0.1226,
+      "Turnover": 0.8636,
+      "Liquidité (L pondéré)": 0.9994,
+      "Nb positions": 23.53,
+      "Total return": 1.6172,
+      "Alpha ann. vs MASI": 0.1341,
+      "Tracking error": 0.1024,
+      "n_months": 30,
+      "n_days": 762
+    },
+    {
+      "Configuration": "C4 Hybrid + régime",
+      "cell": 4,
+      "Return annuel": 0.3905,
+      "Volatilité": 0.1485,
+      "Sharpe": 2.296,
+      "Sortino": 3.934,
+      "CVaR": 0.0201,
+      "Max DD": -0.1222,
+      "Turnover": 0.8362,
+      "Liquidité (L pondéré)": 0.9995,
+      "Nb positions": 24.07,
+      "Total return": 1.71,
+      "Alpha ann. vs MASI": 0.1456,
+      "Tracking error": 0.1023,
+      "n_months": 30,
+      "n_days": 762
+    }
+  ],
+  "comparisons": [
+    {
+      "Comparaison": "C2 vs C1",
+      "cell_a": 2,
+      "cell_b": 1,
+      "d_Return_ann": 0.020799999999999985,
+      "d_Sharpe": 0.01599999999999957,
+      "d_Sortino": 0.005000000000000782,
+      "d_CVaR": 0.0007999999999999986,
+      "d_MaxDD": -0.010599999999999998,
+      "d_Turnover": -0.00880000000000003
+    },
+    {
+      "Comparaison": "C3 vs C1",
+      "cell_a": 3,
+      "cell_b": 1,
+      "d_Return_ann": -0.013000000000000012,
+      "d_Sharpe": -0.28400000000000025,
+      "d_Sortino": -0.5069999999999997,
+      "d_CVaR": 0.0020999999999999977,
+      "d_MaxDD": -0.024999999999999994,
+      "d_Turnover": -0.044499999999999984
+    },
+    {
+      "Comparaison": "C4 vs C1",
+      "cell_a": 4,
+      "cell_b": 1,
+      "d_Return_ann": 0.0029000000000000137,
+      "d_Sharpe": -0.2020000000000004,
+      "d_Sortino": -0.3519999999999994,
+      "d_CVaR": 0.001899999999999999,
+      "d_MaxDD": -0.024599999999999997,
+      "d_Turnover": -0.07189999999999996
+    },
+    {
+      "Comparaison": "C4 vs C3",
+      "cell_a": 4,
+      "cell_b": 3,
+      "d_Return_ann": 0.015900000000000025,
+      "d_Sharpe": 0.08199999999999985,
+      "d_Sortino": 0.15500000000000025,
+      "d_CVaR": -0.0001999999999999988,
+      "d_MaxDD": 0.0003999999999999976,
+      "d_Turnover": -0.02739999999999998
+    }
+  ],
+  "dominance_monthly": {
+    "pct_months_C2_gt_C1": 0.6333333333333333,
+    "pct_months_C3_gt_C1": 0.4,
+    "pct_months_C4_gt_C1": 0.43333333333333335,
+    "pct_months_C4_gt_C3": 0.6
+  },
+  "preliminary_ranking": [
+    {
+      "rank": 1,
+      "Configuration": "C2 Ridge + régime",
+      "cell": 2,
+      "Sharpe": 2.514,
+      "Return annuel": 0.4084,
+      "Sortino": 4.291,
+      "CVaR": 0.019,
+      "Max DD": -0.1082,
+      "composite_score_rank_sum": 10.0
+    },
+    {
+      "rank": 2,
+      "Configuration": "C1 Ridge",
+      "cell": 1,
+      "Sharpe": 2.498,
+      "Return annuel": 0.3876,
+      "Sortino": 4.286,
+      "CVaR": 0.0182,
+      "Max DD": -0.0976,
+      "composite_score_rank_sum": 13.0
+    },
+    {
+      "rank": 3,
+      "Configuration": "C4 Hybrid + régime",
+      "cell": 4,
+      "Sharpe": 2.296,
+      "Return annuel": 0.3905,
+      "Sortino": 3.934,
+      "CVaR": 0.0201,
+      "Max DD": -0.1222,
+      "composite_score_rank_sum": 15.0
+    },
+    {
+      "rank": 4,
+      "Configuration": "C3 Hybrid",
+      "cell": 3,
+      "Sharpe": 2.214,
+      "Return annuel": 0.3746,
+      "Sortino": 3.779,
+      "CVaR": 0.0203,
+      "Max DD": -0.1226,
+      "composite_score_rank_sum": 22.0
+    }
+  ],
+  "nsga_summary": {
+    "protocol": {
+      "eval_window": "2023-01 → 2025-06",
+      "liquidity": "eligibility constraint VMQ_20j >= min_vmq (not NSGA objective)",
+      "min_vmq_mad": 500000.0,
+      "l_min": 0.9820137900379085,
+      "sell": "excluded before NSGA when sell_mode=exclude",
+      "nsga_objectives": [
+        "max preference-adjusted predicted_return",
+        "min CVaR 95%"
+      ],
+      "no_vmq_imputation": true,
+      "window_frozen_before_backtest": true
+    },
+    "config": {
+      "sell_mode": "exclude",
+      "pref_BUY": 1.0,
+      "pref_NEUTRAL": 0.5,
+      "pref_SELL": 0.0,
+      "w_min": 0.0,
+      "w_max": 0.4,
+      "w_max_SELL": 0.02,
+      "min_vmq": 500000.0,
+      "l_min": 0.9820137900379085,
+      "enforce_liquidity_eligibility": true,
+      "max_turnover": null,
+      "selection_rule": "knee",
+      "pop_size": 36,
+      "n_gen": 30,
+      "weight_report_floor": 0.0001,
+      "eval_start_month": "2023-01",
+      "eval_end_month": "2025-06"
+    },
+    "n_weight_rows": 11102,
+    "n_months_total": 30,
+    "cells": {
+      "1": {
+        "label": "C1 Ridge",
+        "n_months": 30,
+        "n_ok": 30,
+        "n_fallback": 0,
+        "mean_positions_selected": 25.133333333333333
+      },
+      "2": {
+        "label": "C2 Ridge + régime",
+        "n_months": 30,
+        "n_ok": 30,
+        "n_fallback": 0,
+        "mean_positions_selected": 25.566666666666666
+      },
+      "3": {
+        "label": "C3 Hybrid",
+        "n_months": 30,
+        "n_ok": 30,
+        "n_fallback": 0,
+        "mean_positions_selected": 23.533333333333335
+      },
+      "4": {
+        "label": "C4 Hybrid + régime",
+        "n_months": 30,
+        "n_ok": 30,
+        "n_fallback": 0,
+        "mean_positions_selected": 24.066666666666666
+      }
+    },
+    "lookahead": {
+      "returns_history": "cours/indices filtrés date <= as_of",
+      "vmq": "liquidity_vmq_20j as-of t (stage2_inputs); no future",
+      "scores": "predicted_return / recommendation de l'étage 1 à t",
+      "no_future_returns_in_opt": true,
+      "no_vmq_imputation": true
+    }
+  },
+  "figures": [
+    "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\experiments\\factorial_hybrid_adapt\\outputs\\reports\\stage2_official\\figures\\fig_wealth_official.png",
+    "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\experiments\\factorial_hybrid_adapt\\outputs\\reports\\stage2_official\\figures\\fig_drawdown_official.png",
+    "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\experiments\\factorial_hybrid_adapt\\outputs\\reports\\stage2_official\\figures\\fig_monthly_returns_official.png"
+  ]
+}

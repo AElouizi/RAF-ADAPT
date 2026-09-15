@@ -1,0 +1,7 @@
+model_id,cell,groupe,fold_id,mois,date_rebalance,status,error,n_candidates,n_positions_selected,expected_alpha_selected,cvar_selected,liquidity_L_selected,n_pareto,turnover_vs_prev
+c2_rf,,C2_rf,6,2019-01,2019-01-31,ok,,49,40,0.129186,0.007005,0.6239,18,0.0
+c2_rf,,C2_rf,6,2019-02,2019-02-28,ok,,46,40,0.244749,0.007952,0.7323,26,0.3089
+c2_rf,,C2_rf,6,2019-03,2019-03-29,ok,,49,42,0.169095,0.007548,0.5792,21,0.4141
+c2_rf,,C2_rf,6,2019-04,2019-04-30,ok,,50,41,0.154178,0.006063,0.6254,19,0.2974
+c2_rf,,C2_rf,6,2019-05,2019-05-31,ok,,46,42,0.137846,0.006894,0.6568,21,0.3054
+c2_rf,,C2_rf,6,2019-06,2019-06-28,ok,,48,41,0.147642,0.006204,0.7086,20,0.2901

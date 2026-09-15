@@ -1,0 +1,3 @@
+Comparaison,n_months,diff_moyenne_mensuelle,diff_mediane,diff_ecart_type,pct_mois_C4_surperforme,IC95_bootstrap_lo,IC95_bootstrap_hi,t_stat,p_value_ttest,wilcoxon_stat,p_value_wilcoxon,significatif_5pct_ttest,significatif_5pct_wilcoxon
+C4 - MASI,30,0.011411,0.009574,0.030535,0.6333,0.000857,0.022403,2.0469,0.0498,138.0,0.0523,True,False
+C4 - Equal Weight,30,0.005656,0.003104,0.025682,0.5667,-0.003032,0.014882,1.2062,0.2375,179.0,0.2801,False,False

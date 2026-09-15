@@ -1,0 +1,8 @@
+Comparaison,n_months,diff_moyenne_mensuelle,diff_mediane,pct_mois_A_gt_B,IC95_lo,IC95_hi,t_stat,p_ttest,p_wilcoxon,significatif_5pct,significatif_5pct_ttest,significatif_5pct_wilcoxon
+C3 - MASI,84,0.00207,0.004296,0.5952,-0.003659,0.007744,0.7158,0.4761,0.2785,False,False,False
+C3 - Equal Weight C3,84,-0.000747,0.000809,0.5357,-0.003555,0.001961,-0.5283,0.5987,0.9822,False,False,False
+C3 - C1,84,0.00092,0.000317,0.5,-0.001237,0.003259,0.7824,0.4362,0.7719,False,False,False
+C3 - C2,84,2.5e-05,-0.001514,0.4524,-0.002246,0.002342,0.0213,0.9831,0.6816,False,False,False
+C3 - C4,84,0.001259,-8.2e-05,0.4881,-0.000574,0.003101,1.343,0.1829,0.3606,False,False,False
+C4 - MASI,84,0.000811,0.002438,0.5714,-0.004716,0.006268,0.2865,0.7752,0.5383,False,False,False
+C4 - C1,84,-0.000339,0.000352,0.5595,-0.002761,0.002145,-0.2737,0.785,0.9538,False,False,False

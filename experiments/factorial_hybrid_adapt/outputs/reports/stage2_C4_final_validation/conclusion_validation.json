@@ -1,0 +1,34 @@
+{
+  "A_C4_vs_MASI": {
+    "surperformance_economique": true,
+    "delta_ret_ann": 0.079,
+    "pct_mois_surperf": 0.5833,
+    "reponse": "Oui, C4 surperforme le MASI sur la période (+7.9 pp annualisés ; 58% des mois)."
+  },
+  "B_C4_vs_EW": {
+    "surperformance_economique": true,
+    "delta_ret_ann": 0.012,
+    "pct_mois_surperf": 0.4762,
+    "reponse": "Oui, C4 surperforme l'Equal Weight (+1.2 pp annualisés ; 48% des mois)."
+  },
+  "C_significativite": {
+    "vs_MASI_ttest_p": 0.042,
+    "vs_MASI_wilcoxon_p": 0.0377,
+    "vs_EW_ttest_p": 0.6721,
+    "vs_EW_wilcoxon_p": 0.7549,
+    "reponse": "La surperformance mensuelle vs MASI est statistiquement significative à 5%. Vs Equal Weight : non significative à 5% (n=30)."
+  },
+  "D_compromis_rendement_risque": {
+    "sharpe_C4": 0.986,
+    "sharpe_MASI": 0.569,
+    "sharpe_EW": 0.991,
+    "maxdd_C4": -0.2832,
+    "maxdd_MASI": -0.3073,
+    "maxdd_EW": -0.2753,
+    "reponse": "Le compromis est nuancé : vérifier Sharpe/Sortino/MaxDD dans le tableau."
+  },
+  "E_avantage_limite": {
+    "avantage": "Sélection multi-objectif (alpha, CVaR, liquidité) + Hybrid+régime produit une outperformance nette vs marché et vs univers équipondéré, avec Sharpe élevé et liquidité de portefeuille préservée (L≈0.90).",
+    "limite": "Turnover élevé (~0.92 L1) et coûts de transaction non nuls ; avec n=30 mois, les écarts mensuels ne sont pas toujours significatifs à 5% ; échantillon hors échantillon encore court et spécifique BVC."
+  }
+}

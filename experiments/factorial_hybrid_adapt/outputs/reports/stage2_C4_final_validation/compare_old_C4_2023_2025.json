@@ -1,0 +1,26 @@
+{
+  "old_window": "2023-01 → 2025-06",
+  "old": {
+    "Rendement": 0.3554,
+    "Volatilite": 0.1429,
+    "Sharpe": 2.201,
+    "Sortino": 3.719,
+    "CVaR": 0.0196,
+    "Max_DD": -0.1187,
+    "Turnover": 0.919193481380271,
+    "Liquidite": 0.8981933333333335
+  },
+  "new_2023_2025": {
+    "periode": "2023–2025",
+    "n_months": 30,
+    "Rendement": 0.3705,
+    "Volatilite": 0.1502,
+    "Sharpe": 2.175,
+    "Sortino": 3.699,
+    "CVaR": 0.0207,
+    "Max_DD": -0.1284,
+    "Turnover": 0.8683,
+    "Liquidite": 0.9999
+  },
+  "note": "Écarts = nouvelle couverture VMQ + filtre VMQ>=500k appliqué avec 3 objectifs (l'ancien C4 pareto n'avait pas le filtre)."
+}

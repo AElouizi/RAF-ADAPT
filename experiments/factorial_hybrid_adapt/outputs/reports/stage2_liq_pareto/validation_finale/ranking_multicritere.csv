@@ -1,0 +1,5 @@
+rank_composite,cell,Configuration,rank_finance,rank_risk,rank_liquidity,rank_stability,composite,ret,sharpe,L,cvar,maxdd
+1,1,C1 Ridge,3.62,1.0,2.0,2.17,2.198,0.3094,2.062,0.8987,0.0186,-0.1171
+2,3,C3 Hybrid,2.25,2.67,1.0,3.5,2.354,0.3535,2.195,0.9036,0.0196,-0.1264
+3,4,C4 Hybrid + régime,1.25,2.83,3.0,2.33,2.354,0.3554,2.201,0.8982,0.0196,-0.1187
+4,2,C2 Ridge + régime,2.88,3.5,4.0,2.0,3.094,0.3262,2.075,0.8837,0.0197,-0.135

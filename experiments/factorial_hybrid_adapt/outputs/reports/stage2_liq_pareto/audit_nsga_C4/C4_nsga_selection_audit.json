@@ -1,0 +1,254 @@
+{
+  "scope": "C4 Hybrid + régime, Variante A (liquidity=pareto), 2023-01→2025-06",
+  "artefacts": "experiments\\factorial_hybrid_adapt\\outputs\\portfolios_stage2_liq_pareto",
+  "limitation": "Full Pareto front (all n_pareto weight vectors) was NOT persisted. Only 4 profiles per month are stored: P_agressif, P_equilibre, P_defensif, P_selected. Audit of non-dominance is therefore limited to these 4 archived points; n_pareto is a count only.",
+  "n_pareto": {
+    "by_month": {
+      "2023-01": 24,
+      "2023-02": 22,
+      "2023-03": 24,
+      "2023-04": 21,
+      "2023-05": 24,
+      "2023-06": 24,
+      "2023-07": 19,
+      "2023-08": 17,
+      "2023-09": 16,
+      "2023-10": 20,
+      "2023-11": 15,
+      "2023-12": 11,
+      "2024-01": 26,
+      "2024-02": 23,
+      "2024-03": 21,
+      "2024-04": 30,
+      "2024-05": 23,
+      "2024-06": 25,
+      "2024-07": 24,
+      "2024-08": 29,
+      "2024-09": 29,
+      "2024-10": 26,
+      "2024-11": 22,
+      "2024-12": 26,
+      "2025-01": 18,
+      "2025-02": 22,
+      "2025-03": 22,
+      "2025-04": 22,
+      "2025-05": 22,
+      "2025-06": 27
+    },
+    "min": 11,
+    "max": 30,
+    "mean": 22.466666666666665,
+    "total_month_cell": 30
+  },
+  "distribution_P_selected": {
+    "alpha_opt": {
+      "n": 30,
+      "mean": 0.8857718666666669,
+      "std": 0.18959591102817144,
+      "min": 0.516855,
+      "p25": 0.74446575,
+      "median": 0.9411965,
+      "p75": 0.9984742499999999,
+      "max": 1.28665
+    },
+    "alpha_raw_expected_return": {
+      "n": 30,
+      "mean": 0.8887628333333334,
+      "std": 0.1896687018367014,
+      "min": 0.52175,
+      "p25": 0.74580375,
+      "median": 0.945203,
+      "p75": 0.99902925,
+      "max": 1.281539
+    },
+    "cvar_95": {
+      "n": 30,
+      "mean": 0.0102418,
+      "std": 0.001182160570224326,
+      "min": 0.008081,
+      "p25": 0.00924225,
+      "median": 0.0102655,
+      "p75": 0.01107425,
+      "max": 0.013617
+    },
+    "liquidity_L_weighted": {
+      "n": 30,
+      "mean": 0.8981933333333335,
+      "std": 0.11812944954825921,
+      "min": 0.5892,
+      "p25": 0.848075,
+      "median": 0.96365,
+      "p75": 0.9804,
+      "max": 0.9935
+    },
+    "n_titres": {
+      "n": 30,
+      "mean": 33.8,
+      "std": 3.3774097399818306,
+      "min": 27.0,
+      "p25": 32.0,
+      "median": 33.5,
+      "p75": 35.75,
+      "max": 40.0
+    },
+    "turnover_vs_prev": {
+      "n": 30,
+      "mean": 0.4036566666666666,
+      "std": 0.13857829526856014,
+      "min": 0.0,
+      "p25": 0.3185,
+      "median": 0.38155,
+      "p75": 0.487275,
+      "max": 0.6817
+    },
+    "n_pareto": {
+      "n": 30,
+      "mean": 22.466666666666665,
+      "std": 4.240472756120749,
+      "min": 11.0,
+      "p25": 21.0,
+      "median": 22.5,
+      "p75": 24.75,
+      "max": 30.0
+    }
+  },
+  "distribution_4_archived_profiles": {
+    "alpha_opt": {
+      "n": 120,
+      "mean": 0.8676835416666667,
+      "std": 0.2784458002383674,
+      "min": 0.277136,
+      "p25": 0.65345475,
+      "median": 0.8917845,
+      "p75": 1.02693,
+      "max": 1.588898
+    },
+    "alpha_raw": {
+      "n": 120,
+      "mean": 0.8699041833333333,
+      "std": 0.2788460529096846,
+      "min": 0.285146,
+      "p25": 0.658552,
+      "median": 0.8935515,
+      "p75": 1.025857,
+      "max": 1.598815
+    },
+    "cvar_95": {
+      "n": 120,
+      "mean": 0.010198241666666667,
+      "std": 0.002127931792660584,
+      "min": 0.005541,
+      "p25": 0.008868,
+      "median": 0.0100435,
+      "p75": 0.01127675,
+      "max": 0.015636
+    },
+    "L": {
+      "n": 120,
+      "mean": 0.8546316666666667,
+      "std": 0.15953329253096454,
+      "min": 0.2733,
+      "p25": 0.773425,
+      "median": 0.912,
+      "p75": 0.9753,
+      "max": 0.9987
+    },
+    "n_titres": {
+      "n": 120,
+      "mean": 32.19166666666667,
+      "std": 4.694527178979121,
+      "min": 20.0,
+      "p25": 30.0,
+      "median": 33.0,
+      "p75": 35.0,
+      "max": 41.0
+    },
+    "turnover": {
+      "n": 120,
+      "mean": 0.42905750000000004,
+      "std": 0.14332006765284758,
+      "min": 0.0,
+      "p25": 0.3453,
+      "median": 0.4128,
+      "p75": 0.524,
+      "max": 0.7873
+    }
+  },
+  "nondominance_among_4_archived": {
+    "n_dominated_rows": 0,
+    "n_rows": 120,
+    "comment": "Among the 4 archived points, some may be mutually non-dominated by construction of extrema+knee; dominance count reported."
+  },
+  "automatic_selection": {
+    "yes": true,
+    "portfolio_used_in_backtest": "P_selected",
+    "selection_rule_config": "knee",
+    "P_selected_equals_P_equilibre_all_months": true,
+    "rule_exact": {
+      "objectives_minimized_in_F": [
+        "f1=-alpha_opt (pref-adjusted)",
+        "f2=CVaR95",
+        "f3=-L_sigmoid_weighted"
+      ],
+      "knee_definition": "Normalize each objective column of F to [0,1] over the Pareto set; pick argmin of Euclidean distance to utopia (0,0,0) in normalized space (_knee_point_index).",
+      "also_archived": {
+        "P_agressif": "argmin f1 = max alpha among Pareto",
+        "P_defensif": "argmin f2 = min CVaR among Pareto",
+        "P_equilibre": "same knee point",
+        "P_selected": "result of selection_rule (knee) → identical to P_equilibre"
+      }
+    },
+    "uses_future_info": false,
+    "uses_next_month_realized_return": false,
+    "inputs_as_of_t": [
+      "Stage1 predicted_return / recommendation at t",
+      "VMQ_20j / L at t",
+      "daily returns history with date <= as_of t for CVaR",
+      "previous month weights only for turnover reporting (max_turnover=null so not a constraint)"
+    ]
+  },
+  "weight_constraints": {
+    "sum_weights": 1.0,
+    "w_min": 0.0,
+    "w_max": 0.4,
+    "max_n_titles": null,
+    "sector_constraints": null,
+    "cvar_inequality": "CVaR(w) <= ~0.9 * CVaR_MASI (relaxable if infeasible)",
+    "max_turnover_constraint": null,
+    "sell_excluded_before_nsga": true,
+    "empirical_P_selected": {
+      "sum_weights_ok": true,
+      "max_weight_observed": 0.4,
+      "min_weight_observed": 0.00010373438272376112,
+      "n_weights_above_040": 0
+    }
+  },
+  "config_frozen": {
+    "sell_mode": "exclude",
+    "pref_BUY": 1.0,
+    "pref_NEUTRAL": 0.5,
+    "pref_SELL": 0.0,
+    "w_min": 0.0,
+    "w_max": 0.4,
+    "w_max_SELL": 0.02,
+    "liquidity_mode": "pareto",
+    "min_vmq": 500000.0,
+    "l_min": 0.9820137900379085,
+    "max_turnover": null,
+    "selection_rule": "knee",
+    "pop_size": 36,
+    "n_gen": 30,
+    "weight_report_floor": 0.0001,
+    "eval_start_month": "2023-01",
+    "eval_end_month": "2025-06"
+  },
+  "exports": [
+    "C4_archived_profiles_nondominance.csv",
+    "C4_n_pareto_by_month.csv",
+    "C4_P_selected_monthly_metrics.csv",
+    "C4_P_selected_weight_checks.csv",
+    "C4_pareto_archived_solutions_by_month.csv",
+    "C4_profile_roles_check.csv",
+    "C4_selected_equals_equilibre.csv"
+  ]
+}

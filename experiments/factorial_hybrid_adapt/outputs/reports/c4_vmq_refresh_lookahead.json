@@ -1,0 +1,66 @@
+{
+  "formula_no_lookahead": true,
+  "checks": [
+    {
+      "date": "2019-02-11",
+      "n": 56,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    {
+      "date": "2019-02-19",
+      "n": 56,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    {
+      "date": "2019-03-04",
+      "n": 56,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    {
+      "date": "2019-12-05",
+      "n": 57,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    {
+      "date": "2021-07-14",
+      "n": 60,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    {
+      "date": "2021-08-02",
+      "n": 60,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    {
+      "date": "2023-01-23",
+      "n": 68,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    {
+      "date": "2023-05-15",
+      "n": 68,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    {
+      "date": "2023-11-20",
+      "n": 67,
+      "max_abs_diff": 0.0,
+      "ok": true
+    },
+    {
+      "date": "2024-06-26",
+      "n": 69,
+      "max_abs_diff": 0.0,
+      "ok": true
+    }
+  ],
+  "n_tech": 164330
+}

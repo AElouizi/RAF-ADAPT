@@ -1,0 +1,14 @@
+{
+  "fold_id": 54,
+  "model_id": "lightgbm",
+  "groupe": "classique",
+  "ann_return": 0.3101,
+  "sharpe": 2.169,
+  "sortino": 3.902,
+  "cvar_95_realized": 0.0165,
+  "max_drawdown": -0.0865,
+  "turnover_mean": 0.8906592212201673,
+  "liquidity_mean": 0.9999129000209649,
+  "total_return_block": 1.3194573220568961,
+  "n_days": 785
+}

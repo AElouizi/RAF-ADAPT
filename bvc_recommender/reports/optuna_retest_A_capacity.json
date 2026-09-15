@@ -1,0 +1,167 @@
+{
+  "best_params": {
+    "hidden_size": 8,
+    "attention_head_size": 2,
+    "dropout": 0.5,
+    "learning_rate": 0.0011986281799901185
+  },
+  "best_val_loss": 0.3912217915058136,
+  "best_trial_number": 7,
+  "n_trials": 12,
+  "max_epochs": 8,
+  "max_train_rows": 12000,
+  "hidden_sizes": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "dropouts": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "early_stopping_patience": 3,
+  "regime_encoding": "onehot",
+  "target_type": "alpha_ajuste_risque",
+  "sequence_length": 20,
+  "known_reals": null,
+  "trials": [
+    {
+      "number": 0,
+      "value": 0.4124421179294586,
+      "params": {
+        "hidden_size": 4,
+        "attention_head_size": 2,
+        "dropout": 0.3,
+        "learning_rate": 0.0002310201887845295
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 1,
+      "value": 0.4129904806613922,
+      "params": {
+        "hidden_size": 64,
+        "attention_head_size": 4,
+        "dropout": 0.2,
+        "learning_rate": 0.0001238513729886094
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 2,
+      "value": 0.41735103726387024,
+      "params": {
+        "hidden_size": 32,
+        "attention_head_size": 4,
+        "dropout": 0.5,
+        "learning_rate": 0.00032927591344236165
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 3,
+      "value": 0.40891292691230774,
+      "params": {
+        "hidden_size": 64,
+        "attention_head_size": 2,
+        "dropout": 0.2,
+        "learning_rate": 0.0004473636174621269
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 4,
+      "value": 0.40561336278915405,
+      "params": {
+        "hidden_size": 8,
+        "attention_head_size": 2,
+        "dropout": 0.1,
+        "learning_rate": 0.002592475660475161
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 5,
+      "value": 0.4183982312679291,
+      "params": {
+        "hidden_size": 64,
+        "attention_head_size": 1,
+        "dropout": 0.5,
+        "learning_rate": 0.0008798929749689024
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 6,
+      "value": 0.41313862800598145,
+      "params": {
+        "hidden_size": 32,
+        "attention_head_size": 1,
+        "dropout": 0.3,
+        "learning_rate": 0.006533305220227739
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 7,
+      "value": 0.3912217915058136,
+      "params": {
+        "hidden_size": 8,
+        "attention_head_size": 2,
+        "dropout": 0.5,
+        "learning_rate": 0.0011986281799901185
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 8,
+      "value": 0.3959988057613373,
+      "params": {
+        "hidden_size": 4,
+        "attention_head_size": 2,
+        "dropout": 0.1,
+        "learning_rate": 0.007688106801474953
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 9,
+      "value": 0.4015112817287445,
+      "params": {
+        "hidden_size": 32,
+        "attention_head_size": 2,
+        "dropout": 0.3,
+        "learning_rate": 0.0003608219327363787
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 10,
+      "value": 0.4099613130092621,
+      "params": {
+        "hidden_size": 8,
+        "attention_head_size": 1,
+        "dropout": 0.4,
+        "learning_rate": 0.001535117738870188
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 11,
+      "value": 0.4008805751800537,
+      "params": {
+        "hidden_size": 4,
+        "attention_head_size": 2,
+        "dropout": 0.1,
+        "learning_rate": 0.00860851445662938
+      },
+      "state": "TrialState.COMPLETE"
+    }
+  ]
+}

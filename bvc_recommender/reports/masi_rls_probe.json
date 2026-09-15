@@ -1,0 +1,164 @@
+{
+  "table": "market_data_indices_historique",
+  "hypothesis": "RLS filters old rows for anon",
+  "counts": {
+    "total": 15526,
+    "masi": 741,
+    "masi_gte_2010": 741,
+    "masi_lt_2022": 0,
+    "all_lt_2020": 0,
+    "all_lt_2022": 0
+  },
+  "masi_earliest_5": [
+    {
+      "id": "c5298505-1138-47fd-ac1b-ba2991812a41",
+      "code_index": "MASI",
+      "date_index": "2022-11-21",
+      "valeur_index": 10783.87,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    },
+    {
+      "id": "f5613639-e648-4c79-bf93-0e9cc1abedec",
+      "code_index": "MASI",
+      "date_index": "2022-11-22",
+      "valeur_index": 10810.67,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    },
+    {
+      "id": "d8c6a4a1-5c6e-4c1a-8324-9b28426e31c1",
+      "code_index": "MASI",
+      "date_index": "2022-11-23",
+      "valeur_index": 10852.14,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    },
+    {
+      "id": "972b3897-db9c-4efe-8ee9-c4fb2bc8063e",
+      "code_index": "MASI",
+      "date_index": "2022-11-24",
+      "valeur_index": 10805.97,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    },
+    {
+      "id": "028804af-1ff6-42d8-833e-a9898ebd02bf",
+      "code_index": "MASI",
+      "date_index": "2022-11-25",
+      "valeur_index": 10835.23,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    }
+  ],
+  "masi_gte2010_first5": [
+    {
+      "id": "c5298505-1138-47fd-ac1b-ba2991812a41",
+      "code_index": "MASI",
+      "date_index": "2022-11-21",
+      "valeur_index": 10783.87,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    },
+    {
+      "id": "f5613639-e648-4c79-bf93-0e9cc1abedec",
+      "code_index": "MASI",
+      "date_index": "2022-11-22",
+      "valeur_index": 10810.67,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    },
+    {
+      "id": "d8c6a4a1-5c6e-4c1a-8324-9b28426e31c1",
+      "code_index": "MASI",
+      "date_index": "2022-11-23",
+      "valeur_index": 10852.14,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    },
+    {
+      "id": "972b3897-db9c-4efe-8ee9-c4fb2bc8063e",
+      "code_index": "MASI",
+      "date_index": "2022-11-24",
+      "valeur_index": 10805.97,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    },
+    {
+      "id": "028804af-1ff6-42d8-833e-a9898ebd02bf",
+      "code_index": "MASI",
+      "date_index": "2022-11-25",
+      "valeur_index": 10835.23,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    }
+  ],
+  "user_screenshot_uuid": {
+    "id": "9c49e61a-e4e5-40a4-b58d-80ba95b869ea",
+    "found_via_anon": 0,
+    "row": null
+  },
+  "masi_fetch_all": {
+    "rows": 741,
+    "matches_count_masi": true,
+    "date_min": "2022-11-21",
+    "date_max": "2025-11-17",
+    "id_analysis": {
+      "total": 741,
+      "uuid_count": 741,
+      "integer_count": 0,
+      "other_count": 0,
+      "by_type_dates": {
+        "uuid": {
+          "count": 741,
+          "date_min": "2022-11-21",
+          "date_max": "2025-11-17"
+        },
+        "integer": {
+          "count": 0
+        }
+      },
+      "sample_uuid": [
+        "c5298505-1138-47fd-ac1b-ba2991812a41",
+        "f5613639-e648-4c79-bf93-0e9cc1abedec",
+        "d8c6a4a1-5c6e-4c1a-8324-9b28426e31c1"
+      ],
+      "sample_int": []
+    }
+  },
+  "scraped_at_top": {
+    "2025-11-19T15:51:54.294033": 726,
+    "2025-11-19T15:51:54.310075": 15
+  },
+  "all_indices_id_analysis": {
+    "total": 15526,
+    "uuid_count": 15526,
+    "integer_count": 0,
+    "other_count": 0,
+    "by_type_dates": {
+      "uuid": {
+        "count": 15526,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      "integer": {
+        "count": 0
+      }
+    },
+    "sample_uuid": [
+      "a7957597-ba73-47a5-bc6f-a64b718b4d8c",
+      "56ab77bd-629e-4c3c-ad84-3cff32035a3b",
+      "59b99c20-cc6c-4cec-ae61-c732e9527f71"
+    ],
+    "sample_int": []
+  },
+  "all_indices_date_range": {
+    "rows": 15526,
+    "date_min": "2022-11-21",
+    "date_max": "2025-11-17"
+  },
+  "service_role_crosscheck": {
+    "total": 15526,
+    "masi": 741,
+    "masi_lt_2022": 0,
+    "user_uuid_found": 0
+  },
+  "rls_inference": {
+    "anon_sees_pre2022_masi": false,
+    "user_uuid_invisible_to_anon": true,
+    "count_equals_fetch": true,
+    "service_role_same_counts_as_anon": true,
+    "rls_likely_cause": false,
+    "data_absent_not_rls": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "vmq_formula": "rolling_mean_20(prix_cloture * titres_echanges.fillna(0))",
+  "fillna0_on_volume": "Formule technique existante : volume NaN traité comme 0 AVANT le rolling. Ce n'est pas une imputation de VMQ par une valeur future. Les VMQ NaN restants = fenêtres < 20 séances.",
+  "no_future": true,
+  "features_min_date": "2015-06-03",
+  "features_max_date": "2026-05-18",
+  "INDICATORS_MIN_DATE": "2015-06-03",
+  "volume_null_live_after_2010_fill": "voir audit volumes ; 2023+ encore des NULL (histo_volume s'arrête fin 2022)"
+}

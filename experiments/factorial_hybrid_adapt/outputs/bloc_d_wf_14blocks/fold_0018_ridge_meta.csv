@@ -1,0 +1,7 @@
+model_id,cell,groupe,fold_id,mois,date_rebalance,status,error,n_candidates,n_positions_selected,expected_alpha_selected,cvar_selected,liquidity_L_selected,n_pareto,turnover_vs_prev
+ridge,,classique,18,2020-01,2020-01-31,ok,,28,25,0.208197,0.007934,0.9994,9,0.0
+ridge,,classique,18,2020-02,2020-02-28,ok,,19,19,0.220981,0.009831,0.9999,9,0.2458
+ridge,,classique,18,2020-03,2020-03-31,ok,,28,24,0.176893,0.017457,0.9997,9,0.5872
+ridge,,classique,18,2020-04,2020-04-30,ok,,20,16,0.180062,0.019587,0.9998,9,0.4428
+ridge,,classique,18,2020-05,2020-05-29,ok,,10,10,0.093004,0.023309,0.9998,3,0.3797
+ridge,,classique,18,2020-06,2020-06-30,ok,,18,17,0.196901,0.019787,0.9992,9,0.5279

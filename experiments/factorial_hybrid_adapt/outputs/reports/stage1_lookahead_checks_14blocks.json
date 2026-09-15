@@ -1,0 +1,43 @@
+{
+  "tag": "14blocks",
+  "config": {
+    "benchmark_mode": "zero_alpha",
+    "tau_method": "expanding_past_quantile",
+    "tau_quantile": 0.33,
+    "tau_fixed": 0.1
+  },
+  "checks": [
+    {
+      "check": "prediction_uses_only_features_at_t",
+      "status": "OK",
+      "detail": "Scores issus du WF : features *_z / régime connus à date_cours."
+    },
+    {
+      "check": "tau_not_fit_on_test",
+      "status": "OK",
+      "detail": "tau_method=expanding_past_quantile : calibré sur train du bloc, historique des plis antérieurs, ou fixe a priori — jamais sur le test courant."
+    },
+    {
+      "check": "benchmark_available_at_t",
+      "status": "OK",
+      "detail": "benchmark_mode=zero_alpha : 0 (échelle alpha) ou médiane CS du jour t — pas de rendement futur."
+    },
+    {
+      "check": "recommendation_ignores_realized_alpha",
+      "status": "OK",
+      "detail": "realized_alpha n'entre pas dans assign_recommendation ; usage éval seulement."
+    },
+    {
+      "check": "score_definition",
+      "status": "INFO",
+      "detail": "predicted_return = prédiction de alpha_ajuste_risque (excès vs MASI / vol baissière), pas un return brut. benchmark_return=0 sous zero_alpha."
+    }
+  ],
+  "notes": [
+    "predicted_return = alpha_ajuste_risque prédit (déjà vs MASI / vol).",
+    "benchmark_return = 0 sous zero_alpha.",
+    "realized_alpha utilisé uniquement pour Precision / mean alpha.",
+    "IC/Hit de la table = moyenne des plis WF journaliers (fold_metrics).",
+    "% BUY/NEUTRAL/SELL et Precision = panel mois-fin (rebalancement)."
+  ]
+}

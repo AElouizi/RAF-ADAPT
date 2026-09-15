@@ -1,0 +1,7 @@
+model_id,cell,groupe,fold_id,mois,date_rebalance,status,error,n_candidates,n_positions_selected,expected_alpha_selected,cvar_selected,liquidity_L_selected,n_pareto,turnover_vs_prev
+hybrid_rf_regime,,hybride_regime,72,2024-07,2024-07-31,ok,,23,21,0.974054,0.011382,1.0,9,0.0
+hybrid_rf_regime,,hybride_regime,72,2024-08,2024-08-30,ok,,22,21,1.077106,0.011812,0.999,9,0.3504
+hybrid_rf_regime,,hybride_regime,72,2024-09,2024-09-30,ok,,19,18,0.610498,0.012579,0.9993,9,0.3522
+hybrid_rf_regime,,hybride_regime,72,2024-10,2024-10-31,ok,,15,15,0.882298,0.013182,0.9997,9,0.3937
+hybrid_rf_regime,,hybride_regime,72,2024-11,2024-11-29,ok,,20,20,1.071654,0.010939,0.9984,9,0.4496
+hybrid_rf_regime,,hybride_regime,72,2024-12,2024-12-31,ok,,21,21,0.735321,0.010759,0.9997,9,0.3929

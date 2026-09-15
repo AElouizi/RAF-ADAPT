@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-07-28T13:04:50.493633+00:00",
+  "project": "BVC Recommender — Sous-module B (TFT)",
+  "random_state": 42,
+  "model": "TemporalFusionTransformer",
+  "target": "alpha_ajuste_risque",
+  "temporal_validation": {
+    "train": "≤ 2020-12-31",
+    "validation": "2020-12-31 → 2022-12-31",
+    "test": "≥ 2023-01-01"
+  },
+  "regime_injection": {
+    "variables": [
+      "is_bull",
+      "is_sideways",
+      "is_bear"
+    ],
+    "role": "time_varying_known_reals",
+    "source": "features_indices (HMM discret, sous-module A)"
+  },
+  "quantiles": {
+    "q10": "pessimiste",
+    "q50": "central",
+    "q90": "optimiste",
+    "values": [
+      0.1,
+      0.5,
+      0.9
+    ]
+  },
+  "data_version": "post_split_correction_2026-07-28",
+  "train_rows": 50736,
+  "training_history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.5368970632553101,
+      "val_loss": 0.4456993341445923,
+      "train_quantile_loss": 0.5368970632553101,
+      "val_quantile_loss": 0.4456993341445923
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.49930721521377563,
+      "val_loss": 0.4313773512840271,
+      "train_quantile_loss": 0.49930721521377563,
+      "val_quantile_loss": 0.4313773512840271
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.49517199397087097,
+      "val_loss": 0.4356937110424042,
+      "train_quantile_loss": 0.49517199397087097,
+      "val_quantile_loss": 0.4356937110424042
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.49080726504325867,
+      "val_loss": 0.43718475103378296,
+      "train_quantile_loss": 0.49080726504325867,
+      "val_quantile_loss": 0.43718475103378296
+    }
+  ],
+  "tft_splits": {
+    "val": {
+      "rows": 26801,
+      "metrics": {
+        "ic_mean": -0.0076092256676372864,
+        "ic_median": -0.0034899499820681694,
+        "rank_ic_mean": -0.03830318959963299,
+        "ic_n_dates": 503,
+        "hit_ratio": 0.4664378194843476,
+        "hit_ratio_cs_mean": 0.46663805724808477,
+        "sharpe_long_short": -0.1434452906023101,
+        "mean_ls_spread": -0.026227707033703206,
+        "ls_n_periods": 24
+      }
+    },
+    "test": {
+      "rows": 36085,
+      "metrics": {
+        "ic_mean": -0.1293312477155601,
+        "ic_median": -0.1275449231034001,
+        "rank_ic_mean": -0.11354099576480581,
+        "ic_n_dates": 648,
+        "hit_ratio": 0.5013440487737287,
+        "hit_ratio_cs_mean": 0.5019054644174631,
+        "sharpe_long_short": -2.4013832226320884,
+        "mean_ls_spread": -0.475832903860462,
+        "ls_n_periods": 32
+      }
+    }
+  },
+  "comparison_vs_baselines": {
+    "tft": {
+      "ic_mean": -0.1293312477155601,
+      "hit_ratio": 0.5013440487737287,
+      "sharpe_long_short": -2.4013832226320884
+    },
+    "baselines": {
+      "ridge": {
+        "model": "ridge",
+        "split": "test",
+        "ic_mean": 0.07263242270128793,
+        "rank_ic_mean": 0.09717435826100235,
+        "hit_ratio": 0.4893014755048366,
+        "sharpe_long_short": 2.050361033152454
+      },
+      "lightgbm": {
+        "model": "lightgbm",
+        "split": "test",
+        "ic_mean": -0.057793756901254614,
+        "rank_ic_mean": -0.06284701863798861,
+        "hit_ratio": 0.43462755761601213,
+        "sharpe_long_short": -1.2374038231198556
+      },
+      "xgboost": {
+        "model": "xgboost",
+        "split": "test",
+        "ic_mean": -0.0531771545338702,
+        "rank_ic_mean": -0.06442601326807613,
+        "hit_ratio": 0.4331119333125307,
+        "sharpe_long_short": -0.09866640865201001
+      }
+    },
+    "winner_ic": "ridge"
+  }
+}

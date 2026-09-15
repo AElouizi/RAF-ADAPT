@@ -1,0 +1,113 @@
+{
+  "best_params": {
+    "hidden_size": 16,
+    "attention_head_size": 4,
+    "dropout": 0.2,
+    "learning_rate": 0.00024970737145052745
+  },
+  "best_val_loss": 0.38502436876296997,
+  "best_trial_number": 7,
+  "n_trials": 8,
+  "max_epochs": 8,
+  "max_train_rows": 12000,
+  "hidden_sizes": [
+    16,
+    32
+  ],
+  "early_stopping_patience": 3,
+  "known_reals": [
+    "is_bull",
+    "is_neutral",
+    "is_bear"
+  ],
+  "trials": [
+    {
+      "number": 0,
+      "value": 0.41047391295433044,
+      "params": {
+        "hidden_size": 32,
+        "attention_head_size": 1,
+        "dropout": 0.3,
+        "learning_rate": 0.0015930522616241021
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 1,
+      "value": 0.40126490592956543,
+      "params": {
+        "hidden_size": 16,
+        "attention_head_size": 1,
+        "dropout": 0.3,
+        "learning_rate": 0.0011207606211860567
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 2,
+      "value": 0.4048808217048645,
+      "params": {
+        "hidden_size": 16,
+        "attention_head_size": 1,
+        "dropout": 0.3,
+        "learning_rate": 0.00025081156860452336
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 3,
+      "value": 0.40259286761283875,
+      "params": {
+        "hidden_size": 32,
+        "attention_head_size": 2,
+        "dropout": 0.3,
+        "learning_rate": 0.004138040112561018
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 4,
+      "value": 0.40095892548561096,
+      "params": {
+        "hidden_size": 16,
+        "attention_head_size": 1,
+        "dropout": 0.3,
+        "learning_rate": 0.00032927591344236165
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 5,
+      "value": 0.3956007957458496,
+      "params": {
+        "hidden_size": 16,
+        "attention_head_size": 2,
+        "dropout": 0.1,
+        "learning_rate": 0.006161049539380964
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 6,
+      "value": 0.4175473153591156,
+      "params": {
+        "hidden_size": 32,
+        "attention_head_size": 2,
+        "dropout": 0.2,
+        "learning_rate": 0.004544383960336014
+      },
+      "state": "TrialState.COMPLETE"
+    },
+    {
+      "number": 7,
+      "value": 0.38502436876296997,
+      "params": {
+        "hidden_size": 16,
+        "attention_head_size": 4,
+        "dropout": 0.2,
+        "learning_rate": 0.00024970737145052745
+      },
+      "state": "TrialState.COMPLETE"
+    }
+  ]
+}

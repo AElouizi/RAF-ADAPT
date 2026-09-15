@@ -1,0 +1,4 @@
+Strategie,n_months,n_SELL_moyen,n_univers_BUY_NEUTRAL_moyen,n_titres_panel_moyen,pct_SELL,pct_BUY,pct_NEUTRAL
+C1,84,11.6,45.29,56.88,0.2039,0.4278,0.3684
+C4-Knee (τ quantile),84,21.98,34.9,56.88,0.3864,0.3008,0.3129
+C4-B (SELL si score<0),84,30.77,26.11,56.88,0.541,0.3008,0.1582

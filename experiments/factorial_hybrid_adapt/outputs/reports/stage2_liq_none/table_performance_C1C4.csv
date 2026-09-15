@@ -1,0 +1,5 @@
+Configuration,cell,Return annuel,Volatilité,Sharpe,Sortino,CVaR,Max DD,Turnover,Liquidité (L pondéré),Nb positions,Total return,Alpha ann. vs MASI,Tracking error,n_months,n_days
+C1 Ridge,1,0.2797,0.1325,1.928,3.213,0.0185,-0.1248,0.898,0.7279,37.23,1.1058,0.0599,0.1075,30,761
+C2 Ridge + régime,2,0.2554,0.1326,1.782,2.902,0.0194,-0.1431,0.8984,0.7201,37.13,0.9893,0.041,0.1107,30,762
+C3 Hybrid,3,0.3274,0.1411,2.079,3.561,0.0189,-0.1217,0.9086,0.7423,30.77,1.3549,0.098,0.1143,30,762
+C4 Hybrid + régime,4,0.3032,0.1404,1.957,3.317,0.0193,-0.1306,0.933,0.7381,30.97,1.227,0.0794,0.1124,30,762

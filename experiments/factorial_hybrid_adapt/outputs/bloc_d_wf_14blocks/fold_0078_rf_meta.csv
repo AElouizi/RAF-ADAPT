@@ -1,0 +1,7 @@
+model_id,cell,groupe,fold_id,mois,date_rebalance,status,error,n_candidates,n_positions_selected,expected_alpha_selected,cvar_selected,liquidity_L_selected,n_pareto,turnover_vs_prev
+rf,,classique,78,2025-01,2025-01-31,ok,,20,16,0.522109,0.010796,0.9998,9,0.0
+rf,,classique,78,2025-02,2025-02-28,ok,,18,16,0.546288,0.01074,1.0,9,0.2598
+rf,,classique,78,2025-03,2025-03-28,ok,,22,20,0.702781,0.009104,1.0,9,0.4746
+rf,,classique,78,2025-04,2025-04-30,ok,,22,16,0.520467,0.013042,0.9994,9,0.4086
+rf,,classique,78,2025-05,2025-05-30,ok,,21,17,0.417086,0.013705,0.9999,9,0.2595
+rf,,classique,78,2025-06,2025-06-30,ok,,19,15,0.521636,0.014835,0.9997,9,0.2332

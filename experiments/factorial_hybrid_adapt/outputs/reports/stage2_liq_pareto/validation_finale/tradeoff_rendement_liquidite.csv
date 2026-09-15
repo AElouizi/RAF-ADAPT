@@ -1,0 +1,5 @@
+Configuration,Rendement,Sharpe,CVaR,Max DD,L portefeuille,Turnover
+C1 Ridge,0.3094,2.062,0.0186,-0.1171,0.8987,0.9257
+C2 Ridge + régime,0.3262,2.075,0.0197,-0.135,0.8837,0.8793
+C3 Hybrid,0.3535,2.195,0.0196,-0.1264,0.9036,0.9325
+C4 Hybrid + régime,0.3554,2.201,0.0196,-0.1187,0.8982,0.9191

@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-07-21T18:40:00.554844+00:00",
+  "project": "BVC Recommender — Étape 9",
+  "app_path": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\app.py",
+  "launch_command": "py -m streamlit run bvc_recommender/app.py",
+  "periods_available": [
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12",
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07"
+  ],
+  "quarters_available": [
+    "2023-Q1",
+    "2023-Q2",
+    "2023-Q3",
+    "2023-Q4",
+    "2024-Q1",
+    "2024-Q2",
+    "2024-Q3",
+    "2024-Q4",
+    "2025-Q1",
+    "2025-Q2",
+    "2025-Q3"
+  ],
+  "tabs": [
+    {
+      "id": 1,
+      "name": "Recommandations",
+      "features": [
+        "Top 20 classées (score TFT × liquidité)",
+        "Indicateurs clés (P/E, P/B, ROE, RSI, Mom 3M, VMQ)",
+        "Badges NOUVEAU / SORTI vs trimestre précédent"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Portefeuilles",
+      "features": [
+        "3 cartes Agressif / Équilibré / Défensif",
+        "Métriques backtest + répartition des poids"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Performance",
+      "features": [
+        "Courbes cumulées vs MASI / MASI20",
+        "Tableau métriques (Sharpe, Sortino, Calmar, CVaR, Hit, TO trim.)"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Historique",
+      "features": [
+        "Table des trimestres cliquable",
+        "Graphique de rotation trimestrielle"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Explication IA",
+      "features": [
+        "Valeurs SHAP LightGBM",
+        "Note de régime de marché (Mamdani)"
+      ]
+    }
+  ],
+  "constraints": [
+    "no look-ahead",
+    "carry-forward only",
+    "z-score cross-sectional",
+    "sigmoid liquidity",
+    "random_state=42"
+  ],
+  "dependencies": [
+    "streamlit",
+    "plotly",
+    "shap",
+    "lightgbm"
+  ]
+}

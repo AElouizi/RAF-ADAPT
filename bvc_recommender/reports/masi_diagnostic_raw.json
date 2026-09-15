@@ -1,0 +1,575 @@
+{
+  "total_count_exact": 15526,
+  "table_features_fondamentales": {
+    "exists": false,
+    "error": "{'message': \"Could not find the table 'public.features_fondamentales' in the schema cache\", 'code': 'PGRST205', 'hint': \"Perhaps you meant the table 'public.fondamentaux_rs'\", 'details': None}"
+  },
+  "table_features_techniques": {
+    "exists": false,
+    "error": "{'message': \"Could not find the table 'public.features_techniques' in the schema cache\", 'code': 'PGRST205', 'hint': \"Perhaps you meant the table 'public.entreprises'\", 'details': None}"
+  },
+  "fetched_rows_order_id": 15526,
+  "pagination_complete_id": true,
+  "fetched_rows_order_date": 15526,
+  "pagination_complete_date": true,
+  "supabase_analysis": {
+    "columns": [
+      "id",
+      "code_index",
+      "nom_index",
+      "date_index",
+      "valeur_index",
+      "valeur_haut",
+      "valeur_bas",
+      "variation_veille",
+      "variation_annee",
+      "capitalisation_marchande",
+      "drupal_id",
+      "scraped_at"
+    ],
+    "global_date_min": "2022-11-21",
+    "global_date_max": "2025-11-17",
+    "code_index_stats": [
+      {
+        "code_index": "ESGI",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_AGROALIMENTAIRE",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_ASSURANCES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_BANQUES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_BATIMENT",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_BOISSONS",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_CHIMIE",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_DISTRIBUTEURS",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_ELECTRICITE",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_EUR",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_INGENIERIES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_LOISIRS_HOTELS",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_MID_SMALL_CAP",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_MINES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_PETROLE_GAZ",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_RENTABILITE_NET",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_TRANSPORT",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_USD",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_SANTE",
+        "count": 724,
+        "date_min": "2022-12-14",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "FTSE_CSE_MOROCCO_15",
+        "count": 723,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      }
+    ],
+    "rows_before_2020": 0,
+    "pre2020_by_code": [],
+    "masi": {
+      "count": 741,
+      "date_min": "2022-11-21",
+      "date_max": "2025-11-17",
+      "covers_2010": false
+    },
+    "masi_variants": [
+      {
+        "code_index": "MASI",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_AGROALIMENTAIRE",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_ASSURANCES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_BANQUES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_BATIMENT",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_BOISSONS",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_CHIMIE",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_DISTRIBUTEURS",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_ELECTRICITE",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_EUR",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_INGENIERIES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_LOISIRS_HOTELS",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_MID_SMALL_CAP",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_MINES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_PETROLE_GAZ",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_RENTABILITE_NET",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_SANTE",
+        "count": 724,
+        "date_min": "2022-12-14",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_TRANSPORT",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_USD",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      }
+    ]
+  },
+  "count_masi_filter": 741,
+  "count_code_masi_lower": 0,
+  "count_pre2020_api": 0,
+  "count_masi_from_2010": 741,
+  "alt_table_masi_historique": {
+    "exists": false
+  },
+  "alt_table_market_data_masi": {
+    "exists": false
+  },
+  "alt_table_indices_masi": {
+    "exists": false
+  },
+  "alt_table_masi_historical": {
+    "exists": false
+  },
+  "database_url_configured": false,
+  "local_parquet": {
+    "columns": [
+      "id",
+      "code_index",
+      "nom_index",
+      "date_index",
+      "valeur_index",
+      "valeur_haut",
+      "valeur_bas",
+      "variation_veille",
+      "variation_annee",
+      "capitalisation_marchande",
+      "drupal_id",
+      "scraped_at"
+    ],
+    "global_date_min": "2022-11-21",
+    "global_date_max": "2025-11-17",
+    "code_index_stats": [
+      {
+        "code_index": "ESGI",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_AGROALIMENTAIRE",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_ASSURANCES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_BANQUES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_BATIMENT",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_BOISSONS",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_CHIMIE",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_DISTRIBUTEURS",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_ELECTRICITE",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_EUR",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_INGENIERIES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_LOISIRS_HOTELS",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_MID_SMALL_CAP",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_MINES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_PETROLE_GAZ",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_RENTABILITE_NET",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_TRANSPORT",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_USD",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_SANTE",
+        "count": 724,
+        "date_min": "2022-12-14",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "FTSE_CSE_MOROCCO_15",
+        "count": 723,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      }
+    ],
+    "rows_before_2020": 0,
+    "pre2020_by_code": [],
+    "masi": {
+      "count": 741,
+      "date_min": "2022-11-21",
+      "date_max": "2025-11-17",
+      "covers_2010": false
+    },
+    "masi_variants": [
+      {
+        "code_index": "MASI",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_AGROALIMENTAIRE",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_ASSURANCES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_BANQUES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_BATIMENT",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_BOISSONS",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_CHIMIE",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_DISTRIBUTEURS",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_ELECTRICITE",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_EUR",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_INGENIERIES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_LOISIRS_HOTELS",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_MID_SMALL_CAP",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_MINES",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_PETROLE_GAZ",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_RENTABILITE_NET",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_SANTE",
+        "count": 724,
+        "date_min": "2022-12-14",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_TRANSPORT",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      },
+      {
+        "code_index": "MASI_USD",
+        "count": 741,
+        "date_min": "2022-11-21",
+        "date_max": "2025-11-17"
+      }
+    ],
+    "available": true,
+    "path": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\data\\processed\\market_data_indices_historique.parquet",
+    "row_count": 15526
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "model_name": "random_forest",
+  "feature_columns": [
+    "beta_masi_z",
+    "breadth_ma50_z",
+    "ca_growth_yoy_z",
+    "dist_ma200_z",
+    "dist_ma20_z",
+    "dist_ma50_z",
+    "ebitda_growth_yoy_z",
+    "ev_ebitda_z",
+    "gearing_z",
+    "indicateur_liquidite_z",
+    "marge_ebitda_z",
+    "marge_nette_z",
+    "masi_mom_3m_z",
+    "mom_12_1_z",
+    "pb_z",
+    "pe_z",
+    "piotroski_score_z",
+    "resultat_growth_yoy_z",
+    "ret_12m_z",
+    "ret_1m_z",
+    "ret_3m_z",
+    "ret_6m_z",
+    "return_dispersion_z",
+    "roe_z",
+    "rsi_14_z",
+    "score_sante_z",
+    "turnover_ratio_z",
+    "vmq_20j_z",
+    "vmq_60j_z",
+    "vol_20d_z",
+    "vol_60d_z",
+    "vol_baissiere_20d_z",
+    "vol_universe_mean_z"
+  ],
+  "n_features": 33,
+  "include_regime": 0,
+  "clip_bounds": {
+    "lower": -5.2326193195143365,
+    "upper": 6.421041824560743
+  },
+  "best_params": {
+    "n_estimators": 100,
+    "max_depth": 4,
+    "min_samples_leaf": 20,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "tuning_metric": "rank_ic_mean (Spearman) on val",
+  "grid_history": [
+    {
+      "n_estimators": 100,
+      "max_depth": 4,
+      "min_samples_leaf": 20,
+      "rank_ic_val": 0.037221,
+      "ic_mean_val": 0.05980853460068914,
+      "hit_ratio_val": 0.5436645068394529
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 4,
+      "min_samples_leaf": 10,
+      "rank_ic_val": 0.03507,
+      "ic_mean_val": 0.044861496770037965,
+      "hit_ratio_val": 0.5428365730741541
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 4,
+      "min_samples_leaf": 5,
+      "rank_ic_val": 0.034777,
+      "ic_mean_val": 0.05696997198373382,
+      "hit_ratio_val": 0.5425125989920806
+    },
+    {
+      "n_estimators": 200,
+      "max_depth": 4,
+      "min_samples_leaf": 20,
+      "rank_ic_val": 0.016402,
+      "ic_mean_val": 0.05967937000578883,
+      "hit_ratio_val": 0.5444564434845213
+    },
+    {
+      "n_estimators": 200,
+      "max_depth": 4,
+      "min_samples_leaf": 5,
+      "rank_ic_val": 0.011923,
+      "ic_mean_val": 0.05343760241378225,
+      "hit_ratio_val": 0.5426565874730022
+    },
+    {
+      "n_estimators": 200,
+      "max_depth": 4,
+      "min_samples_leaf": 10,
+      "rank_ic_val": 0.010247,
+      "ic_mean_val": 0.04639010778121746,
+      "hit_ratio_val": 0.5425125989920806
+    },
+    {
+      "n_estimators": 400,
+      "max_depth": 4,
+      "min_samples_leaf": 5,
+      "rank_ic_val": 0.008646,
+      "ic_mean_val": 0.05675881465461766,
+      "hit_ratio_val": 0.5432685385169187
+    },
+    {
+      "n_estimators": 400,
+      "max_depth": 4,
+      "min_samples_leaf": 20,
+      "rank_ic_val": 0.006921,
+      "ic_mean_val": 0.054166664803047014,
+      "hit_ratio_val": 0.5434125269978402
+    },
+    {
+      "n_estimators": 400,
+      "max_depth": null,
+      "min_samples_leaf": 20,
+      "rank_ic_val": 0.006101,
+      "ic_mean_val": 0.010981336505861304,
+      "hit_ratio_val": 0.5264578833693304
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": null,
+      "min_samples_leaf": 20,
+      "rank_ic_val": 0.005838,
+      "ic_mean_val": 0.01443901976388887,
+      "hit_ratio_val": 0.5239380849532037
+    },
+    {
+      "n_estimators": 200,
+      "max_depth": null,
+      "min_samples_leaf": 20,
+      "rank_ic_val": 0.005519,
+      "ic_mean_val": 0.013817732419153992,
+      "hit_ratio_val": 0.5277177825773938
+    },
+    {
+      "n_estimators": 400,
+      "max_depth": 4,
+      "min_samples_leaf": 10,
+      "rank_ic_val": 0.004666,
+      "ic_mean_val": 0.044029045385080096,
+      "hit_ratio_val": 0.543304535637149
+    },
+    {
+      "n_estimators": 400,
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "rank_ic_val": 0.004218,
+      "ic_mean_val": 0.004068985805043277,
+      "hit_ratio_val": 0.5249460043196544
+    },
+    {
+      "n_estimators": 200,
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "rank_ic_val": 0.003037,
+      "ic_mean_val": 0.0014452168393304513,
+      "hit_ratio_val": 0.5254859611231102
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "rank_ic_val": 0.00102,
+      "ic_mean_val": -0.0016069659901594708,
+      "hit_ratio_val": 0.5248020158387329
+    },
+    {
+      "n_estimators": 200,
+      "max_depth": null,
+      "min_samples_leaf": 10,
+      "rank_ic_val": -0.000692,
+      "ic_mean_val": -0.013783643184348235,
+      "hit_ratio_val": 0.5258819294456444
+    },
+    {
+      "n_estimators": 400,
+      "max_depth": null,
+      "min_samples_leaf": 10,
+      "rank_ic_val": -0.000869,
+      "ic_mean_val": -0.014418896924120943,
+      "hit_ratio_val": 0.5280777537796977
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": null,
+      "min_samples_leaf": 10,
+      "rank_ic_val": -0.001019,
+      "ic_mean_val": -0.015650007151069,
+      "hit_ratio_val": 0.5251619870410367
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "rank_ic_val": -0.02468,
+      "ic_mean_val": 0.010703927711105985,
+      "hit_ratio_val": 0.506695464362851
+    },
+    {
+      "n_estimators": 200,
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "rank_ic_val": -0.025206,
+      "ic_mean_val": 0.010694090692974959,
+      "hit_ratio_val": 0.5061915046796256
+    },
+    {
+      "n_estimators": 400,
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "rank_ic_val": -0.028315,
+      "ic_mean_val": 0.006171993894792658,
+      "hit_ratio_val": 0.5028077753779697
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_leaf": 5,
+      "rank_ic_val": -0.031169,
+      "ic_mean_val": 0.009211456915695361,
+      "hit_ratio_val": 0.4945644348452124
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_leaf": 20,
+      "rank_ic_val": -0.033966,
+      "ic_mean_val": 0.03345543708167667,
+      "hit_ratio_val": 0.49380849532037435
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "rank_ic_val": -0.03615,
+      "ic_mean_val": -0.008495757360333932,
+      "hit_ratio_val": 0.5079193664506839
+    },
+    {
+      "n_estimators": 200,
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "rank_ic_val": -0.036828,
+      "ic_mean_val": -0.008588566641267796,
+      "hit_ratio_val": 0.5022678185745141
+    },
+    {
+      "n_estimators": 400,
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "rank_ic_val": -0.037686,
+      "ic_mean_val": -0.008506309691757995,
+      "hit_ratio_val": 0.4982361411087113
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 12,
+      "min_samples_leaf": 10,
+      "rank_ic_val": -0.038723,
+      "ic_mean_val": -0.02534976617393653,
+      "hit_ratio_val": 0.5044996400287977
+    },
+    {
+      "n_estimators": 200,
+      "max_depth": 8,
+      "min_samples_leaf": 5,
+      "rank_ic_val": -0.039353,
+      "ic_mean_val": 0.00364348022085285,
+      "hit_ratio_val": 0.49078473722102234
+    },
+    {
+      "n_estimators": 400,
+      "max_depth": 12,
+      "min_samples_leaf": 10,
+      "rank_ic_val": -0.03962,
+      "ic_mean_val": -0.028682779038800135,
+      "hit_ratio_val": 0.49848812095032397
+    },
+    {
+      "n_estimators": 400,
+      "max_depth": 8,
+      "min_samples_leaf": 5,
+      "rank_ic_val": -0.039666,
+      "ic_mean_val": 0.004021992486952176,
+      "hit_ratio_val": 0.4944924406047516
+    },
+    {
+      "n_estimators": 200,
+      "max_depth": 8,
+      "min_samples_leaf": 20,
+      "rank_ic_val": -0.039684,
+      "ic_mean_val": 0.02614627809288703,
+      "hit_ratio_val": 0.49269258459323256
+    },
+    {
+      "n_estimators": 200,
+      "max_depth": 12,
+      "min_samples_leaf": 10,
+      "rank_ic_val": -0.040728,
+      "ic_mean_val": -0.027545541956965715,
+      "hit_ratio_val": 0.5013678905687545
+    },
+    {
+      "n_estimators": 400,
+      "max_depth": 8,
+      "min_samples_leaf": 20,
+      "rank_ic_val": -0.041381,
+      "ic_mean_val": 0.02075145723937368,
+      "hit_ratio_val": 0.49352051835853133
+    },
+    {
+      "n_estimators": 100,
+      "max_depth": 8,
+      "min_samples_leaf": 10,
+      "rank_ic_val": -0.043985,
+      "ic_mean_val": -0.02177693996723968,
+      "hit_ratio_val": 0.4921166306695464
+    },
+    {
+      "n_estimators": 200,
+      "max_depth": 8,
+      "min_samples_leaf": 10,
+      "rank_ic_val": -0.046747,
+      "ic_mean_val": -0.024504894738982697,
+      "hit_ratio_val": 0.489524838012959
+    },
+    {
+      "n_estimators": 400,
+      "max_depth": 8,
+      "min_samples_leaf": 10,
+      "rank_ic_val": -0.050419,
+      "ic_mean_val": -0.025007991468605207,
+      "hit_ratio_val": 0.49377249820014396
+    }
+  ],
+  "splits": {
+    "val": {
+      "rows": 27780,
+      "metrics": {
+        "ic_mean": 0.05980853460068913,
+        "ic_median": 0.042697412997141124,
+        "rank_ic_mean": 0.03722062114452684,
+        "ic_n_dates": 503,
+        "hit_ratio": 0.5436645068394529,
+        "hit_ratio_cs_mean": 0.5432200479779273,
+        "sharpe_long_short": 0.28865275290796744,
+        "mean_ls_spread": 0.056500075046783484,
+        "ls_n_periods": 24
+      }
+    },
+    "test": {
+      "rows": 42387,
+      "metrics": {
+        "ic_mean": -0.048349175760102336,
+        "ic_median": -0.057802976194152866,
+        "rank_ic_mean": 0.02464690962786594,
+        "ic_n_dates": 648,
+        "hit_ratio": 0.40918206053742895,
+        "hit_ratio_cs_mean": 0.4091292120964102,
+        "sharpe_long_short": -0.32662497037355,
+        "mean_ls_spread": -0.05921673803358056,
+        "ls_n_periods": 32
+      }
+    }
+  }
+}

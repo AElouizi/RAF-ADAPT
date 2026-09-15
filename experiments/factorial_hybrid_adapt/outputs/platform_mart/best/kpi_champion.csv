@@ -1,0 +1,2 @@
+model_id,groupe,ann_return,sharpe,sortino,cvar_95_realized,max_drawdown,turnover_mean,liquidity_mean,total_return_block,n_blocks,strategy_label
+c3_lightgbm,C3_lightgbm,0.1737785714285714,1.4837142857142855,2.4705000000000004,0.0155857142857142,-0.1526857142857142,0.9885541273712892,0.5703316746634463,0.8150136475469445,14,C3 — LightGBM

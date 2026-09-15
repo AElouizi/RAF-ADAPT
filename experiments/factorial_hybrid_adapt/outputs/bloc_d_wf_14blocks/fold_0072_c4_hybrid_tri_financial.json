@@ -1,0 +1,14 @@
+{
+  "fold_id": 72,
+  "model_id": "c4_hybrid_tri",
+  "groupe": "C4_hybrid_tri",
+  "ann_return": 0.2789,
+  "sharpe": 1.805,
+  "sortino": 3.044,
+  "cvar_95_realized": 0.0196,
+  "max_drawdown": -0.1095,
+  "turnover_mean": 0.7689096858171975,
+  "liquidity_mean": 0.7674985907846933,
+  "total_return_block": 0.49080865227479253,
+  "n_days": 409
+}

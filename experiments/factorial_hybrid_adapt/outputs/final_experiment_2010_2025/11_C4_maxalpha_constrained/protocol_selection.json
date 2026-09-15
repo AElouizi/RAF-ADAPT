@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-08-15T12:02:11.198659+00:00",
+  "nsga": "unchanged frozen Pareto C4 (3 obj Alpha/CVaR/L, pop=36 gen=30)",
+  "selection_old": "knee / distance to utopia",
+  "selection_new": "max expected_alpha_opt on Pareto s.t. protocol constraints",
+  "constraints": {
+    "cvar": "CVaR_95 <= 0.9 * CVaR_MASI (as-of rebalance, same as NSGA)",
+    "cvar_masi_ratio": 0.9,
+    "liquidity": "portfolio L=sigmoid(VMQ) >= sigmoid(500000 MAD)",
+    "l_min": 0.9820137900379085,
+    "w_max": 0.4,
+    "not_recalibrated_on_backtest": true
+  },
+  "fallback_hierarchy": [
+    "cvar_and_L",
+    "cvar_only",
+    "cvar_relaxed_and_L",
+    "cvar_relaxed_only",
+    "unconstrained"
+  ],
+  "eval_window": "2018-07 → 2025-06",
+  "n_months": 84,
+  "feasibility_stage_counts": {
+    "cvar_only": 72,
+    "cvar_and_L": 12
+  },
+  "pct_same_as_knee": 0.0,
+  "pct_same_as_unconstrained_max_alpha": 0.6190476190476191,
+  "pct_L_ok": 0.14285714285714285,
+  "pct_cvar_ok": 1.0,
+  "transaction_cost": 0.003,
+  "pareto_source": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\experiments\\factorial_hybrid_adapt\\outputs\\portfolios_stage2_final_pareto"
+}

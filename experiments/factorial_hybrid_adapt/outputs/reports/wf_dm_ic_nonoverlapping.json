@@ -1,0 +1,96 @@
+{
+  "scope": "14_blocs_non_chevauchants",
+  "metric": "Rank-IC (Spearman) per 6m test block",
+  "loss": "-Rank-IC",
+  "n_blocks": 14,
+  "ic_by_cell": {
+    "1": {
+      "mean": 0.0445784149346933,
+      "median": 0.0348261090783734,
+      "std": 0.11717953522416277
+    },
+    "2": {
+      "mean": 0.0443983319543785,
+      "median": 0.0322673992983228,
+      "std": 0.11685920974454064
+    },
+    "3": {
+      "mean": 0.04890227516291244,
+      "median": 0.03532854171393285,
+      "std": 0.11201584689966886
+    },
+    "4": {
+      "mean": 0.04914531165388526,
+      "median": 0.0378658703332142,
+      "std": 0.11221935840451058
+    }
+  },
+  "effects": {
+    "adaptation": -0.00018008298031479963,
+    "hybridation": 0.004323860228219144,
+    "interaction": 0.00042311947128762656
+  },
+  "dm_tests": [
+    {
+      "pair": "C1_vs_C2",
+      "label": "adaptation (C2 vs C1)",
+      "delta_IC_mean": -0.00018008298031479963,
+      "mean_loss_diff": -0.00018008298031480918,
+      "dm_stat": -0.23560837338907567,
+      "dm_stat_hln": -0.22703790950657168,
+      "pvalue": 0.8174075970929322,
+      "pvalue_hln": 0.8239255564952415,
+      "n_blocks": 14,
+      "significant_5pct_hln": false
+    },
+    {
+      "pair": "C1_vs_C3",
+      "label": "hybridation (C3 vs C1)",
+      "delta_IC_mean": 0.004323860228219144,
+      "mean_loss_diff": 0.004323860228219135,
+      "dm_stat": 0.34813966218886666,
+      "dm_stat_hln": 0.3354757727101612,
+      "pvalue": 0.7333081247647495,
+      "pvalue_hln": 0.7426183788360792,
+      "n_blocks": 14,
+      "significant_5pct_hln": false
+    },
+    {
+      "pair": "C1_vs_C4",
+      "label": "combine (C4 vs C1)",
+      "delta_IC_mean": 0.004566896719191964,
+      "mean_loss_diff": 0.004566896719191958,
+      "dm_stat": 0.3637854079339478,
+      "dm_stat_hln": 0.35055239055501436,
+      "pvalue": 0.7218661474041297,
+      "pvalue_hln": 0.731539245829371,
+      "n_blocks": 14,
+      "significant_5pct_hln": false
+    },
+    {
+      "pair": "C2_vs_C4",
+      "label": "hybridation | regime (C4 vs C2)",
+      "delta_IC_mean": 0.004746979699506763,
+      "mean_loss_diff": 0.004746979699506765,
+      "dm_stat": 0.3855280598019234,
+      "dm_stat_hln": 0.37150413414641265,
+      "pvalue": 0.7060808696991416,
+      "pvalue_hln": 0.7162466642272853,
+      "n_blocks": 14,
+      "significant_5pct_hln": false
+    },
+    {
+      "pair": "C3_vs_C4",
+      "label": "adaptation | hybrid (C4 vs C3)",
+      "delta_IC_mean": 0.00024303649097281999,
+      "mean_loss_diff": 0.00024303649097282308,
+      "dm_stat": 0.34901803390453606,
+      "dm_stat_hln": 0.3363221928743799,
+      "pvalue": 0.7326639671351506,
+      "pvalue_hln": 0.7419947713831512,
+      "n_blocks": 14,
+      "significant_5pct_hln": false
+    }
+  ],
+  "interpretation_note": "Echantillon petit (n=14). IC_std ~0.11-0.12 domine les ecarts entre cellules ; une moyenne/mediane plus haute n'implique pas significativite DM."
+}

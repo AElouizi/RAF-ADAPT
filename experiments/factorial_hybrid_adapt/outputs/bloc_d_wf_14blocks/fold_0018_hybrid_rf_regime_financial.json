@@ -1,0 +1,14 @@
+{
+  "fold_id": 18,
+  "model_id": "hybrid_rf_regime",
+  "groupe": "hybride_regime",
+  "ann_return": 0.0716,
+  "sharpe": 0.593,
+  "sortino": 0.893,
+  "cvar_95_realized": 0.02,
+  "max_drawdown": -0.2861,
+  "turnover_mean": 1.0370929492314203,
+  "liquidity_mean": 0.9999999992565246,
+  "total_return_block": 0.5243253365153175,
+  "n_days": 1537
+}

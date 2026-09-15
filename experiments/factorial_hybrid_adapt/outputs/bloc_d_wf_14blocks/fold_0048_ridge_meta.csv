@@ -1,0 +1,7 @@
+model_id,cell,groupe,fold_id,mois,date_rebalance,status,error,n_candidates,n_positions_selected,expected_alpha_selected,cvar_selected,liquidity_L_selected,n_pareto,turnover_vs_prev
+ridge,,classique,48,2022-07,2022-07-29,ok,,18,15,0.145116,0.013171,0.9993,9,0.0
+ridge,,classique,48,2022-08,2022-08-31,ok,,17,15,0.138288,0.013091,0.9994,9,0.2396
+ridge,,classique,48,2022-09,2022-09-30,ok,,27,22,0.196354,0.011492,0.9991,7,0.5471
+ridge,,classique,48,2022-10,2022-10-31,ok,,18,14,0.118795,0.013484,0.999,9,0.2743
+ridge,,classique,48,2022-11,2022-11-30,ok,,17,13,0.101859,0.015594,0.9995,9,0.4345
+ridge,,classique,48,2022-12,2022-12-30,ok,,23,18,0.20715,0.013833,0.9995,9,0.5414

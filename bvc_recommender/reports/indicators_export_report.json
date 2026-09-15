@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-06-12T22:30:29.183714+00:00",
+  "project": "BVC Recommender — Export indicateurs",
+  "excel_path": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\exports\\indicateurs_bvc.xlsx",
+  "supabase": {
+    "fundamental": {
+      "table": "features_fondamentales",
+      "ok": true,
+      "rows_written": 1268,
+      "error": null,
+      "fallback_local": null
+    },
+    "technical": {
+      "table": "features_techniques",
+      "ok": false,
+      "rows_written": 0,
+      "error": "Server disconnected without sending a response.",
+      "fallback_local": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\data\\features\\features_techniques.parquet"
+    },
+    "market_context": {
+      "table": "features_indices",
+      "ok": false,
+      "rows_written": 0,
+      "error": "[Errno 11001] getaddrinfo failed",
+      "fallback_local": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\data\\features\\features_indices.parquet"
+    }
+  },
+  "row_counts": {
+    "features_fondamentales": 1268,
+    "features_techniques": 258086,
+    "features_indices": 4067
+  }
+}

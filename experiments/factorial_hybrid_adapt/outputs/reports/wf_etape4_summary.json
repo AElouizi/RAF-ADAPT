@@ -1,0 +1,87 @@
+{
+  "scope": "plis_mensuels_chevauchants",
+  "n_folds": 81,
+  "aggregation": [
+    {
+      "cellule": 1,
+      "modele": "ridge",
+      "regime": 0,
+      "n_folds": 81,
+      "IC_mean": 0.0406629064604739,
+      "IC_median": 0.0406437501278878,
+      "IC_std": 0.12139877052045903,
+      "IC_q25": -0.028475497173175,
+      "IC_q75": 0.1026476415863872,
+      "pct_folds_IC_positive": 0.6049382716049383,
+      "hit_mean": 0.5118162146062708,
+      "hit_median": 0.5177791640673737,
+      "hit_std": 0.04254109543254378,
+      "sharpe_ls_mean": 0.7767155181612602,
+      "sharpe_ls_std": 3.3055128473832016
+    },
+    {
+      "cellule": 2,
+      "modele": "ridge",
+      "regime": 1,
+      "n_folds": 81,
+      "IC_mean": 0.04064065875129733,
+      "IC_median": 0.0452857621447155,
+      "IC_std": 0.12066567124234023,
+      "IC_q25": -0.0284033025997561,
+      "IC_q75": 0.1003967092122798,
+      "pct_folds_IC_positive": 0.6296296296296297,
+      "hit_mean": 0.509337182463548,
+      "hit_median": 0.5115506985751833,
+      "hit_std": 0.04571104325080021,
+      "sharpe_ls_mean": 0.7651925490005247,
+      "sharpe_ls_std": 3.235431284646955
+    },
+    {
+      "cellule": 3,
+      "modele": "hybrid",
+      "regime": 0,
+      "n_folds": 81,
+      "IC_mean": 0.04323659078166456,
+      "IC_median": 0.0573980199847351,
+      "IC_std": 0.12131681430560433,
+      "IC_q25": -0.0224205472836566,
+      "IC_q75": 0.1216230892018519,
+      "pct_folds_IC_positive": 0.6296296296296297,
+      "hit_mean": 0.5249755540077189,
+      "hit_median": 0.5243818681318682,
+      "hit_std": 0.043811722731698435,
+      "sharpe_ls_mean": 0.7024977808335724,
+      "sharpe_ls_std": 4.112438776786563
+    },
+    {
+      "cellule": 4,
+      "modele": "hybrid",
+      "regime": 1,
+      "n_folds": 81,
+      "IC_mean": 0.04326878682239068,
+      "IC_median": 0.0578685668575294,
+      "IC_std": 0.1210973988550012,
+      "IC_q25": -0.0208902305152752,
+      "IC_q75": 0.1217903356083673,
+      "pct_folds_IC_positive": 0.6419753086419753,
+      "hit_mean": 0.5249220287999268,
+      "hit_median": 0.5240384615384616,
+      "hit_std": 0.043084163784013786,
+      "sharpe_ls_mean": 0.7398383766744603,
+      "sharpe_ls_std": 3.9836846541884485
+    }
+  ],
+  "effects_IC_descriptive": {
+    "effet_adaptation": -2.2e-05,
+    "effet_hybridation": 0.002574,
+    "effet_interaction": 5.4e-05,
+    "note": "Descriptif sur plis chevauchants — significativite = etape 6 (blocs)."
+  },
+  "distinction": "Metriques descriptives = plis chevauchants (n=81). Diebold-Mariano + allocation portefeuille = blocs non-chevauchants (etapes 5-6).",
+  "artifacts": {
+    "aggregation": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\experiments\\factorial_hybrid_adapt\\outputs\\reports\\wf_etape4_aggregation.csv",
+    "timeseries_csv": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\experiments\\factorial_hybrid_adapt\\outputs\\reports\\wf_etape4_ic_by_fold.csv",
+    "timeseries_png": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\experiments\\factorial_hybrid_adapt\\outputs\\reports\\wf_etape4_ic_timeseries.png",
+    "boxplot_png": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\experiments\\factorial_hybrid_adapt\\outputs\\reports\\wf_etape4_ic_boxplot.png"
+  }
+}

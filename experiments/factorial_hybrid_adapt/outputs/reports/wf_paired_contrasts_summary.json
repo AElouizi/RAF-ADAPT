@@ -1,0 +1,159 @@
+{
+  "primary_scope": "14_blocs_non_chevauchants",
+  "secondary_scope": "81_plis_chevauchants",
+  "metric": "Rank-IC (Spearman) par fenetre test",
+  "primary": [
+    {
+      "contrast": "regime_on_ridge",
+      "formula": "C2-C1",
+      "label": "Effet regime | Ridge",
+      "n": 14,
+      "mean": -0.00018008298031480918,
+      "median": -0.00046313503113216276,
+      "std": 0.002859867855436814,
+      "ci95_low": -0.001831321519242891,
+      "ci95_high": 0.0014711555586132726,
+      "wilcoxon_stat": 33.0,
+      "pvalue_wilcoxon": 0.2412109375,
+      "significant_5pct": false,
+      "conclusion": "Pas d'effet significatif"
+    },
+    {
+      "contrast": "regime_on_hybrid",
+      "formula": "C4-C3",
+      "label": "Effet regime | Hybrid",
+      "n": 14,
+      "mean": 0.00024303649097282308,
+      "median": 0.00014979646605684654,
+      "std": 0.002605479354550519,
+      "ci95_low": -0.0012613225004527286,
+      "ci95_high": 0.0017473954823983746,
+      "wilcoxon_stat": 52.0,
+      "pvalue_wilcoxon": 1.0,
+      "significant_5pct": false,
+      "conclusion": "Pas d'effet significatif"
+    },
+    {
+      "contrast": "hybrid_vs_ridge",
+      "formula": "C3-C1",
+      "label": "Hybrid vs Ridge (sans regime)",
+      "n": 14,
+      "mean": 0.004323860228219135,
+      "median": 0.013941852005014597,
+      "std": 0.04647101528327836,
+      "ci95_low": -0.02250770516491149,
+      "ci95_high": 0.031155425621349757,
+      "wilcoxon_stat": 44.0,
+      "pvalue_wilcoxon": 0.625732421875,
+      "significant_5pct": false,
+      "conclusion": "Pas d'effet significatif"
+    },
+    {
+      "contrast": "interaction",
+      "formula": "C4-C3-(C2-C1)",
+      "label": "Interaction modele x regime",
+      "n": 14,
+      "mean": 0.0004231194712876322,
+      "median": 0.00032769609192031136,
+      "std": 0.0011439176894496646,
+      "ci95_low": -0.00023735893878643922,
+      "ci95_high": 0.0010835978813617036,
+      "wilcoxon_stat": 32.0,
+      "pvalue_wilcoxon": 0.216552734375,
+      "significant_5pct": false,
+      "conclusion": "Pas d'effet significatif"
+    }
+  ],
+  "secondary": [
+    {
+      "contrast": "regime_on_ridge",
+      "formula": "C2-C1",
+      "label": "Effet regime | Ridge",
+      "n": 81,
+      "mean": -2.224770917657274e-05,
+      "median": 3.4910070537103044e-05,
+      "std": 0.0035822874079242915,
+      "ci95_low": -0.0008143565019466322,
+      "ci95_high": 0.0007698610835934868,
+      "wilcoxon_stat": 1607.0,
+      "pvalue_wilcoxon": 0.8011237406683931,
+      "significant_5pct": false,
+      "conclusion": "Pas d'effet significatif"
+    },
+    {
+      "contrast": "regime_on_hybrid",
+      "formula": "C4-C3",
+      "label": "Effet regime | Hybrid",
+      "n": 81,
+      "mean": 3.2196040726126384e-05,
+      "median": 3.22360070963007e-05,
+      "std": 0.0029920287485286586,
+      "ci95_low": -0.000629395844583718,
+      "ci95_high": 0.0006937879260359708,
+      "wilcoxon_stat": 1646.0,
+      "pvalue_wilcoxon": 0.9455706445611634,
+      "significant_5pct": false,
+      "conclusion": "Pas d'effet significatif"
+    },
+    {
+      "contrast": "hybrid_vs_ridge",
+      "formula": "C3-C1",
+      "label": "Hybrid vs Ridge (sans regime)",
+      "n": 81,
+      "mean": 0.002573684321190648,
+      "median": 0.007322360001585815,
+      "std": 0.04515191292700748,
+      "ci95_low": -0.007410223491665277,
+      "ci95_high": 0.012557592134046574,
+      "wilcoxon_stat": 1375.0,
+      "pvalue_wilcoxon": 0.17887911437683568,
+      "significant_5pct": false,
+      "conclusion": "Pas d'effet significatif"
+    },
+    {
+      "contrast": "interaction",
+      "formula": "C4-C3-(C2-C1)",
+      "label": "Interaction modele x regime",
+      "n": 81,
+      "mean": 5.444374990269915e-05,
+      "median": 5.0099552742704535e-05,
+      "std": 0.001970208182243561,
+      "ci95_low": -0.0003812050540683145,
+      "ci95_high": 0.0004900925538737129,
+      "wilcoxon_stat": 1541.0,
+      "pvalue_wilcoxon": 0.5736803273736797,
+      "significant_5pct": false,
+      "conclusion": "Pas d'effet significatif"
+    }
+  ],
+  "descriptive_14": [
+    {
+      "cellule": 1,
+      "config": "Ridge sans regime",
+      "IC_mean": 0.0445784149346933,
+      "IC_median": 0.0348261090783734,
+      "IC_std": 0.11717953522416277
+    },
+    {
+      "cellule": 2,
+      "config": "Ridge + regime",
+      "IC_mean": 0.0443983319543785,
+      "IC_median": 0.0322673992983228,
+      "IC_std": 0.11685920974454064
+    },
+    {
+      "cellule": 3,
+      "config": "Hybrid sans regime",
+      "IC_mean": 0.04890227516291244,
+      "IC_median": 0.03532854171393285,
+      "IC_std": 0.11201584689966886
+    },
+    {
+      "cellule": 4,
+      "config": "Hybrid + regime",
+      "IC_mean": 0.04914531165388526,
+      "IC_median": 0.0378658703332142,
+      "IC_std": 0.11221935840451058
+    }
+  ]
+}

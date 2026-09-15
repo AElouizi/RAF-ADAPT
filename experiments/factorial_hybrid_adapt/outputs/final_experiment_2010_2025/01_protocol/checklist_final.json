@@ -1,0 +1,20 @@
+{
+  "periode_2010_2025_demandee": true,
+  "mois_impossibles_documentes": "2010-01..2018-06",
+  "mois_effectivement_testes": 84,
+  "filtre_VMQ_500k": false,
+  "liquidite_objectif_pareto_uniquement": true,
+  "SELL_exclu": true,
+  "nsga_3_objectifs": true,
+  "front_pareto_complet": true,
+  "selection_knee": true,
+  "no_lookahead": true,
+  "couts_transaction_0_003": true,
+  "C1_C4_comparables": true,
+  "MASI_comparable": true,
+  "EW_comparable": true,
+  "tests_statistiques": true,
+  "sous_periodes": true,
+  "robustesse_liquidite": true,
+  "plateforme_web_non_modifiee": true
+}

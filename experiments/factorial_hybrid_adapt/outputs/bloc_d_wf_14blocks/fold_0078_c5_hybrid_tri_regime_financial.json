@@ -1,0 +1,14 @@
+{
+  "fold_id": 78,
+  "model_id": "c5_hybrid_tri_regime",
+  "groupe": "C5_hybrid_tri_regime",
+  "ann_return": 0.2381,
+  "sharpe": 1.353,
+  "sortino": 2.191,
+  "cvar_95_realized": 0.0245,
+  "max_drawdown": -0.1143,
+  "turnover_mean": 1.029040294735538,
+  "liquidity_mean": 0.7879810901663018,
+  "total_return_block": 0.27433622085868237,
+  "n_days": 286
+}

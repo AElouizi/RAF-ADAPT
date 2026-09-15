@@ -1,0 +1,54 @@
+{
+  "version": "c1c5_v1",
+  "frozen_at": "2026-08-27",
+  "description": "5 stratégies de sélection (Bloc B) et d'allocation (Bloc D)",
+  "strategies": [
+    {
+      "cell": "C1",
+      "model_id": "c1_ridge",
+      "algorithm": "Ridge (sklearn, alpha=1.0)",
+      "regime": false,
+      "hybrid": false
+    },
+    {
+      "cell": "C2",
+      "model_id": "c2_rf",
+      "algorithm": "Random Forest (grille hyperparamètres walk-forward)",
+      "regime": false,
+      "hybrid": false
+    },
+    {
+      "cell": "C3",
+      "model_id": "c3_lightgbm",
+      "algorithm": "LightGBM (Optuna, config gelée)",
+      "regime": false,
+      "hybrid": false
+    },
+    {
+      "cell": "C4",
+      "model_id": "c4_hybrid_tri",
+      "algorithm": "Ridge + RF + LightGBM (z-score CS, poids 1/3 chacun)",
+      "regime": false,
+      "hybrid": true
+    },
+    {
+      "cell": "C5",
+      "model_id": "c5_hybrid_tri_regime",
+      "algorithm": "Ridge + RF + LightGBM + features régime Bloc A",
+      "regime": true,
+      "hybrid": true
+    }
+  ],
+  "selection_rule": {
+    "type": "tau_quantile_expanding",
+    "labels": ["BUY", "NEUTRAL", "SELL"],
+    "sell_excluded_before_nsga": true
+  },
+  "allocation": {
+    "algorithm": "NSGA-III",
+    "selection_rule": "knee",
+    "w_max": 0.1,
+    "pop_size": 36,
+    "n_gen": 30
+  }
+}

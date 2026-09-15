@@ -1,0 +1,271 @@
+{
+  "generated_at": "2026-06-10 14:58 UTC",
+  "project": "BVC Recommender — Étape 1",
+  "tables": [
+    {
+      "name": "raw/fondamentaux_rs",
+      "row_count": 14040,
+      "column_count": 5,
+      "date_min": "2014-06-30",
+      "date_max": "2025-12-31",
+      "missing_pct": {
+        "id": 0.0,
+        "ticker": 0.0,
+        "item_id": 0.0,
+        "date": 0.0,
+        "montant": 20.31
+      },
+      "status": "OK",
+      "notes": []
+    },
+    {
+      "name": "raw/donnees_financieres",
+      "row_count": 360133,
+      "column_count": 18,
+      "date_min": null,
+      "date_max": null,
+      "missing_pct": {
+        "id": 0.0,
+        "entreprise_id": 0.0,
+        "indicateur_id": 0.0,
+        "periode_id": 0.0,
+        "source_id": 0.0,
+        "type_etat_id": 0.0,
+        "valeur": 0.0,
+        "unite": 0.0,
+        "type_compte": 0.0,
+        "score_qualite": 0.0,
+        "statut_validation": 0.0,
+        "commentaire_validation": 100.0,
+        "valide_par": 100.0,
+        "valide_le": 100.0,
+        "methode_calcul": 100.0,
+        "donnees_brutes": 100.0,
+        "created_at": 0.0,
+        "updated_at": 0.0
+      },
+      "status": "OK",
+      "notes": []
+    },
+    {
+      "name": "raw/market_data_cours_historique",
+      "row_count": 258086,
+      "column_count": 17,
+      "date_min": "2010-01-04",
+      "date_max": "2026-05-18",
+      "missing_pct": {
+        "id": 0.0,
+        "instrument_id": 0.0,
+        "ticker": 0.0,
+        "date_cours": 0.0,
+        "prix_ouverture": 80.76,
+        "prix_cloture": 0.35,
+        "prix_courant": 0.0,
+        "prix_haut": 80.76,
+        "prix_bas": 80.76,
+        "volume": 80.76,
+        "titres_echanges": 80.76,
+        "nombre_transactions": 76.42,
+        "capitalisation": 75.5,
+        "prix_ajuste": 75.5,
+        "ratio_consolide": 75.5,
+        "drupal_id": 99.42,
+        "scraped_at": 0.0
+      },
+      "status": "WARNING",
+      "notes": [
+        "missing médian 75.5%"
+      ]
+    },
+    {
+      "name": "raw/market_data_indices_historique",
+      "row_count": 18886,
+      "column_count": 12,
+      "date_min": "2010-01-04",
+      "date_max": "2025-11-17",
+      "missing_pct": {
+        "id": 0.0,
+        "code_index": 0.0,
+        "nom_index": 100.0,
+        "date_index": 0.0,
+        "valeur_index": 0.0,
+        "valeur_haut": 100.0,
+        "valeur_bas": 100.0,
+        "variation_veille": 100.0,
+        "variation_annee": 100.0,
+        "capitalisation_marchande": 100.0,
+        "drupal_id": 17.79,
+        "scraped_at": 0.0
+      },
+      "status": "WARNING",
+      "notes": [
+        "missing médian 58.9%"
+      ]
+    },
+    {
+      "name": "clean/fondamentaux_rs",
+      "row_count": 14040,
+      "column_count": 7,
+      "date_min": "2014-06-30",
+      "date_max": "2025-12-31",
+      "missing_pct": {
+        "id": 0.0,
+        "ticker": 0.0,
+        "item_id": 0.0,
+        "date": 0.0,
+        "montant": 14.02,
+        "date_fin": 0.0,
+        "publication_date": 0.0
+      },
+      "status": "OK",
+      "notes": []
+    },
+    {
+      "name": "clean/donnees_financieres",
+      "row_count": 138010,
+      "column_count": 18,
+      "date_min": null,
+      "date_max": null,
+      "missing_pct": {
+        "id": 0.0,
+        "entreprise_id": 0.0,
+        "indicateur_id": 0.0,
+        "periode_id": 0.0,
+        "source_id": 0.0,
+        "type_etat_id": 0.0,
+        "valeur": 0.0,
+        "unite": 0.0,
+        "type_compte": 0.0,
+        "score_qualite": 0.0,
+        "statut_validation": 0.0,
+        "commentaire_validation": 100.0,
+        "valide_par": 100.0,
+        "valide_le": 100.0,
+        "methode_calcul": 100.0,
+        "donnees_brutes": 100.0,
+        "created_at": 0.0,
+        "updated_at": 0.0
+      },
+      "status": "OK",
+      "notes": []
+    },
+    {
+      "name": "clean/market_data_cours_historique",
+      "row_count": 258086,
+      "column_count": 17,
+      "date_min": "2010-01-04",
+      "date_max": "2026-05-18",
+      "missing_pct": {
+        "id": 0.0,
+        "instrument_id": 0.0,
+        "ticker": 0.0,
+        "date_cours": 0.0,
+        "prix_ouverture": 75.47,
+        "prix_cloture": 0.0,
+        "prix_courant": 0.0,
+        "prix_haut": 75.47,
+        "prix_bas": 75.47,
+        "volume": 75.47,
+        "titres_echanges": 75.47,
+        "nombre_transactions": 76.42,
+        "capitalisation": 75.32,
+        "prix_ajuste": 75.32,
+        "ratio_consolide": 75.5,
+        "drupal_id": 99.42,
+        "scraped_at": 0.0
+      },
+      "status": "WARNING",
+      "notes": [
+        "missing médian 75.3%"
+      ]
+    },
+    {
+      "name": "clean/market_data_indices_historique",
+      "row_count": 18886,
+      "column_count": 12,
+      "date_min": "2010-01-04",
+      "date_max": "2025-11-17",
+      "missing_pct": {
+        "id": 0.0,
+        "code_index": 0.0,
+        "nom_index": 100.0,
+        "date_index": 0.0,
+        "valeur_index": 0.0,
+        "valeur_haut": 100.0,
+        "valeur_bas": 100.0,
+        "variation_veille": 100.0,
+        "variation_annee": 100.0,
+        "capitalisation_marchande": 100.0,
+        "drupal_id": 17.79,
+        "scraped_at": 0.0
+      },
+      "status": "WARNING",
+      "notes": [
+        "missing médian 58.9%"
+      ]
+    }
+  ],
+  "metrics": {
+    "tickers_fondamentaux": 48,
+    "tickers_cours": 78,
+    "indices_codes": [
+      "ESGI",
+      "FTSE_CSE_MOROCCO_15",
+      "MASI",
+      "MASI_AGROALIMENTAIRE",
+      "MASI_ASSURANCES",
+      "MASI_BANQUES",
+      "MASI_BATIMENT",
+      "MASI_BOISSONS",
+      "MASI_CHIMIE",
+      "MASI_DISTRIBUTEURS",
+      "MASI_ELECTRICITE",
+      "MASI_EUR",
+      "MASI_INGENIERIES",
+      "MASI_LOISIRS_HOTELS",
+      "MASI_MID_SMALL_CAP",
+      "MASI_MINES",
+      "MASI_PETROLE_GAZ",
+      "MASI_RENTABILITE_NET",
+      "MASI_SANTE",
+      "MASI_TRANSPORT",
+      "MASI_USD"
+    ],
+    "entreprises_financieres": 63,
+    "publication_date_appliquee": "fondamentaux_rs (S1/S2)",
+    "masi_coverage": {
+      "code_index": "MASI",
+      "expected_min_date": "2010-01-01",
+      "row_count": 4101,
+      "date_min": "2010-01-04",
+      "date_max": "2025-11-17",
+      "covers_from_2010": true,
+      "status": "OK",
+      "notes": [
+        "Historique MASI couvre depuis 2010-01-04 (4,101 lignes)"
+      ]
+    },
+    "masi_covers_from_2010": true,
+    "supabase_url": "https://pungyebagtntbocoewir.supabase.co",
+    "tables_chargees": 651145,
+    "masi_date_min": "2010-01-04",
+    "masi_date_max": "2025-11-17",
+    "masi_row_count": 4101
+  },
+  "blockers": [],
+  "warnings": [
+    "Historique MASI commence le 2010-01-04 — attendu ~2010-01-01. Beta vs MASI et benchmarks seront limités à cette fenêtre."
+  ],
+  "masi_verification": {
+    "code_index": "MASI",
+    "expected_min_date": "2010-01-01",
+    "row_count": 4101,
+    "date_min": "2010-01-04",
+    "date_max": "2025-11-17",
+    "covers_from_2010": true,
+    "status": "OK",
+    "notes": [
+      "Historique MASI couvre depuis 2010-01-04 (4,101 lignes)"
+    ]
+  }
+}

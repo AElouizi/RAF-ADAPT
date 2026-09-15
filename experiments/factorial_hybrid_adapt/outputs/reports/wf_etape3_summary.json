@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-08-15T10:50:37.155291+00:00",
+  "n_folds_expected": 81,
+  "n_folds_done": 81,
+  "n_prediction_rows": 2285568,
+  "rf_params": {
+    "n_estimators": 100,
+    "max_depth": 4,
+    "min_samples_leaf": 20,
+    "random_state": 42
+  },
+  "note": "Hyperparams RF figés (pas de re-tuning par pli). Métriques descriptives par pli sauvegardées ; agrégation inter-plis = étape 4.",
+  "preview_mean_rank_ic_by_cell": {
+    "1": 0.0257,
+    "2": 0.0257,
+    "3": 0.0314,
+    "4": 0.0317
+  }
+}

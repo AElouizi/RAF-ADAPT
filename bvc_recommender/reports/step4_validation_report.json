@@ -1,0 +1,1145 @@
+{
+  "generated_at": "2026-08-15T10:16:24.315995+00:00",
+  "project": "BVC Recommender — Sous-module A",
+  "random_state": 42,
+  "method": "Règle à seuils both-AND (q=0.33/0.67) — calibres train ≤ 2020-12-31 (EOM mensuel), appliqués hors train ; remplace GaussianHMM",
+  "thresholds_documented": {
+    "p33_momentum": -0.016704,
+    "p67_momentum": 0.042896,
+    "p33_breadth": 0.392857,
+    "p67_breadth": 0.596491
+  },
+  "inputs": [
+    "masi_mom_3m",
+    "breadth_ma50"
+  ],
+  "outputs": [
+    "is_bull",
+    "is_neutral",
+    "is_bear",
+    "is_rebalancing_date",
+    "is_sideways"
+  ],
+  "source_of_truth": "features_indices (quotidien)",
+  "hmm_archive": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\data\\features\\features_indices_hmm_archive.parquet",
+  "period": {
+    "start_year": 2015,
+    "end_year": 2026
+  },
+  "train_end": "2020-12-31",
+  "months": 137,
+  "dominant_regime_counts": {
+    "neutral": 80,
+    "bull": 33,
+    "bear": 24
+  },
+  "history_path": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\data\\datasets\\regime_history.parquet",
+  "features_indices_path": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\data\\features\\features_indices.parquet",
+  "chart_path": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\regime_evolution.png",
+  "timeline": [
+    {
+      "month": "2015-01",
+      "as_of_date": "2015-01-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2015-02",
+      "as_of_date": "2015-02-27",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2015-03",
+      "as_of_date": "2015-03-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2015-04",
+      "as_of_date": "2015-04-30",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2015-05",
+      "as_of_date": "2015-05-29",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2015-06",
+      "as_of_date": "2015-06-30",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2015-07",
+      "as_of_date": "2015-07-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2015-08",
+      "as_of_date": "2015-08-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2015-09",
+      "as_of_date": "2015-09-30",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2015-10",
+      "as_of_date": "2015-10-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2015-11",
+      "as_of_date": "2015-11-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2015-12",
+      "as_of_date": "2015-12-31",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2016-01",
+      "as_of_date": "2016-01-29",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2016-02",
+      "as_of_date": "2016-02-29",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2016-03",
+      "as_of_date": "2016-03-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2016-04",
+      "as_of_date": "2016-04-29",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2016-05",
+      "as_of_date": "2016-05-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2016-06",
+      "as_of_date": "2016-06-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2016-07",
+      "as_of_date": "2016-07-29",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2016-08",
+      "as_of_date": "2016-08-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2016-09",
+      "as_of_date": "2016-09-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2016-10",
+      "as_of_date": "2016-10-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2016-11",
+      "as_of_date": "2016-11-30",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2016-12",
+      "as_of_date": "2016-12-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2017-01",
+      "as_of_date": "2017-01-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2017-02",
+      "as_of_date": "2017-02-28",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2017-03",
+      "as_of_date": "2017-03-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2017-04",
+      "as_of_date": "2017-04-28",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2017-05",
+      "as_of_date": "2017-05-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2017-06",
+      "as_of_date": "2017-06-30",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2017-07",
+      "as_of_date": "2017-07-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2017-08",
+      "as_of_date": "2017-08-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2017-09",
+      "as_of_date": "2017-09-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2017-10",
+      "as_of_date": "2017-10-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2017-11",
+      "as_of_date": "2017-11-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2017-12",
+      "as_of_date": "2017-12-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2018-01",
+      "as_of_date": "2018-01-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2018-02",
+      "as_of_date": "2018-02-28",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2018-03",
+      "as_of_date": "2018-03-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2018-04",
+      "as_of_date": "2018-04-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2018-05",
+      "as_of_date": "2018-05-31",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2018-06",
+      "as_of_date": "2018-06-30",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2018-07",
+      "as_of_date": "2018-07-31",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2018-08",
+      "as_of_date": "2018-08-31",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2018-09",
+      "as_of_date": "2018-09-30",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2018-10",
+      "as_of_date": "2018-10-31",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2018-11",
+      "as_of_date": "2018-11-30",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2018-12",
+      "as_of_date": "2018-12-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2019-01",
+      "as_of_date": "2019-01-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2019-02",
+      "as_of_date": "2019-02-28",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2019-03",
+      "as_of_date": "2019-03-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2019-04",
+      "as_of_date": "2019-04-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2019-05",
+      "as_of_date": "2019-05-31",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2019-06",
+      "as_of_date": "2019-06-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2019-07",
+      "as_of_date": "2019-07-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2019-08",
+      "as_of_date": "2019-08-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2019-09",
+      "as_of_date": "2019-09-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2019-10",
+      "as_of_date": "2019-10-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2019-11",
+      "as_of_date": "2019-11-29",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2019-12",
+      "as_of_date": "2019-12-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2020-01",
+      "as_of_date": "2020-01-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2020-02",
+      "as_of_date": "2020-02-28",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2020-03",
+      "as_of_date": "2020-03-31",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2020-04",
+      "as_of_date": "2020-04-30",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2020-05",
+      "as_of_date": "2020-05-29",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2020-06",
+      "as_of_date": "2020-06-30",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2020-07",
+      "as_of_date": "2020-07-29",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2020-08",
+      "as_of_date": "2020-08-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2020-09",
+      "as_of_date": "2020-09-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2020-10",
+      "as_of_date": "2020-10-28",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2020-11",
+      "as_of_date": "2020-11-30",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2020-12",
+      "as_of_date": "2020-12-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2021-01",
+      "as_of_date": "2021-01-29",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2021-02",
+      "as_of_date": "2021-02-26",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2021-03",
+      "as_of_date": "2021-03-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2021-04",
+      "as_of_date": "2021-04-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2021-05",
+      "as_of_date": "2021-05-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2021-06",
+      "as_of_date": "2021-06-30",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2021-07",
+      "as_of_date": "2021-07-29",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2021-08",
+      "as_of_date": "2021-08-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2021-09",
+      "as_of_date": "2021-09-30",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2021-10",
+      "as_of_date": "2021-10-29",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2021-11",
+      "as_of_date": "2021-11-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2021-12",
+      "as_of_date": "2021-12-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2022-01",
+      "as_of_date": "2022-01-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2022-02",
+      "as_of_date": "2022-02-28",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2022-03",
+      "as_of_date": "2022-03-31",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2022-04",
+      "as_of_date": "2022-04-29",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2022-05",
+      "as_of_date": "2022-05-31",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2022-06",
+      "as_of_date": "2022-06-30",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2022-07",
+      "as_of_date": "2022-07-29",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2022-08",
+      "as_of_date": "2022-08-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2022-09",
+      "as_of_date": "2022-09-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2022-10",
+      "as_of_date": "2022-10-31",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2022-11",
+      "as_of_date": "2022-11-30",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2022-12",
+      "as_of_date": "2022-12-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2023-01",
+      "as_of_date": "2023-01-31",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2023-02",
+      "as_of_date": "2023-02-28",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2023-03",
+      "as_of_date": "2023-03-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2023-04",
+      "as_of_date": "2023-04-28",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2023-05",
+      "as_of_date": "2023-05-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2023-06",
+      "as_of_date": "2023-06-30",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2023-07",
+      "as_of_date": "2023-07-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2023-08",
+      "as_of_date": "2023-08-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2023-09",
+      "as_of_date": "2023-09-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2023-10",
+      "as_of_date": "2023-10-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2023-11",
+      "as_of_date": "2023-11-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2023-12",
+      "as_of_date": "2023-12-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2024-01",
+      "as_of_date": "2024-01-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2024-02",
+      "as_of_date": "2024-02-29",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2024-03",
+      "as_of_date": "2024-03-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2024-04",
+      "as_of_date": "2024-04-30",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2024-05",
+      "as_of_date": "2024-05-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2024-06",
+      "as_of_date": "2024-06-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2024-07",
+      "as_of_date": "2024-07-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2024-08",
+      "as_of_date": "2024-08-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2024-09",
+      "as_of_date": "2024-09-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2024-10",
+      "as_of_date": "2024-10-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2024-11",
+      "as_of_date": "2024-11-29",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2024-12",
+      "as_of_date": "2024-12-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2025-01",
+      "as_of_date": "2025-01-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2025-02",
+      "as_of_date": "2025-02-28",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2025-03",
+      "as_of_date": "2025-03-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2025-04",
+      "as_of_date": "2025-04-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2025-05",
+      "as_of_date": "2025-05-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2025-06",
+      "as_of_date": "2025-06-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2025-07",
+      "as_of_date": "2025-07-31",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2025-08",
+      "as_of_date": "2025-08-29",
+      "is_bull": 1,
+      "is_neutral": 0,
+      "is_bear": 0,
+      "dominant": "bull"
+    },
+    {
+      "month": "2025-09",
+      "as_of_date": "2025-09-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2025-10",
+      "as_of_date": "2025-10-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2025-11",
+      "as_of_date": "2025-11-28",
+      "is_bull": 0,
+      "is_neutral": 0,
+      "is_bear": 1,
+      "dominant": "bear"
+    },
+    {
+      "month": "2025-12",
+      "as_of_date": "2025-12-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2026-01",
+      "as_of_date": "2026-01-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2026-02",
+      "as_of_date": "2026-02-13",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2026-03",
+      "as_of_date": "2026-03-31",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2026-04",
+      "as_of_date": "2026-04-30",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    },
+    {
+      "month": "2026-05",
+      "as_of_date": "2026-05-18",
+      "is_bull": 0,
+      "is_neutral": 1,
+      "is_bear": 0,
+      "dominant": "neutral"
+    }
+  ],
+  "latest": {
+    "month": "2026-05",
+    "as_of_date": "2026-05-18",
+    "is_bull": 0,
+    "is_neutral": 1,
+    "is_bear": 0,
+    "dominant": "neutral"
+  }
+}

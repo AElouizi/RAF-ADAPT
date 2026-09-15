@@ -1,0 +1,183 @@
+{
+  "generated_at": "2026-08-24T20:36:50.887658+00:00",
+  "mode": "smoke_1_block",
+  "fold_id": 0,
+  "test_window": "2018-07->2018-12",
+  "model_ids": [
+    "ridge",
+    "rf",
+    "lightgbm",
+    "hybrid_rf",
+    "hybrid_lgbm",
+    "hybrid_rf_regime"
+  ],
+  "n_models_done": 6,
+  "elapsed_sec": 87.7,
+  "nsga_config": {
+    "sell_mode": "exclude",
+    "pref_BUY": 1.0,
+    "pref_NEUTRAL": 0.5,
+    "pref_SELL": 0.0,
+    "w_min": 0.0,
+    "w_max": 0.1,
+    "w_max_SELL": 0.02,
+    "liquidity_mode": "eligibility",
+    "apply_vmq_filter": false,
+    "min_vmq": 500000.0,
+    "l_min": 0.9820137900379085,
+    "max_turnover": null,
+    "selection_rule": "knee",
+    "pop_size": 36,
+    "n_gen": 30,
+    "weight_report_floor": 0.0001,
+    "eval_start_month": "2015-06",
+    "eval_end_month": "2025-06"
+  },
+  "benchmark_summary": {
+    "masi_sharpe_mean": -0.53,
+    "masi_ann_return_mean": -0.0448,
+    "ew_masi20_sharpe_mean": -1.072,
+    "ew_masi20_ann_return_mean": -0.0997
+  },
+  "omnibus_financial": {
+    "sharpe": {
+      "metric": "sharpe",
+      "stat": NaN,
+      "pvalue": NaN,
+      "n_blocks": 1,
+      "n_groups": 3,
+      "groups": [
+        "classique",
+        "hybride",
+        "hybride_regime"
+      ],
+      "note": "pas assez de blocs pour Friedman"
+    },
+    "ann_return": {
+      "metric": "ann_return",
+      "stat": NaN,
+      "pvalue": NaN,
+      "n_blocks": 1,
+      "n_groups": 3,
+      "groups": [
+        "classique",
+        "hybride",
+        "hybride_regime"
+      ],
+      "note": "pas assez de blocs pour Friedman"
+    },
+    "cvar_95_realized": {
+      "metric": "cvar_95_realized",
+      "stat": NaN,
+      "pvalue": NaN,
+      "n_blocks": 1,
+      "n_groups": 3,
+      "groups": [
+        "classique",
+        "hybride",
+        "hybride_regime"
+      ],
+      "note": "pas assez de blocs pour Friedman"
+    },
+    "turnover_mean": {
+      "metric": "turnover_mean",
+      "stat": NaN,
+      "pvalue": NaN,
+      "n_blocks": 1,
+      "n_groups": 3,
+      "groups": [
+        "classique",
+        "hybride",
+        "hybride_regime"
+      ],
+      "note": "pas assez de blocs pour Friedman"
+    }
+  },
+  "block_financials": [
+    {
+      "fold_id": 0,
+      "model_id": "ridge",
+      "groupe": "classique",
+      "ann_return": 0.1018,
+      "sharpe": 0.863,
+      "sortino": 1.336,
+      "cvar_95_realized": 0.0181,
+      "max_drawdown": -0.243,
+      "turnover_mean": 0.8311821923746184,
+      "liquidity_mean": 0.9999998863755089,
+      "total_return_block": 1.082878770511139,
+      "n_days": 1908
+    },
+    {
+      "fold_id": 0,
+      "model_id": "rf",
+      "groupe": "classique",
+      "ann_return": 0.0927,
+      "sharpe": 0.834,
+      "sortino": 1.278,
+      "cvar_95_realized": 0.0173,
+      "max_drawdown": -0.2312,
+      "turnover_mean": 0.7077228464848874,
+      "liquidity_mean": 0.999985374168009,
+      "total_return_block": 0.9561271844537689,
+      "n_days": 1908
+    },
+    {
+      "fold_id": 0,
+      "model_id": "lightgbm",
+      "groupe": "classique",
+      "ann_return": 0.2234,
+      "sharpe": 1.317,
+      "sortino": 2.112,
+      "cvar_95_realized": 0.0238,
+      "max_drawdown": -0.3543,
+      "turnover_mean": 1.086710013518072,
+      "liquidity_mean": 0.9999977798914056,
+      "total_return_block": 3.6037430649748954,
+      "n_days": 1908
+    },
+    {
+      "fold_id": 0,
+      "model_id": "hybrid_rf",
+      "groupe": "hybride",
+      "ann_return": 0.1515,
+      "sharpe": 1.038,
+      "sortino": 1.641,
+      "cvar_95_realized": 0.0213,
+      "max_drawdown": -0.2928,
+      "turnover_mean": 1.292592591108172,
+      "liquidity_mean": 0.9999999992577897,
+      "total_return_block": 1.9100807485753983,
+      "n_days": 1908
+    },
+    {
+      "fold_id": 0,
+      "model_id": "hybrid_lgbm",
+      "groupe": "hybride",
+      "ann_return": 0.2077,
+      "sharpe": 1.126,
+      "sortino": 1.811,
+      "cvar_95_realized": 0.0263,
+      "max_drawdown": -0.3558,
+      "turnover_mean": 1.1757991188675903,
+      "liquidity_mean": 0.9999999992481664,
+      "total_return_block": 3.1751655802681835,
+      "n_days": 1908
+    },
+    {
+      "fold_id": 0,
+      "model_id": "hybrid_rf_regime",
+      "groupe": "hybride_regime",
+      "ann_return": 0.1408,
+      "sharpe": 0.97,
+      "sortino": 1.529,
+      "cvar_95_realized": 0.0216,
+      "max_drawdown": -0.2928,
+      "turnover_mean": 1.403703702296261,
+      "liquidity_mean": 0.9999999992962786,
+      "total_return_block": 1.7110845975109417,
+      "n_days": 1908
+    }
+  ],
+  "note": "Validation pipeline — pas interprétation. Run 14 blocs : run_bloc_d_eval.py"
+}

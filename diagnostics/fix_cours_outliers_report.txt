@@ -1,0 +1,11 @@
+=== Correction outliers SNA / SLF / TMA / RDS ===
+
+--- Parquet locaux ---
+{'path': 'C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\data\\processed\\market_data_cours_historique.parquet', 'status': 'updated', 'before': 258086, 'deleted': 4044, 'after': 254042, 'by_ticker': {'SNA': 3843, 'SLF': 147, 'RDS': 48, 'TMA': 6}}
+{'path': 'C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\data\\processed\\raw_cache\\market_data_cours_historique.parquet', 'status': 'updated', 'before': 258086, 'deleted': 4044, 'after': 254042, 'by_ticker': {'SNA': 3843, 'SLF': 147, 'RDS': 48, 'TMA': 6}}
+{'path': 'C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\diagnostics\\_cache_cours_rest.parquet', 'status': 'updated', 'before': 239281, 'deleted': 4031, 'after': 235250, 'by_ticker': {'SNA': 3843, 'SLF': 141, 'RDS': 41, 'TMA': 6}}
+
+SQL ecrit : C:\Users\a\Desktop\ISO_2024\Modèle empirique\Projet_Cursor_RS_final\diagnostics\fix_cours_outliers_sna_slf_tma_rds.sql
+
+--- Tentative DELETE Supabase REST ---
+{'role': 'anon', 'SNA_all': {'ok': True, 'deleted': 3843, 'rounds': 8, 'label': 'SNA_all'}, 'SLF_low': {'ok': True, 'deleted': 141, 'rounds': 1, 'label': 'SLF_low'}, 'TMA_spikes': {'ok': True, 'deleted': 6, 'rounds': 1, 'label': 'TMA_spikes'}, 'RDS_2018_high': {'ok': True, 'deleted': 41, 'rounds': 1, 'label': 'RDS_2018_high'}}

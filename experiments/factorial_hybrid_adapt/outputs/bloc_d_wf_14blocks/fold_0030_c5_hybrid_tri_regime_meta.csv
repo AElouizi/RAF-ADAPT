@@ -1,0 +1,7 @@
+model_id,cell,groupe,fold_id,mois,date_rebalance,status,error,n_candidates,n_positions_selected,expected_alpha_selected,cvar_selected,liquidity_L_selected,n_pareto,turnover_vs_prev
+c5_hybrid_tri_regime,,C5_hybrid_tri_regime,30,2021-01,2021-01-29,ok,,32,27,0.804775,0.018339,0.77,19,0.0
+c5_hybrid_tri_regime,,C5_hybrid_tri_regime,30,2021-02,2021-02-26,ok,,36,36,0.661247,0.014983,0.6441,21,0.5146
+c5_hybrid_tri_regime,,C5_hybrid_tri_regime,30,2021-03,2021-03-31,ok,,32,31,0.826019,0.015433,0.671,22,0.3937
+c5_hybrid_tri_regime,,C5_hybrid_tri_regime,30,2021-04,2021-04-30,ok,,34,33,0.833338,0.013984,0.8209,22,0.5188
+c5_hybrid_tri_regime,,C5_hybrid_tri_regime,30,2021-05,2021-05-31,ok,,29,25,0.966703,0.011332,0.6644,20,0.3266
+c5_hybrid_tri_regime,,C5_hybrid_tri_regime,30,2021-06,2021-06-30,ok,,34,31,0.906346,0.012289,0.773,22,0.4147

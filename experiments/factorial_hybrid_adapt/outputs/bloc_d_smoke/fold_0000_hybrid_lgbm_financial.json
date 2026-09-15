@@ -1,0 +1,14 @@
+{
+  "fold_id": 0,
+  "model_id": "hybrid_lgbm",
+  "groupe": "hybride",
+  "ann_return": 0.2077,
+  "sharpe": 1.126,
+  "sortino": 1.811,
+  "cvar_95_realized": 0.0263,
+  "max_drawdown": -0.3558,
+  "turnover_mean": 1.1757991188675903,
+  "liquidity_mean": 0.9999999992481664,
+  "total_return_block": 3.1751655802681835,
+  "n_days": 1908
+}

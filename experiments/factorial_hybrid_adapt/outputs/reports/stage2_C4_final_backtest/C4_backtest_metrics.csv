@@ -1,0 +1,27 @@
+,value
+cell,C4
+configuration,Hybrid + régime
+selection,knee / utopia distance (frozen)
+window_decision_months,2018-07 → 2025-06
+transaction_cost_rate,0.003
+turnover_definition,L1 bilateral Σ|Δw| (project convention stage2_metrics)
+cost_formula,"turnover × 0.003, charged on first holding day"
+n_months,84
+total_return_net,1.6487634642831543
+total_return_gross,2.3900871256526615
+cumulative_wealth_base100_net,264.87634642831546
+annualized_return_net,0.1434
+annualized_return_gross,0.1829
+volatility_ann_net,0.1469
+sharpe_net,0.986
+sortino_net,1.507
+cvar_95_net,0.0218
+max_drawdown_net,-0.2832
+max_drawdown_duration_days,335
+turnover_mean,0.9788525257433094
+transaction_cost_mean,0.0029365575772299286
+portfolio_liquidity_mean_exante,0.9997702380952382
+n_positions_mean,17.821428571428573
+pct_positive_months_net,0.6547619047619048
+alpha_ann_vs_masi_net,0.0748
+days,1832

@@ -1,0 +1,1 @@
+"""Onglets du dashboard."""

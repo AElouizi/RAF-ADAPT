@@ -1,0 +1,14 @@
+{
+  "fold_id": 36,
+  "model_id": "c3_lightgbm",
+  "groupe": "C3_lightgbm",
+  "ann_return": 0.1637,
+  "sharpe": 1.427,
+  "sortino": 2.332,
+  "cvar_95_realized": 0.0162,
+  "max_drawdown": -0.1731,
+  "turnover_mean": 0.9082576483864649,
+  "liquidity_mean": 0.5815572182868026,
+  "total_return_block": 1.0166306276388983,
+  "n_days": 1166
+}

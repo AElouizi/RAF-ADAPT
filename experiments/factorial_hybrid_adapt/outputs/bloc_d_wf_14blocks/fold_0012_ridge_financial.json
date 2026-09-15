@@ -1,0 +1,14 @@
+{
+  "fold_id": 12,
+  "model_id": "ridge",
+  "groupe": "classique",
+  "ann_return": 0.1094,
+  "sharpe": 0.9,
+  "sortino": 1.353,
+  "cvar_95_realized": 0.0192,
+  "max_drawdown": -0.2792,
+  "turnover_mean": 0.6736835297540291,
+  "liquidity_mean": 0.9999881835469036,
+  "total_return_block": 0.9828038273881217,
+  "n_days": 1661
+}

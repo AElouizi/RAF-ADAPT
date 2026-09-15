@@ -1,0 +1,91 @@
+========================================================================
+CALIBRATION REGIME A SEUILS (etapes 1-4)
+Seuils fit UNIQUEMENT sur train <= 2020-12-31 (annees >= 2015)
+Colonnes : masi_mom_3m, breadth_ma50 (EOM mensuel)
+Encodage : is_bull / is_neutral / is_bear (somme=1)
+========================================================================
+
+Panel mensuel 2015-2025 : 131 mois
+Train 2015-2020 : 72 mois
+
+=== Baseline HMM actuel (meme panel mensuel EOM) ===
+  bull    :   6 mois (  4.6%)
+  neutral :  63 mois ( 48.1%)
+  bear    :  62 mois ( 47.3%)
+
+=== Comparaison des variantes (objectifs : min classe >= 10-15%) ===
+  variante         mode             q   bull%   neut%   bear%    min%
+  both_33_67       both       0.33/0.67   23.7%   58.0%   18.3%   18.3%
+  both_25_75       both       0.25/0.75   18.3%   67.2%   14.5%   14.5%
+  both_40_60       both       0.40/0.60   32.8%   42.7%   24.4%   24.4%
+  mom_33_67        mom_only   0.33/0.67   37.4%   35.1%   27.5%   27.5%
+  br_33_67         br_only    0.33/0.67   34.4%   39.7%   26.0%   26.0%
+  either_33_67     either     0.33/0.67   44.3%   24.4%   31.3%   24.4%
+  either_25_75     either     0.25/0.75   38.2%   34.4%   27.5%   27.5%
+  mom_25_75        mom_only   0.25/0.75   29.8%   47.3%   22.9%   22.9%
+
+>>> VARIANTE RETENUE POUR DETAIL : both_33_67
+    Motif : Regle canonique both AND (p33/p67) : toutes classes >= 10%.
+
+=== ETAPE 1 — Seuils calibres sur train 2015-2020 ===
+  Variante : both_33_67 | mode=both
+  Quantiles : q_low=0.33, q_high=0.67
+  p_low_momentum  (q=0.33)  = -0.016704
+  p_high_momentum (q=0.67) = 0.042896
+  p_low_breadth   (q=0.33)  = 0.392857
+  p_high_breadth  (q=0.67) = 0.596491
+
+  [Reference canonique both_33_67 — toujours documentee]
+  p33_momentum = -0.016704
+  p67_momentum = 0.042896
+  p33_breadth  = 0.392857
+  p67_breadth  = 0.596491
+
+=== ETAPE 2 — Regle appliquee (one-hot, somme=1) ===
+  is_bull    = (mom > p_high_mom) & (br > p_high_br)
+  is_bear    = (mom < p_low_mom)  & (br < p_low_br)
+  is_neutral = ~is_bull & ~is_bear
+  Verification somme==1 : True (n=131)
+
+=== Distribution — both_33_67 (n=131) ===
+  bull    :  31 mois ( 23.7%)
+  neutral :  76 mois ( 58.0%)
+  bear    :  24 mois ( 18.3%)
+  Par sous-periode :
+    2015-2017 (n=36): bull=11 (31%) | neutral=19 (53%) | bear=6 (17%)
+    2018-2020 (n=36): bull=5 (14%) | neutral=21 (58%) | bear=10 (28%)
+    2021-2022 (n=24): bull=6 (25%) | neutral=12 (50%) | bear=6 (25%)
+    2023-2025 (n=35): bull=9 (26%) | neutral=24 (69%) | bear=2 (6%)
+
+=== Transitions & duree moyenne des episodes ===
+  Nombre de transitions : 52 / 130 mois adjacents
+  bull    : 15 episodes | duree moy=2.07 | med=2.0 | max=4
+  neutral : 26 episodes | duree moy=2.92 | med=2.5 | max=8
+  bear    : 12 episodes | duree moy=2.00 | med=1.0 | max=7
+
+=== Plausibilite economique vs MASI (ret_1m) ===
+  bull     n= 31 | mean=+3.91% | med=+3.21% | %pos=96.8% | %neg=3.2%
+  neutral  n= 76 | mean=+0.44% | med=-0.07% | %pos=48.7% | %neg=51.3%
+  bear     n= 24 | mean=-3.31% | med=-2.38% | %pos=12.5% | %neg=87.5%
+
+  Ordre mean(bull) > mean(bear) : OUI
+
+=== Episodes bear les plus longs (top 6) ===
+  2018-05 → 2018-11 (7 mois) | ret_1m moy=-2.07%
+  2015-04 → 2015-06 (3 mois) | ret_1m moy=-2.29%
+  2022-05 → 2022-07 (3 mois) | ret_1m moy=-3.44%
+  2020-03 → 2020-04 (2 mois) | ret_1m moy=-11.99%
+  2022-10 → 2022-11 (2 mois) | ret_1m moy=-3.00%
+  2015-09 → 2015-09 (1 mois) | ret_1m moy=-2.48%
+
+=== Episodes bull les plus longs (top 5) ===
+  2016-10 → 2017-01 (4 mois) | ret_1m moy=+5.10%
+  2016-03 → 2016-05 (3 mois) | ret_1m moy=+3.16%
+  2017-06 → 2017-08 (3 mois) | ret_1m moy=+2.31%
+  2020-11 → 2021-01 (3 mois) | ret_1m moy=+3.60%
+  2021-08 → 2021-10 (3 mois) | ret_1m moy=+3.28%
+
+=== Check COVID (mars-mai 2020) ===
+  2020-03: regime=bear | MASI=-20.85%
+  2020-04: regime=bear | MASI=-3.13%
+  2020-05: regime=neutral | MASI=+4.81%

@@ -1,0 +1,233 @@
+{
+  "generated_at": "2026-08-27T23:02:06.877332+00:00",
+  "mode": "all",
+  "n_folds_done": 81,
+  "model_ids": [
+    "c1_ridge",
+    "c2_rf",
+    "c3_lightgbm",
+    "c4_hybrid_tri",
+    "c5_hybrid_tri_regime"
+  ],
+  "retune": true,
+  "lgbm_config": {
+    "frozen_at": "2026-08-24",
+    "n_trials": 9,
+    "version": 1
+  },
+  "results_long": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\experiments\\factorial_hybrid_adapt\\outputs\\reports\\bloc_b_results_long_overlapping.csv",
+  "analysis": {
+    "n_overlapping_folds": 81,
+    "n_independent_blocks": 14,
+    "block_fold_ids": [
+      0,
+      6,
+      12,
+      18,
+      24,
+      30,
+      36,
+      42,
+      48,
+      54,
+      60,
+      66,
+      72,
+      78
+    ],
+    "mean_metric_by_model": [
+      {
+        "model_id": "c3_lightgbm",
+        "groupe": "C3_lightgbm",
+        "valeur": 0.1305357990012002
+      },
+      {
+        "model_id": "c5_hybrid_tri_regime",
+        "groupe": "C5_hybrid_tri_regime",
+        "valeur": 0.08172854637648808
+      },
+      {
+        "model_id": "c4_hybrid_tri",
+        "groupe": "C4_hybrid_tri",
+        "valeur": 0.08127141334984979
+      },
+      {
+        "model_id": "c2_rf",
+        "groupe": "C2_rf",
+        "valeur": 0.042891302952917106
+      },
+      {
+        "model_id": "c1_ridge",
+        "groupe": "C1_ridge",
+        "valeur": 0.02566540899761509
+      }
+    ],
+    "omnibus_14blocks": {
+      "rank_ic": {
+        "metric": "rank_ic",
+        "stat": NaN,
+        "pvalue": NaN,
+        "n_blocks": 14,
+        "n_groups": 0,
+        "note": "moins de 2 groupes disponibles"
+      },
+      "ic_ir": {
+        "metric": "ic_ir",
+        "stat": NaN,
+        "pvalue": NaN,
+        "n_blocks": 14,
+        "n_groups": 0,
+        "note": "moins de 2 groupes disponibles"
+      },
+      "rmse": {
+        "metric": "rmse",
+        "stat": NaN,
+        "pvalue": NaN,
+        "n_blocks": 14,
+        "n_groups": 0,
+        "note": "moins de 2 groupes disponibles"
+      },
+      "spread_BUY_SELL": {
+        "metric": "spread_BUY_SELL",
+        "stat": NaN,
+        "pvalue": NaN,
+        "n_blocks": 14,
+        "n_groups": 0,
+        "note": "moins de 2 groupes disponibles"
+      },
+      "hit_ratio": {
+        "metric": "hit_ratio",
+        "stat": NaN,
+        "pvalue": NaN,
+        "n_blocks": 14,
+        "n_groups": 0,
+        "note": "moins de 2 groupes disponibles"
+      },
+      "turnover": {
+        "metric": "turnover",
+        "stat": NaN,
+        "pvalue": NaN,
+        "n_blocks": 14,
+        "n_groups": 0,
+        "note": "moins de 2 groupes disponibles"
+      }
+    },
+    "bootstrap_81folds": {
+      "rank_ic": {
+        "c1_ridge": {
+          "metric": "rank_ic",
+          "model_id": "c1_ridge",
+          "mean": 0.02566540899761509,
+          "ci_low": -0.032748143785245626,
+          "ci_high": 0.08408800043371294,
+          "n_folds": 81,
+          "n_bootstrap": 1000,
+          "block_size": 5.0,
+          "alpha": 0.05
+        },
+        "c2_rf": {
+          "metric": "rank_ic",
+          "model_id": "c2_rf",
+          "mean": 0.042891302952917106,
+          "ci_low": -0.00678469883048539,
+          "ci_high": 0.10333032025217762,
+          "n_folds": 81,
+          "n_bootstrap": 1000,
+          "block_size": 5.0,
+          "alpha": 0.05
+        },
+        "c3_lightgbm": {
+          "metric": "rank_ic",
+          "model_id": "c3_lightgbm",
+          "mean": 0.1305357990012002,
+          "ci_low": 0.09789366826404151,
+          "ci_high": 0.15943834736225423,
+          "n_folds": 81,
+          "n_bootstrap": 1000,
+          "block_size": 5.0,
+          "alpha": 0.05
+        },
+        "c4_hybrid_tri": {
+          "metric": "rank_ic",
+          "model_id": "c4_hybrid_tri",
+          "mean": 0.08127141334984979,
+          "ci_low": 0.03712117193425351,
+          "ci_high": 0.12859717257177192,
+          "n_folds": 81,
+          "n_bootstrap": 1000,
+          "block_size": 5.0,
+          "alpha": 0.05
+        },
+        "c5_hybrid_tri_regime": {
+          "metric": "rank_ic",
+          "model_id": "c5_hybrid_tri_regime",
+          "mean": 0.08172854637648806,
+          "ci_low": 0.03659900288264491,
+          "ci_high": 0.13108386135169361,
+          "n_folds": 81,
+          "n_bootstrap": 1000,
+          "block_size": 5.0,
+          "alpha": 0.05
+        }
+      },
+      "spread_BUY_SELL": {
+        "c1_ridge": {
+          "metric": "spread_BUY_SELL",
+          "model_id": "c1_ridge",
+          "mean": 0.05572624202215437,
+          "ci_low": -0.10987793282185959,
+          "ci_high": 0.23154413829968404,
+          "n_folds": 81,
+          "n_bootstrap": 1000,
+          "block_size": 5.0,
+          "alpha": 0.05
+        },
+        "c2_rf": {
+          "metric": "spread_BUY_SELL",
+          "model_id": "c2_rf",
+          "mean": -0.0356164932023581,
+          "ci_low": -0.5073296856311384,
+          "ci_high": 0.3741089370798398,
+          "n_folds": 81,
+          "n_bootstrap": 1000,
+          "block_size": 5.0,
+          "alpha": 0.05
+        },
+        "c3_lightgbm": {
+          "metric": "spread_BUY_SELL",
+          "model_id": "c3_lightgbm",
+          "mean": 0.15947251996345874,
+          "ci_low": 0.0628701716042083,
+          "ci_high": 0.2456116342060784,
+          "n_folds": 81,
+          "n_bootstrap": 1000,
+          "block_size": 5.0,
+          "alpha": 0.05
+        },
+        "c4_hybrid_tri": {
+          "metric": "spread_BUY_SELL",
+          "model_id": "c4_hybrid_tri",
+          "mean": 0.11139233814045692,
+          "ci_low": -0.021806301434030652,
+          "ci_high": 0.2663469604215339,
+          "n_folds": 81,
+          "n_bootstrap": 1000,
+          "block_size": 5.0,
+          "alpha": 0.05
+        },
+        "c5_hybrid_tri_regime": {
+          "metric": "spread_BUY_SELL",
+          "model_id": "c5_hybrid_tri_regime",
+          "mean": 0.1303295067743171,
+          "ci_low": -0.004676156084085198,
+          "ci_high": 0.2778796201438333,
+          "n_folds": 81,
+          "n_bootstrap": 1000,
+          "block_size": 5.0,
+          "alpha": 0.05
+        }
+      }
+    }
+  },
+  "results_long_blocks": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\experiments\\factorial_hybrid_adapt\\outputs\\reports\\bloc_b_results_long_blocks_from_overlapping.csv"
+}

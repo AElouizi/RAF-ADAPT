@@ -1,0 +1,14 @@
+{
+  "fold_id": 6,
+  "model_id": "c2_rf",
+  "groupe": "C2_rf",
+  "ann_return": 0.08,
+  "sharpe": 0.843,
+  "sortino": 1.273,
+  "cvar_95_realized": 0.0148,
+  "max_drawdown": -0.1921,
+  "turnover_mean": 0.7266464894357466,
+  "liquidity_mean": 0.5486658491610573,
+  "total_return_block": 0.7254521231743147,
+  "n_days": 1786
+}

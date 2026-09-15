@@ -1,0 +1,7 @@
+Règle de décision (protocole utilisateur) :
+« Ne jamais conclure à une supériorité statistique si p >= 5 %. »
+
+Application conservative : significatif_5pct = (p_ttest < 0.05) ET (p_wilcoxon < 0.05).
+
+C4 vs MASI : t=0.0497 < 5 %, Wilcoxon=0.0546 >= 5 % → pas de conclusion de supériorité statistique robuste.
+L'IC bootstrap 95 % de la différence mensuelle exclut 0 (importance économique).

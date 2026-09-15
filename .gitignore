@@ -1,0 +1,70 @@
+# Secrets — never commit
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Jupyter / IDE
+.ipynb_checkpoints/
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+lightning_logs/
+
+# Heavy / regenerable ML artifacts
+*.joblib
+*.pkl
+*.pickle
+*.h5
+*.pt
+*.pth
+experiments/factorial_hybrid_adapt/outputs/models/
+**/outputs/models/
+
+# Large regenerable experiment dumps (keep platform_mart + bloc_d for the web app)
+experiments/factorial_hybrid_adapt/outputs/wf_fold_parts*/
+experiments/factorial_hybrid_adapt/outputs/wf_variant_*/
+experiments/factorial_hybrid_adapt/outputs/bloc_b_wf_*/
+experiments/factorial_hybrid_adapt/outputs/bloc_b_smoke/
+experiments/factorial_hybrid_adapt/outputs/bloc_d_smoke/
+experiments/factorial_hybrid_adapt/outputs/portfolios*/
+experiments/factorial_hybrid_adapt/outputs/agent_runs/
+experiments/factorial_hybrid_adapt/outputs/selections/
+experiments/factorial_hybrid_adapt/outputs/ml_dataset*.parquet
+experiments/factorial_hybrid_adapt/outputs/reports/wf_stage1_predictions.parquet
+experiments/factorial_hybrid_adapt/outputs/reports/factorial_predictions.parquet
+experiments/factorial_hybrid_adapt/outputs/reports/stage1_recommendations_*.parquet
+experiments/factorial_hybrid_adapt/outputs/reports/rf_predictions.parquet
+experiments/factorial_hybrid_adapt/outputs/reports/stage2_inputs_*.parquet
+
+# Local market dumps / exports (app uses platform_mart + Supabase)
+bvc_recommender/data/
+bvc_recommender/exports/
+bvc_recommender/**/__pycache__/
+
+# Local caches
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.streamlit/secrets.toml

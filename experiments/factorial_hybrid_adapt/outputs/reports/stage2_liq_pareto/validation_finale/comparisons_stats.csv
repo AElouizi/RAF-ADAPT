@@ -1,0 +1,5 @@
+Comparaison,cell_a,cell_b,n_months,diff_moyenne_mensuelle,diff_mediane,diff_ecart_type,pct_mois_A_surperforme,IC95_bootstrap_lo,IC95_bootstrap_hi,test_apparie,t_stat,p_value_ttest,wilcoxon_stat,p_value_wilcoxon,diff_ann_approx
+C2 vs C1,2,1,30,0.001444,0.001098,0.010066,0.6,-0.002112,0.004968,t-test apparié + Wilcoxon,0.7855,0.4385,203.0,0.5561,0.0173
+C3 vs C1,3,1,30,0.003474,4e-05,0.014268,0.5,-0.00133,0.00877,t-test apparié + Wilcoxon,1.3335,0.1928,185.0,0.3387,0.0417
+C4 vs C1,4,1,30,0.003611,0.004215,0.01551,0.6,-0.001727,0.009117,t-test apparié + Wilcoxon,1.2753,0.2123,168.0,0.1909,0.0433
+C4 vs C3,4,3,30,0.000138,-0.000915,0.008949,0.4333,-0.002999,0.003263,t-test apparié + Wilcoxon,0.0843,0.9334,225.0,0.8872,0.0017

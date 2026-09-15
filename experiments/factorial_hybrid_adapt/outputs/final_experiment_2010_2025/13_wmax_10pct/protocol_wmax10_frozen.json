@@ -1,0 +1,29 @@
+{
+  "variant": "C1–C4 w_max=10%",
+  "frozen_before_backtest": true,
+  "frozen_at": "2026-08-15T12:18:14.091426+00:00",
+  "eval_window": "2018-07 → 2025-06",
+  "changed_only": {
+    "w_max": 0.1,
+    "previous_w_max": 0.4,
+    "applies_to": "C1, C2, C3, C4 identically"
+  },
+  "unchanged": {
+    "models_scores": true,
+    "BUY_NEUTRAL_SELL": "stage2_inputs_14blocks.parquet (quantile τ)",
+    "nsga_objectives": [
+      "max Alpha",
+      "min CVaR",
+      "max L"
+    ],
+    "selection": "knee / distance to utopia",
+    "sell_mode": "exclude",
+    "pref_BUY": 1.0,
+    "pref_NEUTRAL": 0.5,
+    "liquidity_mode": "pareto",
+    "vmq_eligibility_filter": false,
+    "pop_size": 36,
+    "n_gen": 30,
+    "transaction_cost": 0.003
+  }
+}

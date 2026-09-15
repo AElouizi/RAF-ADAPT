@@ -1,0 +1,14 @@
+{
+  "fold_id": 54,
+  "model_id": "c1_ridge",
+  "groupe": "C1_ridge",
+  "ann_return": 0.214,
+  "sharpe": 1.879,
+  "sortino": 3.177,
+  "cvar_95_realized": 0.0147,
+  "max_drawdown": -0.0841,
+  "turnover_mean": 0.9763949886497598,
+  "liquidity_mean": 0.44790728507970795,
+  "total_return_block": 0.8308525557454967,
+  "n_days": 786
+}

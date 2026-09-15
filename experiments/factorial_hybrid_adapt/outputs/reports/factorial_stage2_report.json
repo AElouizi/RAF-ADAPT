@@ -1,0 +1,67 @@
+{
+  "portfolio": "P_equilibre",
+  "transaction_cost": 0.003,
+  "liquidity_column": "indicateur_liquidite",
+  "summary": [
+    {
+      "cellule": 1,
+      "portfolio": "P_equilibre",
+      "sharpe": 2.029,
+      "sortino": 3.649,
+      "CVaR": 0.0158,
+      "liquidite_moy": 0.573372,
+      "turnover": 0.7924,
+      "total_return": 1.0058,
+      "ann_return": 0.26,
+      "max_drawdown": -0.0893,
+      "vol_ann": 0.1173,
+      "n_days": 759,
+      "n_rebalances": 32
+    },
+    {
+      "cellule": 2,
+      "portfolio": "P_equilibre",
+      "sharpe": 1.96,
+      "sortino": 3.487,
+      "CVaR": 0.0159,
+      "liquidite_moy": 0.576859,
+      "turnover": 0.8253,
+      "total_return": 0.9658,
+      "ann_return": 0.2516,
+      "max_drawdown": -0.0962,
+      "vol_ann": 0.1181,
+      "n_days": 759,
+      "n_rebalances": 32
+    },
+    {
+      "cellule": 3,
+      "portfolio": "P_equilibre",
+      "sharpe": 1.987,
+      "sortino": 3.509,
+      "CVaR": 0.0158,
+      "liquidite_moy": 0.544094,
+      "turnover": 0.8595,
+      "total_return": 0.9511,
+      "ann_return": 0.2485,
+      "max_drawdown": -0.1052,
+      "vol_ann": 0.115,
+      "n_days": 759,
+      "n_rebalances": 32
+    },
+    {
+      "cellule": 4,
+      "portfolio": "P_equilibre",
+      "sharpe": 1.945,
+      "sortino": 3.495,
+      "CVaR": 0.015,
+      "liquidite_moy": 0.546153,
+      "turnover": 0.878,
+      "total_return": 0.8922,
+      "ann_return": 0.2358,
+      "max_drawdown": -0.1006,
+      "vol_ann": 0.1121,
+      "n_days": 759,
+      "n_rebalances": 32
+    }
+  ]
+}

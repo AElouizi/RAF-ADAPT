@@ -1,0 +1,195 @@
+{
+  "rf_params": {
+    "n_estimators": 100,
+    "max_depth": 4,
+    "min_samples_leaf": 20,
+    "random_state": 42
+  },
+  "top_n": 25,
+  "clip_bounds": {
+    "lower": -5.2326193195143365,
+    "upper": 6.421041824560743
+  },
+  "cells": {
+    "1": {
+      "cell_id": 1,
+      "name": "ridge_static",
+      "model": "ridge",
+      "regime": 0,
+      "n_features": 33,
+      "splits": {
+        "val": {
+          "rows": 27780,
+          "metrics": {
+            "ic_mean": -0.013112777278394102,
+            "ic_median": -0.0017373795177115874,
+            "rank_ic_mean": -0.04915603442817457,
+            "ic_n_dates": 503,
+            "hit_ratio": 0.499532037437005,
+            "hit_ratio_cs_mean": 0.49927389150138834,
+            "sharpe_long_short": -0.6336502705903888,
+            "mean_ls_spread": -0.10391397189345479,
+            "ls_n_periods": 24
+          },
+          "top_n_months": 24,
+          "top_n_ok": 1,
+          "top_n_min": 25,
+          "top_n_max": 25
+        },
+        "test": {
+          "rows": 42387,
+          "metrics": {
+            "ic_mean": 0.05396843528379995,
+            "ic_median": 0.028094758650701615,
+            "rank_ic_mean": 0.054641007818805015,
+            "ic_n_dates": 648,
+            "hit_ratio": 0.4818458489631255,
+            "hit_ratio_cs_mean": 0.4818640840422437,
+            "sharpe_long_short": 1.3249379641895196,
+            "mean_ls_spread": 0.2504567867490204,
+            "ls_n_periods": 32
+          },
+          "top_n_months": 32,
+          "top_n_ok": 1,
+          "top_n_min": 25,
+          "top_n_max": 25
+        }
+      }
+    },
+    "2": {
+      "cell_id": 2,
+      "name": "ridge_adapt",
+      "model": "ridge",
+      "regime": 1,
+      "n_features": 36,
+      "splits": {
+        "val": {
+          "rows": 27780,
+          "metrics": {
+            "ic_mean": -0.01309286225007655,
+            "ic_median": -0.0011474383818376958,
+            "rank_ic_mean": -0.04858259018759181,
+            "ic_n_dates": 503,
+            "hit_ratio": 0.4783297336213103,
+            "hit_ratio_cs_mean": 0.47870076418281154,
+            "sharpe_long_short": -0.5322252142573237,
+            "mean_ls_spread": -0.08596575037573306,
+            "ls_n_periods": 24
+          },
+          "top_n_months": 24,
+          "top_n_ok": 1,
+          "top_n_min": 25,
+          "top_n_max": 25
+        },
+        "test": {
+          "rows": 42387,
+          "metrics": {
+            "ic_mean": 0.05054481113612954,
+            "ic_median": 0.028428991715376384,
+            "rank_ic_mean": 0.051292899999592884,
+            "ic_n_dates": 648,
+            "hit_ratio": 0.48635194753108263,
+            "hit_ratio_cs_mean": 0.4864144100776011,
+            "sharpe_long_short": 1.2138609143555905,
+            "mean_ls_spread": 0.2474731714478589,
+            "ls_n_periods": 32
+          },
+          "top_n_months": 32,
+          "top_n_ok": 1,
+          "top_n_min": 25,
+          "top_n_max": 25
+        }
+      }
+    },
+    "3": {
+      "cell_id": 3,
+      "name": "hybrid_static",
+      "model": "hybrid",
+      "regime": 0,
+      "n_features": 33,
+      "splits": {
+        "val": {
+          "rows": 27780,
+          "metrics": {
+            "ic_mean": 0.03208574172848686,
+            "ic_median": 0.05356995781778718,
+            "rank_ic_mean": -0.02696941055602639,
+            "ic_n_dates": 503,
+            "hit_ratio": 0.4787616990640749,
+            "hit_ratio_cs_mean": 0.4787269286494771,
+            "sharpe_long_short": 0.16627339568374305,
+            "mean_ls_spread": 0.0336042402269602,
+            "ls_n_periods": 24
+          },
+          "top_n_months": 24,
+          "top_n_ok": 1,
+          "top_n_min": 25,
+          "top_n_max": 25
+        },
+        "test": {
+          "rows": 42387,
+          "metrics": {
+            "ic_mean": 0.002293962377456474,
+            "ic_median": 0.0007941677459664253,
+            "rank_ic_mean": 0.04792650311703307,
+            "ic_n_dates": 648,
+            "hit_ratio": 0.5398825111472857,
+            "hit_ratio_cs_mean": 0.5395787873665451,
+            "sharpe_long_short": 0.5590427463993526,
+            "mean_ls_spread": 0.12125400611682324,
+            "ls_n_periods": 32
+          },
+          "top_n_months": 32,
+          "top_n_ok": 1,
+          "top_n_min": 25,
+          "top_n_max": 25
+        }
+      }
+    },
+    "4": {
+      "cell_id": 4,
+      "name": "hybrid_adapt",
+      "model": "hybrid",
+      "regime": 1,
+      "n_features": 36,
+      "splits": {
+        "val": {
+          "rows": 27780,
+          "metrics": {
+            "ic_mean": 0.030917929981906928,
+            "ic_median": 0.05091958133059031,
+            "rank_ic_mean": -0.027379448646416307,
+            "ic_n_dates": 503,
+            "hit_ratio": 0.478869690424766,
+            "hit_ratio_cs_mean": 0.4788550652729328,
+            "sharpe_long_short": 0.35402891418685545,
+            "mean_ls_spread": 0.0725533080287198,
+            "ls_n_periods": 24
+          },
+          "top_n_months": 24,
+          "top_n_ok": 1,
+          "top_n_min": 25,
+          "top_n_max": 25
+        },
+        "test": {
+          "rows": 42387,
+          "metrics": {
+            "ic_mean": -4.429799790222423e-05,
+            "ic_median": 0.003941589676667259,
+            "rank_ic_mean": 0.045997534377785906,
+            "ic_n_dates": 648,
+            "hit_ratio": 0.5402363932337745,
+            "hit_ratio_cs_mean": 0.5399452963978855,
+            "sharpe_long_short": 0.555010991951844,
+            "mean_ls_spread": 0.11794644954362944,
+            "ls_n_periods": 32
+          },
+          "top_n_months": 32,
+          "top_n_ok": 1,
+          "top_n_min": 25,
+          "top_n_max": 25
+        }
+      }
+    }
+  }
+}

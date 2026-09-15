@@ -1,0 +1,49 @@
+{
+  "frozen_at": "2026-08-24",
+  "version": 1,
+  "note": "Grille LightGBM gelée AVANT le premier run OOS complet (anti data-snooping). Ne pas élargir après démarrage du walk-forward 7 modèles.",
+  "n_trials": 9,
+  "aligned_with_rf_grid_size": true,
+  "rf_reference_grid_combos": 9,
+  "objective": "maximize_rank_ic_mean_spearman_on_inner_val",
+  "inner_val_months": 6,
+  "search_space": {
+    "n_estimators": {
+      "type": "categorical",
+      "choices": [100, 200, 400]
+    },
+    "max_depth": {
+      "type": "int",
+      "low": 3,
+      "high": 8
+    },
+    "learning_rate": {
+      "type": "float",
+      "low": 0.01,
+      "high": 0.2,
+      "log": true
+    },
+    "num_leaves": {
+      "type": "int",
+      "low": 15,
+      "high": 63
+    },
+    "min_child_samples": {
+      "type": "int",
+      "low": 5,
+      "high": 50
+    }
+  },
+  "fixed_params": {
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "verbose": -1
+  },
+  "defaults": {
+    "n_estimators": 200,
+    "max_depth": 5,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "min_child_samples": 20
+  }
+}

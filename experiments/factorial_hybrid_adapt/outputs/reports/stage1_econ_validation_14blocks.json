@@ -1,0 +1,54 @@
+{
+  "horizon": "FORWARD_HORIZON_DAYS du dataset (alpha / excess vs MASI)",
+  "primary_metric": "future_excess = realized_alpha * vol_baissiere_20d(t)",
+  "secondary_metric": "future_alpha = alpha_ajuste_risque réalisé",
+  "best_BUY_SELL_separation": {
+    "configuration": "C3 Hybrid",
+    "cell": 3,
+    "spread_BUY_SELL_mean_excess": 0.01205363074418756,
+    "pct_blocks_BUY_gt_SELL": 0.6428571428571429
+  },
+  "lookahead_checks": [
+    {
+      "check": "prediction_uses_only_features_at_t",
+      "status": "OK",
+      "detail": "Scores issus du WF : features *_z / régime connus à date_cours."
+    },
+    {
+      "check": "tau_not_fit_on_test",
+      "status": "OK",
+      "detail": "tau_method=expanding_past_quantile : calibré sur train du bloc, historique des plis antérieurs, ou fixe a priori — jamais sur le test courant."
+    },
+    {
+      "check": "benchmark_available_at_t",
+      "status": "OK",
+      "detail": "benchmark_mode=zero_alpha : 0 (échelle alpha) ou médiane CS du jour t — pas de rendement futur."
+    },
+    {
+      "check": "recommendation_ignores_realized_alpha",
+      "status": "OK",
+      "detail": "realized_alpha n'entre pas dans assign_recommendation ; usage éval seulement."
+    },
+    {
+      "check": "score_definition",
+      "status": "INFO",
+      "detail": "predicted_return = prédiction de alpha_ajuste_risque (excès vs MASI / vol baissière), pas un return brut. benchmark_return=0 sous zero_alpha."
+    },
+    {
+      "check": "recommendation_reproducible_from_excess_and_tau",
+      "status": "OK",
+      "detail": "Taux de reproduction règle excess±tau = 1.000000"
+    },
+    {
+      "check": "recommendation_not_equal_to_realized_thresholding",
+      "status": "OK",
+      "detail": "Accord reco vs seuil(realized_alpha,tau)=0.355 (élevé ⇒ suspicion ; attendu nettement < 1 car pred ≠ realized)."
+    },
+    {
+      "check": "future_outcomes_eval_only",
+      "status": "OK",
+      "detail": "future_alpha / future_excess utilisés uniquement pour stats ex-post ; non injectés dans recommendation."
+    }
+  ],
+  "nsga_launched": false
+}

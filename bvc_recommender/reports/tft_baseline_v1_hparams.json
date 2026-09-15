@@ -1,0 +1,6 @@
+{
+  "hidden_size": 16,
+  "attention_head_size": 4,
+  "dropout": 0.2,
+  "learning_rate": 0.00024970737145052745
+}

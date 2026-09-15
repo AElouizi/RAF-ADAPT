@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Rapport de réalisation — Système de recommandation d'actions</title>
+  <style>
+    :root {
+      --ink: #1a2332;
+      --muted: #4b5563;
+      --line: #d5dde6;
+      --paper: #f7f5f1;
+      --accent: #0c3d4d;
+      --good: #166534;
+      --warn: #9a3412;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #e8ecef;
+      font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      line-height: 1.55;
+      font-size: 16px;
+    }
+    .page {
+      max-width: 920px;
+      margin: 32px auto;
+      background: #fff;
+      padding: 56px 64px 72px;
+      box-shadow: 0 0 0 1px var(--line);
+    }
+    h1, h2, h3, h4 {
+      font-family: "Segoe UI", Calibri, "Helvetica Neue", sans-serif;
+      color: var(--accent);
+      line-height: 1.25;
+    }
+    h1 { font-size: 1.85rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.28rem;
+      margin: 2.2rem 0 0.7rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 2px solid var(--accent);
+    }
+    h3 { font-size: 1.05rem; margin: 1.4rem 0 0.45rem; }
+    p { margin: 0.55rem 0 0.85rem; }
+    .cover {
+      border-bottom: 4px solid var(--accent);
+      padding-bottom: 1.4rem;
+      margin-bottom: 1.6rem;
+    }
+    .kicker {
+      font-family: "Segoe UI", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0 0 1rem; }
+    .meta {
+      font-family: "Segoe UI", sans-serif;
+      font-size: 0.88rem;
+      color: var(--muted);
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 4px 12px;
+    }
+    .toc { background: var(--paper); padding: 1rem 1.2rem; margin: 1.4rem 0 2rem; }
+    .toc ol { margin: 0.3rem 0 0; padding-left: 1.3rem; }
+    .toc a { color: var(--accent); text-decoration: none; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: "Segoe UI", sans-serif;
+      font-size: 0.86rem;
+      margin: 0.7rem 0 1.1rem;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 0.42rem 0.55rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #eef3f6; color: var(--accent); font-weight: 600; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; }
+    .note { font-size: 0.9rem; color: var(--muted); }
+    ul, ol { margin: 0.3rem 0 0.9rem; }
+    li { margin: 0.22rem 0; }
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 1rem 0 1.3rem;
+    }
+    .kpi div {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 0.7rem 0.8rem;
+    }
+    .kpi span { display: block; font-family: "Segoe UI", sans-serif; font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .kpi strong { font-family: "Segoe UI", sans-serif; font-size: 1.15rem; color: var(--accent); }
+    .box {
+      border-left: 4px solid var(--accent);
+      background: var(--paper);
+      padding: 0.7rem 1rem;
+      margin: 0.9rem 0 1.2rem;
+    }
+    .flow {
+      font-family: "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      background: #0c3d4d;
+      color: #f8fafc;
+      padding: 0.85rem 1rem;
+      margin: 0.8rem 0 1.2rem;
+      letter-spacing: 0.01em;
+    }
+    code { font-family: Consolas, "Courier New", monospace; font-size: 0.86em; }
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--line);
+      font-family: "Segoe UI", sans-serif;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; box-shadow: none; max-width: none; padding: 18mm; }
+      h2 { break-after: avoid; }
+      table, .kpi, .box { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="cover">
+    <p class="kicker">Livrable client · Confidentialité interne</p>
+    <h1>Système de recommandation d'actions</h1>
+    <p class="subtitle">Rapport complet de réalisation — Bourse de Casablanca (BVC / MASI)</p>
+    <div class="meta">
+      <span>Objet</span><span>Scoring, recommandations BUY/NEUTRAL/SELL, allocation de portefeuille et plateforme de consultation</span>
+      <span>Marché</span><span>Bourse de Casablanca — univers actions, indice de référence MASI</span>
+      <span>Modèle retenu</span><span>C3 — Hybride Ridge + Random Forest (sans régime), allocation NSGA-III (genou), poids max 10 % par titre</span>
+      <span>Fenêtre de validation</span><span>Décisions mensuelles de juillet 2018 à juin 2025 (84 mois OOS). Période demandée 2010–2025 : 2010-01 → 2018-06 non calculable sans réentraîner Stage 1</span>
+      <span>Date du rapport</span><span>15 août 2026</span>
+      <span>Statut</span><span>Livrable expérimental FINAL · artefacts figés · plateforme alignée</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <strong>Sommaire</strong>
+    <ol>
+      <li><a href="#s1">Synthèse exécutive</a></li>
+      <li><a href="#s2">Contexte, enjeux et objectifs</a></li>
+      <li><a href="#s3">Périmètre et principes de gouvernance</a></li>
+      <li><a href="#s4">Étape 1 — Constitution de la base de données</a></li>
+      <li><a href="#s5">Étape 2 — Indicateurs et dataset d'apprentissage</a></li>
+      <li><a href="#s6">Étape 3 — Détection du régime de marché</a></li>
+      <li><a href="#s7">Étape 4 — Scoring (étage 1) et plan factoriel</a></li>
+      <li><a href="#s8">Étape 5 — Validation glissante</a></li>
+      <li><a href="#s9">Étape 6 — Recommandations BUY / NEUTRAL / SELL</a></li>
+      <li><a href="#s10">Étape 7 — Allocation de portefeuille (étage 2)</a></li>
+      <li><a href="#s11">Étape 8 — Backtest, benchmarks et validation statistique</a></li>
+      <li><a href="#s12">Étape 9 — Plateforme investisseur</a></li>
+      <li><a href="#s13">Résultats du modèle livré (C3)</a></li>
+      <li><a href="#s14">Limites, risques et précautions d'usage</a></li>
+      <li><a href="#s15">Livrables, reproductibilité et suite</a></li>
+      <li><a href="#s16">Annexe — Paramètres figés</a></li>
+    </ol>
+  </div>
+
+  <h2 id="s1">1. Synthèse exécutive</h2>
+  <p>
+    Le projet livre un <strong>système de recommandation d'actions</strong> pour la Bourse de Casablanca.
+    Il produit, chaque mois, une liste de titres avec une recommandation (Acheter / Neutre / Vendre),
+    un portefeuille pondéré, et un historique de performance comparable au MASI et à un univers équipondéré.
+  </p>
+  <p>
+    Le pipeline comporte deux étages distincts. L'<strong>étage 1</strong> estime un score de qualité
+    (excès de rendement ajusté au risque par rapport au MASI), puis le traduit en recommandation.
+    L'<strong>étage 2</strong> construit un portefeuille long-only à partir des titres non vendus,
+    en arbitrant trois objectifs : alpha attendu, risque de queue (CVaR) et liquidité.
+  </p>
+  <p>
+    Quatre configurations ont été comparées (Ridge vs hybride Ridge+Forêt aléatoire, avec ou sans régime).
+    La configuration retenue pour la livraison est <strong>C3 — Hybrid</strong>, avec allocation
+    NSGA-III à trois objectifs (alpha, CVaR, liquidité), sélection du point « genou » (distance à l'utopie)
+    et <strong>poids maximal de 10 % par titre</strong>.
+    La liquidité n'est <strong>pas</strong> un filtre d'éligibilité (aucun seuil VMQ ≥ 500 k MAD).
+  </p>
+
+  <div class="kpi">
+    <div><span>Rendement net annualisé</span><strong>11,25 %</strong></div>
+    <div><span>Sharpe net</span><strong>0,994</strong></div>
+    <div><span>Max drawdown</span><strong>−24,2 %</strong></div>
+    <div><span>Richesse (base 100)</span><strong>202,1</strong></div>
+  </div>
+  <p class="note">
+    Période hors échantillon testable : décisions 2018-07 → 2025-06 (84 mois). Dernière détention close au 2025-07-31 (un mois, comme les autres périodes — pas jusqu'au dernier cours en base). Coût de transaction 0,3 % × turnover L1.
+    MASI sur la même fenêtre : +7,69 % annualisé, Sharpe 0,66, richesse 167,2.
+    Equal Weight (même univers BUY+NEUTRAL C3) : +12,36 % annualisé, Sharpe 1,162.
+    C3 n'est pas au-dessus du MASI sur toute la trajectoire (creux 2020–2022). L'écart vs MASI n'est pas significatif à 5 % (t p = 0,48 ; Wilcoxon p = 0,28).
+    Après correction du calendrier, C2 a un Sharpe légèrement supérieur (1,035 vs 0,994) ; C3 reste le modèle affiché (hybride). Sur 2023–2025, C3 atteint +38,3 % annualisé (Sharpe 2,65).
+  </p>
+
+  <h2 id="s2">2. Contexte, enjeux et objectifs</h2>
+  <h3>2.1 Marché</h3>
+  <p>
+    La Bourse de Casablanca est un marché frontière : liquidité hétérogène, historique plus court que
+    les marchés développés, publication financière semestrielle, et friction de transaction non négligeable.
+    Un système de recommandation ne peut donc pas se limiter à un classement de rendement brut :
+    il doit intégrer le risque baissier, la liquidité et l'état du marché.
+  </p>
+  <h3>2.2 Objectifs métier</h3>
+  <ul>
+    <li>Produire, pour chaque mois, une recommandation par titre de l'univers (BUY / NEUTRAL / SELL).</li>
+    <li>Construire un portefeuille investissable (poids, nombre de lignes, liquidité).</li>
+    <li>Mesurer la performance nette de frais vs MASI et vs un portefeuille équipondéré.</li>
+    <li>Mettre à disposition de l'investisseur une interface de consultation (calendrier, titres, portefeuille, rendements).</li>
+  </ul>
+  <h3>2.3 Ce que le système ne fait pas</h3>
+  <ul>
+    <li>Il ne prédit pas le cours brut d'une action ; la cible est un <em>alpha ajusté au risque</em>.</li>
+    <li>Il n'exécute pas d'ordres ; la plateforme est en lecture seule.</li>
+    <li>Le modèle de deep learning TFT a été exploré en amont puis écarté du livrable opérationnel.</li>
+  </ul>
+
+  <h2 id="s3">3. Périmètre et principes de gouvernance</h2>
+  <div class="box">
+    <strong>Principes non négociables.</strong>
+    Point-in-time strict (aucune information future). Features fondamentales datées à la date de publication BVC
+    (S1 disponible fin septembre, S2 fin avril de l'année suivante). Régime de marché calibré sur le passé uniquement.
+    Poids et recommandations historiques figés : la plateforme visualise, elle ne recalcule pas.
+  </div>
+  <ul>
+    <li><strong>Univers</strong> : actions cotées BVC présentes dans l'historique de constitution d'indices et les cours.</li>
+    <li><strong>Fréquence</strong> : rebalancement mensuel (fin de mois de décision).</li>
+    <li><strong>Horizon de la cible</strong> : 63 jours de bourse (~3 mois).</li>
+    <li><strong>Style</strong> : long-only, pas de vente à découvert, poids maximal 10 % par titre.</li>
+    <li><strong>Devise / unité de liquidité</strong> : MAD ; VMQ en dirhams.</li>
+  </ul>
+
+  <p class="flow">
+    Données BVC → Features (fondamentales, techniques, marché) → Score α → Reco BUY/NEUTRAL/SELL
+    → NSGA-III (α, CVaR, liquidité) → Portefeuille mensuel → Backtest net → Plateforme
+  </p>
+
+  <h2 id="s4">4. Étape 1 — Constitution de la base de données</h2>
+  <p>
+    Les données sont collectées depuis les tables de marché et de fondamentaux (entrepôt / Supabase),
+    nettoyées, puis stockées en fichiers de travail reproductibles.
+  </p>
+  <h3>4.1 Sources</h3>
+  <table>
+    <thead><tr><th>Famille</th><th>Contenu</th><th>Rôle</th></tr></thead>
+    <tbody>
+      <tr><td>Cours historiques</td><td>Prix, volumes, dates de séance par ticker</td><td>Features techniques, rendements réalisés, liquidité</td></tr>
+      <tr><td>Indices (MASI)</td><td>Niveau et rendements de l'indice</td><td>Benchmark, bêta, contexte de marché, régime</td></tr>
+      <tr><td>Fondamentaux</td><td>Comptes semestriels (CA, PNB, RNPG, capitaux propres, etc.)</td><td>Ratios de valorisation et de qualité</td></tr>
+      <tr><td>Constitution d'indices</td><td>Libellés, dates de cotation, nombre de titres</td><td>Univers, capitalisation, noms affichés</td></tr>
+    </tbody>
+  </table>
+  <h3>4.2 Contrôles qualité</h3>
+  <ul>
+    <li>Correction des historiques de cours après opérations sur titres (splits).</li>
+    <li>Filtrage à partir de la date de première cotation et à partir du 3 juin 2015 pour les indicateurs.</li>
+    <li>Traitement sectoriel : banques / assurances (PNB, primes, exclusion d'EV/EBITDA, règles de résultat net).</li>
+    <li>Valeurs aberrantes (PE/PB ≤ 0, |ROE| excessif) mises en NA plutôt que forcées.</li>
+  </ul>
+
+  <h2 id="s5">5. Étape 2 — Indicateurs et dataset d'apprentissage</h2>
+  <h3>5.1 Features techniques (journalières)</h3>
+  <p>
+    Momentum (1, 3, 6, 12 mois), RSI, distances aux moyennes mobiles 20/50/200,
+    volatilité 20 et 60 jours, volatilité baissière 20 jours, bêta MASI,
+    volumes moyens quotidiens (VMQ 20j et 60j), turnover et indicateur de liquidité.
+  </p>
+  <h3>5.2 Features fondamentales (point-in-time)</h3>
+  <p>
+    PE, PB, EV/EBITDA (hors financiers), ROE, marges, croissances YoY, gearing,
+    score de Piotroski et score de santé. Jointure as-of sur la date de publication, jamais sur la date de clôture comptable.
+  </p>
+  <h3>5.3 Contexte de marché</h3>
+  <p>
+    Momentum 3 mois du MASI, dispersion des rendements, breadth (part de titres au-dessus de leur MA50),
+    volatilité moyenne de l'univers. Calculés uniquement à partir des données BVC.
+  </p>
+  <h3>5.4 Cible d'apprentissage</h3>
+  <div class="box">
+    <strong>alpha_ajuste_risque</strong> =
+    (rendement à terme du titre − rendement à terme du MASI) / volatilité baissière 20 jours.
+    Horizon = 63 séances. Le modèle apprend à identifier un excès de rendement ajusté au risque, pas un rendement brut.
+  </div>
+  <p>
+    Les features continues sont ensuite normalisées en cross-section (z-scores par date, colonnes <code>*_z</code>),
+    afin de comparer les titres entre eux un jour donné plutôt que dans le temps.
+  </p>
+
+  <h2 id="s6">6. Étape 3 — Détection du régime de marché</h2>
+  <p>
+    Un HMM gaussien avait été testé puis abandonné : l'état « haussier » y était trop rare (~3–5 % des mois)
+    pour conditionner un modèle. Il a été remplacé par une <strong>règle à seuils explicite à trois états</strong>
+    (haussier, neutre, baissier).
+  </p>
+  <ul>
+    <li>Entrées : momentum 3 mois du MASI et breadth MA50, observés en fin de mois.</li>
+    <li>Seuils (terciles 33 % / 67 %) calibrés sur 2015–2020 uniquement, puis figés :
+      momentum −1,67 % / +4,29 % ; breadth 39,3 % / 59,6 %.</li>
+    <li>Haussier = momentum <em>et</em> breadth au-dessus du tercile haut ; baissier = les deux sous le tercile bas ; sinon neutre.</li>
+    <li>Le régime du mois est propagé à chaque séance du mois (pas de fuite intra-mois vers le futur).</li>
+  </ul>
+  <p>
+    Les cellules « avec régime » reçoivent trois indicatrices <code>is_bull</code>, <code>is_neutral</code>, <code>is_bear</code>
+    en plus des features z-scorées.
+  </p>
+
+  <h2 id="s7">7. Étape 4 — Scoring (étage 1) et plan factoriel</h2>
+  <p>
+    L'étage 1 compare de façon contrôlée l'<strong>hybridation</strong> (Ridge seul vs Ridge + Forêt aléatoire)
+    et l'<strong>adaptation</strong> (avec ou sans features de régime). Quatre cellules, mêmes données, même cible.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Cellule</th><th>Modèle</th><th>Régime</th><th>Rôle</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>C1</td><td>Ridge</td><td>Non</td><td>Référence linéaire</td></tr>
+      <tr><td>C2</td><td>Ridge</td><td>Oui</td><td>Effet régime seul</td></tr>
+      <tr><td>C3</td><td>Ridge + RF (50 % / 50 %)</td><td>Non</td><td><strong>Modèle livré</strong></td></tr>
+      <tr><td>C4</td><td>Ridge + RF (50 % / 50 %)</td><td>Oui</td><td>Hybridation + régime</td></tr>
+    </tbody>
+  </table>
+  <h3>7.1 Ridge</h3>
+  <p>
+    Régression Ridge (pénalisation L2, graine 42). Interprétable, robuste en petit échantillon.
+    Features : ~33 colonnes z-scorées (36 avec régime).
+  </p>
+  <h3>7.2 Forêt aléatoire</h3>
+  <p>
+    Même cible et mêmes features. Hyperparamètres choisis sur validation (Rank-IC Spearman),
+    sans retuning sur le test. Combinaison hybride : moyenne des scores Ridge et RF après z-score cross-sectionnel du jour.
+  </p>
+  <h3>7.3 Première lecture (split fixe)</h3>
+  <p>
+    Un split train ≤ 2020 / validation 2021–2022 / test ≥ 2023 a servi de premier diagnostic.
+    Il a révélé un <strong>déséquilibre de régimes</strong> : le test ne contenait quasiment pas de mois baissiers
+    (environ 3 %), contre 25 % en validation. Toute conclusion sur l'adaptation au régime était donc fragile.
+    D'où l'étape suivante.
+  </p>
+
+  <h2 id="s8">8. Étape 5 — Validation glissante</h2>
+  <p>
+    Le split fixe a été remplacé par une <strong>validation walk-forward à fenêtre glissante</strong>
+    sur 2015–2025, afin de tester le scoring sur plusieurs régimes successifs.
+  </p>
+  <table>
+    <thead><tr><th>Paramètre</th><th>Choix</th></tr></thead>
+    <tbody>
+      <tr><td>Fenêtre d'apprentissage</td><td>36 mois glissants (taille constante, non expansive)</td></tr>
+      <tr><td>Fenêtre de test</td><td>6 mois immédiatement après le train</td></tr>
+      <tr><td>Pas</td><td>1 mois (plis descriptifs chevauchants)</td></tr>
+      <tr><td>Blocs d'allocation</td><td>Blocs de 6 mois non chevauchants (indépendance pour tests statistiques)</td></tr>
+      <tr><td>Embargo</td><td>Aucun entre train et test ; la cible à 63 jours est calculée sans utiliser de cours postérieurs à la date de feature</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Les scores hors échantillon de ces blocs alimentent ensuite la règle de recommandation et l'allocation,
+    sans réutiliser les performances du test pour choisir les hyperparamètres.
+  </p>
+
+  <h2 id="s9">9. Étape 6 — Recommandations BUY / NEUTRAL / SELL</h2>
+  <p>
+    Le classement « top 25 » initial a été abandonné pour le livrable : il ne parlait pas le langage de l'investisseur
+    et forçait une cardinalité artificielle. La règle opérationnelle couvre <strong>l'univers complet</strong>.
+  </p>
+  <h3>9.1 Définition</h3>
+  <ul>
+    <li>Le score prédit est déjà un alpha (excès vs MASI ajusté au risque).</li>
+    <li>Benchmark interne : zéro (battre le marché ⇔ alpha &gt; 0).</li>
+    <li>Seuil de conviction τ : quantile 33 % des |prédictions| passées (expanding, jamais le mois courant).</li>
+    <li>BUY si alpha &gt; +τ ; SELL si alpha &lt; −τ ; NEUTRAL sinon.</li>
+    <li>Le score de conviction reste l'alpha signé (intensité continue).</li>
+  </ul>
+  <h3>9.2 Usage à l'étage 2</h3>
+  <p>
+    Les titres SELL sont exclus du portefeuille. Les BUY conservent leur alpha intégral.
+    Les NEUTRAL voient leur score d'optimisation multiplié par 0,5 (conviction réduite, pas d'exclusion).
+  </p>
+  <p class="note">Sur la fenêtre livrée : recommandations C1–C4, 84 mois (2018-07 → 2025-06), univers complet BUY/NEUTRAL/SELL. Portefeuille livré = C3.</p>
+
+  <h2 id="s10">10. Étape 7 — Allocation de portefeuille (étage 2)</h2>
+  <h3>10.1 Problème d'optimisation</h3>
+  <p>
+    Chaque mois, un algorithme évolutionnaire <strong>NSGA-III</strong> cherche un ensemble de portefeuilles
+    non dominés (front de Pareto), puis un unique portefeuille est retenu.
+  </p>
+  <table>
+    <thead><tr><th>Élément</th><th>Spécification retenue (Variante A)</th></tr></thead>
+    <tbody>
+      <tr><td>Univers</td><td>Tous les titres du mois sauf SELL (pas de filtre VMQ ≥ 500 k)</td></tr>
+      <tr><td>Objectifs</td><td>Maximiser l'alpha de portefeuille ; minimiser le CVaR 95 % ; maximiser L = sigmoid(VMQ 20j)</td></tr>
+      <tr><td>Contraintes</td><td>Somme des poids = 100 % ; long-only ; poids max 10 % ; sparse (poids min 0 %)</td></tr>
+      <tr><td>CVaR</td><td>Estimé sur l'historique de rendements journaliers ≤ date de décision (~2 ans)</td></tr>
+      <tr><td>Population / générations</td><td>36 / 30 (aligné walk-forward)</td></tr>
+      <tr><td>Sélection finale</td><td>Point genou (distance à l'utopie) = portefeuille d'équilibre</td></tr>
+    </tbody>
+  </table>
+  <h3>10.2 Variantes étudiées puis arbitrées</h3>
+  <table>
+    <thead><tr><th>Mode liquidité</th><th>Principe</th><th>Décision</th></tr></thead>
+    <tbody>
+      <tr><td>Éligibilité</td><td>Filtre VMQ ≥ 500 000 MAD puis NSGA à 2 objectifs (α, CVaR)</td><td>Protocole antérieur, non retenu pour le livrable</td></tr>
+      <tr><td><strong>Pareto (Variante A)</strong></td><td>Pas de filtre dur ; la liquidité est un 3<sup>e</sup> objectif</td><td><strong>Retenu</strong></td></tr>
+      <tr><td>Aucune</td><td>Ni filtre ni objectif de liquidité</td><td>Contrôle méthodologique uniquement</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Le filtre dur écartait des titres encore négociables et ne laissait pas l'optimiseur arbitrer liquidité contre alpha.
+    La Variante A internalise cet arbitrage.
+  </p>
+  <h3>10.3 Choix de C3 parmi C1–C4</h3>
+  <p>
+    Sous le protocole figé (NSGA-III 3 objectifs, Knee, w_i ≤ 10 %, SELL exclus, pas de filtre VMQ),
+    une fois la dernière période bornée à un mois (2025-07-31),
+    <strong>C2</strong> a le meilleur Sharpe (1,035) et <strong>C3 Hybrid</strong> le même ordre de rendement (11,25 % vs 11,26 %).
+    C3 reste le modèle affiché sur la plateforme (hybride). C4 n'améliore pas C3.
+    Les écarts C3 vs C1 / C2 / C4 / MASI ne sont pas significatifs à 5 %.
+    La courbe de richesse C3 passe <em>sous</em> le MASI sur une longue partie de 2020–2022 ; le rattrapage est concentré en 2023–2025.
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Cellule</th>
+        <th class="num">Rend. ann.</th>
+        <th class="num">Sharpe</th>
+        <th class="num">Max DD</th>
+        <th class="num">L</th>
+        <th class="num">Positions moy.</th>
+        <th class="num">Richesse 100</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>C1 Ridge</td><td class="num">10,09 %</td><td class="num">0,948</td><td class="num">−22,2 %</td><td class="num">0,711</td><td class="num">39,7</td><td class="num">188,6</td></tr>
+      <tr><td>C2 Ridge + régime</td><td class="num">11,26 %</td><td class="num">1,035</td><td class="num">−22,6 %</td><td class="num">0,703</td><td class="num">38,7</td><td class="num">202,3</td></tr>
+      <tr><td><strong>C3 Hybrid</strong></td><td class="num"><strong>11,25 %</strong></td><td class="num"><strong>0,994</strong></td><td class="num">−24,2 %</td><td class="num">0,712</td><td class="num">31,6</td><td class="num"><strong>202,1</strong></td></tr>
+      <tr><td>C4 Hybrid + régime</td><td class="num">9,43 %</td><td class="num">0,844</td><td class="num">−24,3 %</td><td class="num">0,713</td><td class="num">31,5</td><td class="num">181,3</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Portefeuilles Knee figés, SELL exclus, pas de filtre VMQ ≥ 500 k, w_i ≤ 10 %. Front de Pareto complet conservé. Concentration : poids max réalisé = 10 % ; Top 3 ≈ 29 % ; Top 5 ≈ 46 % (C3).</p>
+
+  <h2 id="s11">11. Étape 8 — Backtest, benchmarks et validation statistique</h2>
+  <h3>11.1 Convention de holding (anti look-ahead)</h3>
+  <ul>
+    <li>Décision en date de rebalancement t (fin de mois), avec données ≤ t uniquement.</li>
+    <li>Le dernier mois de décision (2025-06) est détenu jusqu'au 2025-07-31, pas jusqu'au dernier cours disponible en 2026.</li>
+    <li>Coût : 0,3 % × turnover L1 (somme des |Δw|), imputé le premier jour de détention.</li>
+    <li>Les poids C3 ne sont pas réoptimisés pendant le backtest final.</li>
+  </ul>
+  <h3>11.2 Benchmarks</h3>
+  <ul>
+    <li><strong>MASI</strong> : indice de marché.</li>
+    <li><strong>Equal Weight</strong> : univers équipondéré rebalancé mensuellement (contrôle « simple diversification »).</li>
+  </ul>
+  <h3>11.3 Lecture statistique (n = 84 mois)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Comparaison</th>
+        <th class="num">Écart mensuel moyen</th>
+        <th class="num">Mois de surperformance</th>
+        <th class="num">p (Student)</th>
+        <th class="num">p (Wilcoxon)</th>
+        <th>Significatif à 5 % (les deux tests)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>C3 − MASI</td>
+        <td class="num">+0,21 pp</td>
+        <td class="num">59,5 %</td>
+        <td class="num">0,476</td>
+        <td class="num">0,279</td>
+        <td>Non</td>
+      </tr>
+      <tr>
+        <td>C3 − Equal Weight C3</td>
+        <td class="num">−0,07 pp</td>
+        <td class="num">53,6 %</td>
+        <td class="num">0,599</td>
+        <td class="num">0,982</td>
+        <td>Non</td>
+      </tr>
+      <tr>
+        <td>C3 − C1 / C2 / C4</td>
+        <td class="num">0,00 à +0,13 pp</td>
+        <td class="num">45–50 %</td>
+        <td class="num">&gt; 0,18</td>
+        <td class="num">&gt; 0,36</td>
+        <td>Non</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    L'avantage économique vs MASI est de l'ordre de +3,6 pp annualisés, sans conclusion statistique à 5 %.
+    Vs l'équipondéré du même univers C3, NSGA n'apporte pas de gain significatif (Sharpe EW 1,162 vs C3 0,994).
+    C3 ne « superforme » pas le MASI au sens d'une trajectoire toujours au-dessus : 2020–2022 est négatif (Sharpe −0,32).
+  </p>
+  <h3>11.4 Sous-périodes (C3)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Période</th><th class="num">n mois</th><th class="num">Rend. ann.</th><th class="num">Sharpe</th><th class="num">Max DD</th><th class="num">L</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>2010–2014</td><td class="num">0</td><td colspan="4">Impossible (pas de Stage 1)</td></tr>
+      <tr><td>2015–2019 (dès 2018-07)</td><td class="num">18</td><td class="num">4,84 %</td><td class="num">0,66</td><td class="num">−6,4 %</td><td class="num">0,58</td></tr>
+      <tr><td>2020–2022</td><td class="num">36</td><td class="num">−4,35 %</td><td class="num">−0,32</td><td class="num">−23,8 %</td><td class="num">0,70</td></tr>
+      <tr><td>2023–2025</td><td class="num">30</td><td class="num">38,29 %</td><td class="num">2,65</td><td class="num">−11,1 %</td><td class="num">0,81</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="s12">12. Étape 9 — Plateforme investisseur</h2>
+  <p>
+    Une application web (Streamlit) présente les artefacts figés, sans recalcul des modèles.
+    Titre affiché : <strong>Système de recommandation d'actions</strong>.
+  </p>
+  <table>
+    <thead><tr><th>Fonction</th><th>Ce que voit l'investisseur</th></tr></thead>
+    <tbody>
+      <tr><td>Calendrier</td><td>Sélection du mois de décision (<strong>2018-07 à 2025-06, 84 mois</strong>, pas 2023). Onglet marché : MASI dès 2010</td></tr>
+      <tr><td>Recommandations</td><td>Liste complète des titres, nom, BUY/NEUTRAL/SELL, alpha, régime, liquidité, VMQ, présence au portefeuille, poids</td></tr>
+      <tr><td>Portefeuille</td><td>Composition pondérée, alpha, CVaR, L, turnover, rendement brut/net du mois</td></tr>
+      <tr><td>Historique</td><td>Série mensuelle des rendements et de la richesse</td></tr>
+      <tr><td>Performance</td><td>Courbes C3 vs MASI vs Equal Weight, C1–C4, drawdowns, KPIs, tests, sous-périodes</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Lancement local : <code>py -3 -m streamlit run experiments/factorial_hybrid_adapt/web/app_c4.py</code>
+    — URL : <code>http://localhost:8501</code>.
+  </p>
+
+  <h2 id="s13">13. Résultats du modèle livré (C3)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Indicateur (net de frais)</th>
+        <th class="num">C3</th>
+        <th class="num">MASI</th>
+        <th class="num">Equal Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Rendement annualisé</td><td class="num">11,25 %</td><td class="num">7,69 %</td><td class="num">12,36 %</td></tr>
+      <tr><td>Volatilité annualisée</td><td class="num">11,39 %</td><td class="num">12,38 %</td><td class="num">10,51 %</td></tr>
+      <tr><td>Sharpe</td><td class="num">0,994</td><td class="num">0,661</td><td class="num">1,162</td></tr>
+      <tr><td>Sortino</td><td class="num">1,511</td><td class="num">0,979</td><td class="num">1,733</td></tr>
+      <tr><td>CVaR 95 %</td><td class="num">1,65 %</td><td class="num">1,88 %</td><td class="num">1,57 %</td></tr>
+      <tr><td>Max drawdown</td><td class="num">−24,17 %</td><td class="num">−30,54 %</td><td class="num">−22,62 %</td></tr>
+      <tr><td>Durée max. de drawdown</td><td class="num">548 j</td><td class="num">626 j</td><td class="num">518 j</td></tr>
+      <tr><td>Mois positifs</td><td class="num">61,9 %</td><td class="num">56,0 %</td><td class="num">70,2 %</td></tr>
+      <tr><td>Richesse finale (base 100)</td><td class="num">202,1</td><td class="num">167,2</td><td class="num">215,9</td></tr>
+      <tr><td>Turnover L1 moyen</td><td class="num">0,99</td><td class="num">—</td><td class="num">0,54</td></tr>
+      <tr><td>Liquidité L moyenne</td><td class="num">0,71</td><td class="num">—</td><td class="num">0,63</td></tr>
+    </tbody>
+  </table>
+  <p>
+    Rendement cumulé net : +102 %. L'écart vs MASI est économique (+3,6 pp annualisés) sans conclusion statistique à 5 %.
+    La lecture « C3 superforme le MASI sur 2018–2025 » est trop forte : C3 termine plus haut, mais passe sous l'indice pendant 2020–2022, et Equal Weight termine encore plus haut.
+  </p>
+  <p><img src="figures_final/fig03_C4_vs_bench.png" alt="Portefeuille vs MASI vs Equal Weight" style="width:100%;border:1px solid #d5dde6;" /></p>
+  <p><img src="figures_final/fig02_wealth_C1C4.png" alt="Richesse C1-C4" style="width:100%;border:1px solid #d5dde6;" /></p>
+  <p><img src="figures_final/fig04_drawdown.png" alt="Drawdown" style="width:100%;border:1px solid #d5dde6;" /></p>
+
+  <h2 id="s14">14. Limites, risques et précautions d'usage</h2>
+  <ul>
+    <li><strong>Échantillon Stage 1</strong> : 84 mois OOS (2018-07 → 2025-06). 2010–2018-06 non couvert sans réentraînement. Les performances 2023–2025 ne se généralisent pas à 2020–2022 (C3 : −4,35 % annualisé).</li>
+    <li><strong>Turnover élevé</strong> (~0,99 en L1) : sensibilité aux frais réels de courtage, spread et impact de marché.</li>
+    <li><strong>Drawdown</strong> de −24,2 % sur 2018–2025, moins profond que le MASI (−30,5 %).</li>
+    <li><strong>Non significativité vs Equal Weight</strong> : une partie du gain peut venir de la diversification de l'univers BUY+NEUTRAL, pas uniquement de l'allocation NSGA.</li>
+    <li><strong>Liquidité BVC</strong> : L ≈ 0,71 est un proxy (sigmoid du VMQ), pas une garantie d'exécution. Pas de filtre VMQ ≥ 500 k.</li>
+    <li><strong>Pas un conseil en investissement réglementé</strong> : outil d'aide à la décision.</li>
+  </ul>
+
+  <h2 id="s15">15. Livrables, reproductibilité et suite</h2>
+  <h3>15.1 Ce qui est livré</h3>
+  <ul>
+    <li>Chaîne de données et de features (point-in-time).</li>
+    <li>Modèles d'étage 1 C1–C4 et règle de recommandation.</li>
+    <li>Optimiseur d'étage 2 et portefeuilles C1–C4 figés (w_i ≤ 10 %).</li>
+    <li>Rapports de backtest et de validation vs MASI / Equal Weight.</li>
+    <li>Entrepôt de consultation <code>platform_mart</code> et application web.</li>
+  </ul>
+  <h3>15.2 Artefacts clés</h3>
+  <table>
+    <thead><tr><th>Contenu</th><th>Emplacement</th></tr></thead>
+    <tbody>
+      <tr><td>Portefeuilles C4 figés (FINAL)</td><td><code>experiments/factorial_hybrid_adapt/outputs/final_experiment_2010_2025/04_final_portfolios/</code></td></tr>
+      <tr><td>Backtest net C1–C4</td><td><code>.../outputs/final_experiment_2010_2025/05_backtest/</code></td></tr>
+      <tr><td>Validation vs benchmarks</td><td><code>.../outputs/final_experiment_2010_2025/06_benchmarks/</code> et <code>07_statistical_validation/</code></td></tr>
+      <tr><td>Données de la plateforme</td><td><code>.../outputs/platform_mart/</code></td></tr>
+      <tr><td>Application</td><td><code>experiments/factorial_hybrid_adapt/web/app_c4.py</code></td></tr>
+      <tr><td>Rapport expérimental</td><td><code>.../outputs/final_experiment_2010_2025/10_reports/Rapport_final_experimental.html</code></td></tr>
+    </tbody>
+  </table>
+  <h3>15.3 Pistes d'évolution (hors périmètre actuel)</h3>
+  <ul>
+    <li>Contrainte de turnover dans NSGA-III pour réduire les frais.</li>
+    <li>Limites sectorielles ou d'émetteur imposées par la politique d'investissement.</li>
+    <li>Hébergement de la plateforme (authentification, rôles lecture seule).</li>
+    <li>Extension de la fenêtre dès que de nouveaux mois sont disponibles, sans réécrire l'historique figé.</li>
+  </ul>
+
+  <h2 id="s16">16. Annexe — Paramètres figés</h2>
+  <table>
+    <thead><tr><th>Paramètre</th><th>Valeur</th></tr></thead>
+    <tbody>
+      <tr><td>Graine aléatoire</td><td>42</td></tr>
+      <tr><td>Horizon de la cible</td><td>63 séances</td></tr>
+      <tr><td>Indicateurs à partir de</td><td>3 juin 2015</td></tr>
+      <tr><td>Publication S1 / S2</td><td>septembre N / avril N+1</td></tr>
+      <tr><td>Pondération hybride</td><td>Ridge 50 % + RF 50 %</td></tr>
+      <tr><td>τ (reco)</td><td>quantile 33 % des |préd.| passées, expanding</td></tr>
+      <tr><td>Préférences allocation</td><td>BUY ×1,0 ; NEUTRAL ×0,5 ; SELL exclus</td></tr>
+      <tr><td>Poids max / min</td><td>10 % / 0 %</td></tr>
+      <tr><td>NSGA-III</td><td>population 36, 30 générations</td></tr>
+      <tr><td>Lookback CVaR</td><td>504 séances</td></tr>
+      <tr><td>Coût de transaction</td><td>0,30 %</td></tr>
+      <tr><td>Fenêtre livrable (demandée)</td><td>2010-01 → 2025-06</td></tr>
+      <tr><td>Fenêtre testable (OOS)</td><td>2018-07 → 2025-06 (84 mois)</td></tr>
+      <tr><td>Filtre VMQ ≥ 500 k</td><td>Non (liquidité = objectif Pareto uniquement)</td></tr>
+      <tr><td>TFT</td><td>Non utilisé dans le système livré</td></tr>
+    </tbody>
+  </table>
+
+  <p class="footer">
+    Document destiné au client du projet « Système de recommandation d'actions » — Bourse de Casablanca.
+    Les chiffres reproduisent le livrable expérimental FINAL (2018-07 → 2025-06, sans filtre VMQ).
+    Ce rapport décrit la réalisation ; il ne constitue pas une offre d'investissement.
+  </p>
+</div>
+</body>
+</html>

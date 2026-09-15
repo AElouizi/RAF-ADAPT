@@ -1,0 +1,40 @@
+{
+  "n_folds": 81,
+  "historique_global_mois": {
+    "n": 122,
+    "bull": 32,
+    "neutral": 70,
+    "bear": 20,
+    "pct_bull": 26.23,
+    "pct_neutral": 57.38,
+    "pct_bear": 16.39
+  },
+  "mean_pct_across_folds": {
+    "bull": 24.07,
+    "neutral": 60.49,
+    "bear": 15.43
+  },
+  "pooled_test_month_slots": {
+    "n": 486,
+    "bull": 117,
+    "neutral": 294,
+    "bear": 75,
+    "pct_bull": 24.07,
+    "pct_neutral": 60.49,
+    "pct_bear": 15.43,
+    "note": "somme des mois-test sur tous les plis (chevauchement compté plusieurs fois)"
+  },
+  "unique_months_in_any_test_window": {
+    "n": 86,
+    "bull": 21,
+    "neutral": 50,
+    "bear": 15,
+    "pct_bull": 24.42,
+    "pct_neutral": 58.14,
+    "pct_bear": 17.44
+  },
+  "folds_with_at_least_one_bear_month": 34,
+  "folds_with_bear_share_ge_1_of_6": 34,
+  "reference_fixed_test_bear_pct": 3.1,
+  "reference_fixed_val_bear_pct": 25.0
+}

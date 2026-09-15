@@ -1,0 +1,678 @@
+{
+  "random_state": 42,
+  "rebalance_frequency": "monthly",
+  "period": {
+    "start": "2023-01-01",
+    "end": "2025-08-13"
+  },
+  "transaction_cost": 0.003,
+  "periods": [
+    {
+      "period": "2023-01",
+      "quarter": "2023-Q1",
+      "rebalance_date": "2023-01-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-01.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q1.csv"
+    },
+    {
+      "period": "2023-02",
+      "quarter": "2023-Q1",
+      "rebalance_date": "2023-02-28",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-02.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q1.csv"
+    },
+    {
+      "period": "2023-03",
+      "quarter": "2023-Q1",
+      "rebalance_date": "2023-03-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-03.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q1.csv"
+    },
+    {
+      "period": "2023-04",
+      "quarter": "2023-Q2",
+      "rebalance_date": "2023-04-28",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-04.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q2.csv"
+    },
+    {
+      "period": "2023-05",
+      "quarter": "2023-Q2",
+      "rebalance_date": "2023-05-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-05.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q2.csv"
+    },
+    {
+      "period": "2023-06",
+      "quarter": "2023-Q2",
+      "rebalance_date": "2023-06-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-06.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q2.csv"
+    },
+    {
+      "period": "2023-07",
+      "quarter": "2023-Q3",
+      "rebalance_date": "2023-07-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-07.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q3.csv"
+    },
+    {
+      "period": "2023-08",
+      "quarter": "2023-Q3",
+      "rebalance_date": "2023-08-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-08.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q3.csv"
+    },
+    {
+      "period": "2023-09",
+      "quarter": "2023-Q3",
+      "rebalance_date": "2023-09-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-09.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q3.csv"
+    },
+    {
+      "period": "2023-10",
+      "quarter": "2023-Q4",
+      "rebalance_date": "2023-10-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-10.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q4.csv"
+    },
+    {
+      "period": "2023-11",
+      "quarter": "2023-Q4",
+      "rebalance_date": "2023-11-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-11.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q4.csv"
+    },
+    {
+      "period": "2023-12",
+      "quarter": "2023-Q4",
+      "rebalance_date": "2023-12-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-12.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q4.csv"
+    },
+    {
+      "period": "2024-01",
+      "quarter": "2024-Q1",
+      "rebalance_date": "2024-01-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-01.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q1.csv"
+    },
+    {
+      "period": "2024-02",
+      "quarter": "2024-Q1",
+      "rebalance_date": "2024-02-29",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-02.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q1.csv"
+    },
+    {
+      "period": "2024-03",
+      "quarter": "2024-Q1",
+      "rebalance_date": "2024-03-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-03.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q1.csv"
+    },
+    {
+      "period": "2024-04",
+      "quarter": "2024-Q2",
+      "rebalance_date": "2024-04-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-04.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q2.csv"
+    },
+    {
+      "period": "2024-05",
+      "quarter": "2024-Q2",
+      "rebalance_date": "2024-05-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-05.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q2.csv"
+    },
+    {
+      "period": "2024-06",
+      "quarter": "2024-Q2",
+      "rebalance_date": "2024-06-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-06.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q2.csv"
+    },
+    {
+      "period": "2024-07",
+      "quarter": "2024-Q3",
+      "rebalance_date": "2024-07-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-07.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q3.csv"
+    },
+    {
+      "period": "2024-08",
+      "quarter": "2024-Q3",
+      "rebalance_date": "2024-08-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-08.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q3.csv"
+    },
+    {
+      "period": "2024-09",
+      "quarter": "2024-Q3",
+      "rebalance_date": "2024-09-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-09.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q3.csv"
+    },
+    {
+      "period": "2024-10",
+      "quarter": "2024-Q4",
+      "rebalance_date": "2024-10-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-10.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q4.csv"
+    },
+    {
+      "period": "2024-11",
+      "quarter": "2024-Q4",
+      "rebalance_date": "2024-11-29",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-11.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q4.csv"
+    },
+    {
+      "period": "2024-12",
+      "quarter": "2024-Q4",
+      "rebalance_date": "2024-12-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-12.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q4.csv"
+    },
+    {
+      "period": "2025-01",
+      "quarter": "2025-Q1",
+      "rebalance_date": "2025-01-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-01.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q1.csv"
+    },
+    {
+      "period": "2025-02",
+      "quarter": "2025-Q1",
+      "rebalance_date": "2025-02-28",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-02.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q1.csv"
+    },
+    {
+      "period": "2025-03",
+      "quarter": "2025-Q1",
+      "rebalance_date": "2025-03-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-03.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q1.csv"
+    },
+    {
+      "period": "2025-04",
+      "quarter": "2025-Q2",
+      "rebalance_date": "2025-04-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-04.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q2.csv"
+    },
+    {
+      "period": "2025-05",
+      "quarter": "2025-Q2",
+      "rebalance_date": "2025-05-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-05.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q2.csv"
+    },
+    {
+      "period": "2025-06",
+      "quarter": "2025-Q2",
+      "rebalance_date": "2025-06-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-06.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q2.csv"
+    },
+    {
+      "period": "2025-07",
+      "quarter": "2025-Q3",
+      "rebalance_date": "2025-07-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-07.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q3.csv"
+    }
+  ],
+  "quarters": [
+    {
+      "period": "2023-01",
+      "quarter": "2023-Q1",
+      "rebalance_date": "2023-01-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-01.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q1.csv"
+    },
+    {
+      "period": "2023-02",
+      "quarter": "2023-Q1",
+      "rebalance_date": "2023-02-28",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-02.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q1.csv"
+    },
+    {
+      "period": "2023-03",
+      "quarter": "2023-Q1",
+      "rebalance_date": "2023-03-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-03.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q1.csv"
+    },
+    {
+      "period": "2023-04",
+      "quarter": "2023-Q2",
+      "rebalance_date": "2023-04-28",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-04.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q2.csv"
+    },
+    {
+      "period": "2023-05",
+      "quarter": "2023-Q2",
+      "rebalance_date": "2023-05-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-05.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q2.csv"
+    },
+    {
+      "period": "2023-06",
+      "quarter": "2023-Q2",
+      "rebalance_date": "2023-06-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-06.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q2.csv"
+    },
+    {
+      "period": "2023-07",
+      "quarter": "2023-Q3",
+      "rebalance_date": "2023-07-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-07.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q3.csv"
+    },
+    {
+      "period": "2023-08",
+      "quarter": "2023-Q3",
+      "rebalance_date": "2023-08-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-08.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q3.csv"
+    },
+    {
+      "period": "2023-09",
+      "quarter": "2023-Q3",
+      "rebalance_date": "2023-09-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-09.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q3.csv"
+    },
+    {
+      "period": "2023-10",
+      "quarter": "2023-Q4",
+      "rebalance_date": "2023-10-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-10.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q4.csv"
+    },
+    {
+      "period": "2023-11",
+      "quarter": "2023-Q4",
+      "rebalance_date": "2023-11-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-11.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q4.csv"
+    },
+    {
+      "period": "2023-12",
+      "quarter": "2023-Q4",
+      "rebalance_date": "2023-12-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-12.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2023-Q4.csv"
+    },
+    {
+      "period": "2024-01",
+      "quarter": "2024-Q1",
+      "rebalance_date": "2024-01-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-01.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q1.csv"
+    },
+    {
+      "period": "2024-02",
+      "quarter": "2024-Q1",
+      "rebalance_date": "2024-02-29",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-02.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q1.csv"
+    },
+    {
+      "period": "2024-03",
+      "quarter": "2024-Q1",
+      "rebalance_date": "2024-03-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-03.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q1.csv"
+    },
+    {
+      "period": "2024-04",
+      "quarter": "2024-Q2",
+      "rebalance_date": "2024-04-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-04.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q2.csv"
+    },
+    {
+      "period": "2024-05",
+      "quarter": "2024-Q2",
+      "rebalance_date": "2024-05-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-05.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q2.csv"
+    },
+    {
+      "period": "2024-06",
+      "quarter": "2024-Q2",
+      "rebalance_date": "2024-06-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-06.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q2.csv"
+    },
+    {
+      "period": "2024-07",
+      "quarter": "2024-Q3",
+      "rebalance_date": "2024-07-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-07.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q3.csv"
+    },
+    {
+      "period": "2024-08",
+      "quarter": "2024-Q3",
+      "rebalance_date": "2024-08-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-08.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q3.csv"
+    },
+    {
+      "period": "2024-09",
+      "quarter": "2024-Q3",
+      "rebalance_date": "2024-09-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-09.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q3.csv"
+    },
+    {
+      "period": "2024-10",
+      "quarter": "2024-Q4",
+      "rebalance_date": "2024-10-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-10.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q4.csv"
+    },
+    {
+      "period": "2024-11",
+      "quarter": "2024-Q4",
+      "rebalance_date": "2024-11-29",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-11.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q4.csv"
+    },
+    {
+      "period": "2024-12",
+      "quarter": "2024-Q4",
+      "rebalance_date": "2024-12-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-12.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2024-Q4.csv"
+    },
+    {
+      "period": "2025-01",
+      "quarter": "2025-Q1",
+      "rebalance_date": "2025-01-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-01.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q1.csv"
+    },
+    {
+      "period": "2025-02",
+      "quarter": "2025-Q1",
+      "rebalance_date": "2025-02-28",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-02.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q1.csv"
+    },
+    {
+      "period": "2025-03",
+      "quarter": "2025-Q1",
+      "rebalance_date": "2025-03-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-03.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q1.csv"
+    },
+    {
+      "period": "2025-04",
+      "quarter": "2025-Q2",
+      "rebalance_date": "2025-04-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-04.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q2.csv"
+    },
+    {
+      "period": "2025-05",
+      "quarter": "2025-Q2",
+      "rebalance_date": "2025-05-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-05.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q2.csv"
+    },
+    {
+      "period": "2025-06",
+      "quarter": "2025-Q2",
+      "rebalance_date": "2025-06-30",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-06.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q2.csv"
+    },
+    {
+      "period": "2025-07",
+      "quarter": "2025-Q3",
+      "rebalance_date": "2025-07-31",
+      "n_ranked": 64,
+      "n_top": 22,
+      "recommendations_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-07.csv",
+      "recommendations_quarter_file": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\reports\\recommendations\\2025-Q3.csv"
+    }
+  ],
+  "metrics": {
+    "P_agressif": {
+      "name": "P_agressif",
+      "days": 602,
+      "total_return": 1.0771,
+      "annualized_return": 0.358,
+      "benchmark_total_return": 0.9254,
+      "benchmark_annualized_return": 0.3155,
+      "alpha_annualized": 0.0553,
+      "sharpe": 1.339,
+      "sortino": 2.557,
+      "max_drawdown": -0.2259,
+      "calmar": 1.585,
+      "cvar_95": 0.0203,
+      "hit_ratio": 0.5498,
+      "volatility_ann": 0.2512,
+      "tracking_error": 0.2442,
+      "turnover_mean_period": 0.7221,
+      "turnover_annualized": 8.6656,
+      "turnover_quarterly": 2.0351
+    },
+    "P_equilibre": {
+      "name": "P_equilibre",
+      "days": 602,
+      "total_return": 1.3453,
+      "annualized_return": 0.4288,
+      "benchmark_total_return": 0.9254,
+      "benchmark_annualized_return": 0.3155,
+      "alpha_annualized": 0.1021,
+      "sharpe": 1.626,
+      "sortino": 3.474,
+      "max_drawdown": -0.1555,
+      "calmar": 2.757,
+      "cvar_95": 0.0189,
+      "hit_ratio": 0.5847,
+      "volatility_ann": 0.2356,
+      "tracking_error": 0.2284,
+      "turnover_mean_period": 0.709,
+      "turnover_annualized": 8.5079,
+      "turnover_quarterly": 1.9981
+    },
+    "P_defensif": {
+      "name": "P_defensif",
+      "days": 602,
+      "total_return": 1.4138,
+      "annualized_return": 0.4461,
+      "benchmark_total_return": 0.9254,
+      "benchmark_annualized_return": 0.3155,
+      "alpha_annualized": 0.1097,
+      "sharpe": 1.796,
+      "sortino": 5.856,
+      "max_drawdown": -0.1014,
+      "calmar": 4.402,
+      "cvar_95": 0.0151,
+      "hit_ratio": 0.5664,
+      "volatility_ann": 0.2176,
+      "tracking_error": 0.2156,
+      "turnover_mean_period": 0.7273,
+      "turnover_annualized": 8.7279,
+      "turnover_quarterly": 2.0497
+    },
+    "MASI20_proxy": {
+      "name": "MASI20_proxy",
+      "days": 602,
+      "total_return": 0.7465,
+      "annualized_return": 0.2629,
+      "benchmark_total_return": 0.9254,
+      "benchmark_annualized_return": 0.3155,
+      "alpha_annualized": -0.0399,
+      "sharpe": 1.959,
+      "sortino": 3.293,
+      "max_drawdown": -0.1005,
+      "calmar": 2.615,
+      "cvar_95": 0.017,
+      "hit_ratio": 0.5548,
+      "volatility_ann": 0.1231,
+      "tracking_error": 0.0502
+    },
+    "MASI": {
+      "name": "MASI",
+      "days": 627,
+      "total_return": 0.9326,
+      "annualized_return": 0.3032,
+      "benchmark_total_return": 0.9326,
+      "benchmark_annualized_return": 0.3032,
+      "alpha_annualized": 0.0,
+      "sharpe": 2.349,
+      "sortino": 4.198,
+      "max_drawdown": -0.1025,
+      "calmar": 2.957,
+      "cvar_95": 0.0146,
+      "hit_ratio": 0.571,
+      "volatility_ann": 0.1156,
+      "tracking_error": 0.0
+    }
+  },
+  "cumulative_returns": {
+    "P_agressif": 1.0770636087132974,
+    "P_equilibre": 1.3452867250393563,
+    "P_defensif": 1.4138396279965146,
+    "MASI": 0.9326289651548134,
+    "MASI20_proxy": 0.7465478343280436
+  },
+  "generated_at": "2026-07-21T22:53:07.984953+00:00",
+  "project": "BVC Recommender — Étape 8",
+  "score_source": "tft_q50",
+  "equity_curves_path": "C:\\Users\\a\\Desktop\\ISO_2024\\Modèle empirique\\Projet_Cursor_RS_final\\bvc_recommender\\data\\datasets\\backtest_equity_curves.parquet"
+}

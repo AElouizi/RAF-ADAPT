@@ -1,0 +1,88 @@
+{
+  "scope": "14_blocs_non_chevauchants",
+  "grid": {
+    "n_estimators": [
+      100
+    ],
+    "max_depth": [
+      3,
+      4,
+      6
+    ],
+    "min_samples_leaf": [
+      10,
+      30
+    ]
+  },
+  "elapsed_min": 18.397829190889993,
+  "note": "Retune a l'interieur du train de chaque bloc (6 derniers mois = val interne). Pas de val 2021-22 fixe. Pas de fuite du test du bloc. Echantillon aligne sur le DM (14), pas les 81 plis chevauchants.",
+  "aggregation": [
+    {
+      "cellule": 1,
+      "modele": "ridge",
+      "regime": false,
+      "IC_mean": 0.04457841493469332,
+      "IC_median": 0.03482610907837348,
+      "IC_std": 0.11717953522416281,
+      "hit_mean": 0.5126480447485205,
+      "n_folds": 14
+    },
+    {
+      "cellule": 2,
+      "modele": "ridge",
+      "regime": true,
+      "IC_mean": 0.04439833195437852,
+      "IC_median": 0.03226739929832285,
+      "IC_std": 0.1168592097445407,
+      "hit_mean": 0.5082903427640021,
+      "n_folds": 14
+    },
+    {
+      "cellule": 3,
+      "modele": "hybrid",
+      "regime": false,
+      "IC_mean": 0.052964011402170885,
+      "IC_median": 0.040225152312461626,
+      "IC_std": 0.10863282778855363,
+      "hit_mean": 0.5277783132654216,
+      "n_folds": 14
+    },
+    {
+      "cellule": 4,
+      "modele": "hybrid",
+      "regime": true,
+      "IC_mean": 0.05342197789854478,
+      "IC_median": 0.041852447400989166,
+      "IC_std": 0.1086980795870859,
+      "hit_mean": 0.5278373780588218,
+      "n_folds": 14
+    }
+  ],
+  "dm": [
+    {
+      "pair": "adaptation C2vsC1",
+      "delta_IC": -0.00018008298031479963,
+      "dm_stat_hln": -0.22703790950656336,
+      "pvalue_hln": 0.8239255564952478,
+      "sig_5pct": false,
+      "n": 14
+    },
+    {
+      "pair": "hybridation C3vsC1",
+      "delta_IC": 0.008385596467477566,
+      "dm_stat_hln": 0.6239749796153138,
+      "pvalue_hln": 0.5434387114813968,
+      "sig_5pct": false,
+      "n": 14
+    },
+    {
+      "pair": "combine C4vsC1",
+      "delta_IC": 0.008843562963851463,
+      "dm_stat_hln": 0.6577540992579809,
+      "pvalue_hln": 0.522173220026976,
+      "sig_5pct": false,
+      "n": 14
+    }
+  ],
+  "generated_at": "2026-08-13T12:22:54.746679+00:00"
+}

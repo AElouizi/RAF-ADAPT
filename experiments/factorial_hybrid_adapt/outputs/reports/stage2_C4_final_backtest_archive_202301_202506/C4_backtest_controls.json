@@ -1,0 +1,11 @@
+{
+  "n_months": 30,
+  "all_sum_weights_1": true,
+  "n_SELL_total": 0,
+  "all_first_return_after_decision": true,
+  "weights_frozen_from_C4_final_artefact": true,
+  "no_model_retrain": true,
+  "no_weight_reoptimization": true,
+  "transaction_cost_rate": 0.003,
+  "rebalance_convention": "Weights decided at month-end date_rebalance t (as-of ≤ t). Applied to realized returns on trading days strictly after t up to and including next month-end rebalance (exclusive of t)."
+}

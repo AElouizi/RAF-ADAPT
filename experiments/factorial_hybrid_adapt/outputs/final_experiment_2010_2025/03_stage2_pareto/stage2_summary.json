@@ -1,0 +1,76 @@
+{
+  "protocol": {
+    "eval_window": "2018-07 → 2025-06",
+    "liquidity_mode": "pareto",
+    "liquidity": "NSGA objective max L=sigmoid(VMQ); no VMQ eligibility filter",
+    "min_vmq_mad": null,
+    "l_min": null,
+    "sell": "excluded before NSGA when sell_mode=exclude",
+    "nsga_objectives": [
+      "max preference-adjusted predicted_return",
+      "min CVaR 95%",
+      "max portfolio L=sigmoid(VMQ_20j)"
+    ],
+    "no_vmq_imputation": true,
+    "window_frozen_before_backtest": true
+  },
+  "config": {
+    "sell_mode": "exclude",
+    "pref_BUY": 1.0,
+    "pref_NEUTRAL": 0.5,
+    "pref_SELL": 0.0,
+    "w_min": 0.0,
+    "w_max": 0.1,
+    "w_max_SELL": 0.02,
+    "liquidity_mode": "pareto",
+    "apply_vmq_filter": false,
+    "min_vmq": 500000.0,
+    "l_min": 0.9820137900379085,
+    "max_turnover": null,
+    "selection_rule": "knee",
+    "pop_size": 36,
+    "n_gen": 30,
+    "weight_report_floor": 0.0001,
+    "eval_start_month": "2018-07",
+    "eval_end_month": "2025-06"
+  },
+  "n_weight_rows": 57397,
+  "n_months_total": 84,
+  "cells": {
+    "1": {
+      "label": "C1 Ridge",
+      "n_months": 84,
+      "n_ok": 84,
+      "n_fallback": 0,
+      "mean_positions_selected": 39.654761904761905
+    },
+    "2": {
+      "label": "C2 Ridge + régime",
+      "n_months": 84,
+      "n_ok": 84,
+      "n_fallback": 0,
+      "mean_positions_selected": 38.654761904761905
+    },
+    "3": {
+      "label": "C3 Hybrid",
+      "n_months": 84,
+      "n_ok": 84,
+      "n_fallback": 0,
+      "mean_positions_selected": 31.571428571428573
+    },
+    "4": {
+      "label": "C4 Hybrid + régime",
+      "n_months": 84,
+      "n_ok": 84,
+      "n_fallback": 0,
+      "mean_positions_selected": 31.523809523809526
+    }
+  },
+  "lookahead": {
+    "returns_history": "cours/indices filtrés date <= as_of",
+    "vmq": "liquidity_vmq_20j as-of t (stage2_inputs); no future",
+    "scores": "predicted_return / recommendation de l'étage 1 à t",
+    "no_future_returns_in_opt": true,
+    "no_vmq_imputation": true
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "generated_at": "2026-08-11T22:21:55.970920+00:00",
+  "hypothesis": "Division par vol_baissiere_20d crée des outliers extrêmes (alpha max~10^3) qui dégradent QuantileLoss ; excess_vs_masi devrait mieux s'apprendre.",
+  "baselines": {
+    "alpha_ajuste_risque": {
+      "target": "alpha_ajuste_risque",
+      "models": {
+        "ridge": {
+          "val": {
+            "ic_mean": -0.013112777278394102,
+            "hit_ratio": 0.499532037437005,
+            "sharpe_long_short": -0.6336502705903888
+          },
+          "test": {
+            "ic_mean": 0.05396843528379995,
+            "hit_ratio": 0.4818458489631255,
+            "sharpe_long_short": 1.3249379641895196
+          }
+        },
+        "lightgbm": {
+          "val": {
+            "ic_mean": 0.03347499477779929,
+            "hit_ratio": 0.5258099352051836,
+            "sharpe_long_short": 1.2186834259704598
+          },
+          "test": {
+            "ic_mean": -0.09624849875652146,
+            "hit_ratio": 0.4456083233066742,
+            "sharpe_long_short": -2.0410588963125864
+          }
+        }
+      }
+    },
+    "excess_vs_masi": {
+      "target": "excess_vs_masi",
+      "models": {
+        "ridge": {
+          "val": {
+            "ic_mean": -0.015161671619897238,
+            "hit_ratio": 0.5072354211663067,
+            "sharpe_long_short": -1.4016210501009574
+          },
+          "test": {
+            "ic_mean": 0.029096470496175014,
+            "hit_ratio": 0.48599806544459384,
+            "sharpe_long_short": 1.3567774689512684
+          }
+        },
+        "lightgbm": {
+          "val": {
+            "ic_mean": -0.0001552994083408644,
+            "hit_ratio": 0.520374370050396,
+            "sharpe_long_short": -0.08982200943220942
+          },
+          "test": {
+            "ic_mean": -0.103459908402499,
+            "hit_ratio": 0.44067756623493054,
+            "sharpe_long_short": -2.254798497317447
+          }
+        }
+      }
+    }
+  },
+  "baseline_verdict": {
+    "lightgbm_test_ic_alpha": -0.09624849875652146,
+    "lightgbm_test_ic_excess": -0.103459908402499,
+    "ridge_note": "Ridge a souvent un IC test >0 ; LGBM overfitte les 2 cibles",
+    "preferred_for_tft": "excess_vs_masi",
+    "reason": "QuantileLoss TFT sensible aux outliers alpha (max~10^3) ; excess plus stable"
+  },
+  "tft": {
+    "target": "excess_vs_masi",
+    "hparams": {
+      "learning_rate": 0.00025,
+      "hidden_size": 16,
+      "attention_head_size": 4,
+      "dropout": 0.2,
+      "hidden_continuous_size": 8
+    },
+    "reference_tft_alpha_test_ic": -0.0777,
+    "splits": {
+      "val": {
+        "ic_mean": -0.058343379322430125,
+        "hit_ratio": 0.4665124435655386,
+        "sharpe_long_short": -1.6664666064007372
+      },
+      "test": {
+        "ic_mean": -0.13289369767013012,
+        "hit_ratio": 0.48227795482887625,
+        "sharpe_long_short": -1.7753201852060385
+      }
+    }
+  },
+  "tft_verdict": "IC test=-0.1329 on excess (delta vs alpha -0.0552)",
+  "tft_no_regime": {
+    "target": "alpha_ajuste_risque",
+    "known_reals": [],
+    "splits": {
+      "val": {
+        "ic_mean": -0.02730251410885136,
+        "hit_ratio": 0.4846460952949517,
+        "sharpe_long_short": -0.7795547748922771
+      },
+      "test": {
+        "ic_mean": -0.023917337692867274,
+        "hit_ratio": 0.51999445753083,
+        "sharpe_long_short": -0.2141280692636175
+      }
+    },
+    "test_ic_if_sign_flipped": 0.023917337692867274
+  },
+  "no_regime_verdict": "IC test no-regime=-0.0239 (ref with-regime=-0.0777)",
+  "final_synthesis": {
+    "alpha_outliers_hypothesis": "REJECTED — excess TFT worse (-0.133 vs -0.078)",
+    "regime_hurts_tft": "PARTIAL — no-regime IC test=-0.024 better than with-regime -0.078 but still <0",
+    "best_available_signal": "Ridge on alpha_ajuste_risque: test IC=+0.054, Sharpe L/S=+1.32",
+    "recommendation": "Ne pas relancer Optuna TFT maintenant. Ancrer le scoring sur Ridge (IC>0) ; TFT à revoir (régularisation / architecture / label) après."
+  }
+}

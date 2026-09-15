@@ -1,0 +1,94 @@
+{
+  "project_ref": "tlrborylhfwxrrryyism",
+  "supabase_url": "https://tlrborylhfwxrrryyism.supabase.co",
+  "total_indices": 15526,
+  "masi_total": 741,
+  "masi_before_2022": 0,
+  "masi_before_2020": 0,
+  "all_before_2022": 0,
+  "all_before_2020": 0,
+  "masi_gte_2010": 741,
+  "masi_earliest_5": [
+    {
+      "id": "c5298505-1138-47fd-ac1b-ba2991812a41",
+      "code_index": "MASI",
+      "date_index": "2022-11-21",
+      "valeur_index": 10783.87,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    },
+    {
+      "id": "f5613639-e648-4c79-bf93-0e9cc1abedec",
+      "code_index": "MASI",
+      "date_index": "2022-11-22",
+      "valeur_index": 10810.67,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    },
+    {
+      "id": "d8c6a4a1-5c6e-4c1a-8324-9b28426e31c1",
+      "code_index": "MASI",
+      "date_index": "2022-11-23",
+      "valeur_index": 10852.14,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    },
+    {
+      "id": "972b3897-db9c-4efe-8ee9-c4fb2bc8063e",
+      "code_index": "MASI",
+      "date_index": "2022-11-24",
+      "valeur_index": 10805.97,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    },
+    {
+      "id": "028804af-1ff6-42d8-833e-a9898ebd02bf",
+      "code_index": "MASI",
+      "date_index": "2022-11-25",
+      "valeur_index": 10835.23,
+      "scraped_at": "2025-11-19T15:51:54.310075"
+    }
+  ],
+  "masi_latest_3": [
+    {
+      "id": "e6305f3d-e030-42e7-b0e3-a3d6346784c4",
+      "code_index": "MASI",
+      "date_index": "2025-11-17",
+      "valeur_index": 18496.1149,
+      "scraped_at": "2025-11-19T15:51:54.294033"
+    },
+    {
+      "id": "d222f49e-ac42-47f3-b8f7-ca49096dad53",
+      "code_index": "MASI",
+      "date_index": "2025-11-14",
+      "valeur_index": 18645.5271,
+      "scraped_at": "2025-11-19T15:51:54.294033"
+    },
+    {
+      "id": "98a3b9e0-aae5-46da-a79c-7b32d4dec7d7",
+      "code_index": "MASI",
+      "date_index": "2025-11-13",
+      "valeur_index": 18754.4321,
+      "scraped_at": "2025-11-19T15:51:54.294033"
+    }
+  ],
+  "cours_ticker_MASI": 0,
+  "cours_ticker_masi": 0,
+  "cours_ticker_MSI": 0,
+  "alt_indices": {
+    "exists": false
+  },
+  "alt_index_historique": {
+    "exists": false
+  },
+  "alt_market_indices": {
+    "exists": false
+  },
+  "alt_masi": {
+    "exists": false
+  },
+  "alt_historique_masi": {
+    "exists": false
+  },
+  "alt_market_data_index": {
+    "exists": false
+  },
+  "cours_total_gte_2010": 258086,
+  "cours_before_2020": 148641
+}

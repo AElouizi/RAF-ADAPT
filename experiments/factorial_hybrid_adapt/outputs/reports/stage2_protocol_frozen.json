@@ -1,0 +1,25 @@
+{
+  "protocol_frozen_at": "2026-08-15",
+  "eval_window": {"start": "2018-07", "end": "2025-06", "n_months": 84},
+  "window_selection": "fixed before backtest; not chosen from performance",
+  "stage1": "unchanged Hybrid+régime predictions / recommendations",
+  "liquidity": {
+    "vmq": "rolling_mean_20(prix_cloture * titres_echanges.fillna(0)) as-of t",
+    "no_vmq_imputation_for_eligibility": true,
+    "filter": "VMQ_20j >= 500000 MAD (NaN excluded)",
+    "sigmoid": "unchanged k=8/500000 m=250000",
+    "nsga_objectives": ["max Alpha", "min CVaR 95%", "max L=sigmoid(VMQ)"]
+  },
+  "sell": "excluded_before_nsga",
+  "selection": "knee / utopia distance",
+  "hyperparameters": {
+    "pop_size": 36,
+    "n_gen": 30,
+    "w_max": 0.10,
+    "pref_BUY": 1.0,
+    "pref_NEUTRAL": 0.5,
+    "transaction_cost": 0.003
+  },
+  "no_model_retrain": true,
+  "no_lookahead": true
+}

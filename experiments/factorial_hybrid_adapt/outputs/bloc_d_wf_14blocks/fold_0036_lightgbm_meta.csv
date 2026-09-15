@@ -1,0 +1,7 @@
+model_id,cell,groupe,fold_id,mois,date_rebalance,status,error,n_candidates,n_positions_selected,expected_alpha_selected,cvar_selected,liquidity_L_selected,n_pareto,turnover_vs_prev
+lightgbm,,classique,36,2021-07,2021-07-29,ok,,20,19,0.350729,0.017913,0.9995,9,0.0
+lightgbm,,classique,36,2021-08,2021-08-31,ok,,22,21,0.822697,0.016506,0.9997,9,0.4682
+lightgbm,,classique,36,2021-09,2021-09-30,ok,,29,23,0.58013,0.011677,0.9992,9,0.5815
+lightgbm,,classique,36,2021-10,2021-10-29,ok,,28,20,0.452309,0.01494,0.9997,9,0.3587
+lightgbm,,classique,36,2021-11,2021-11-30,ok,,25,21,0.341927,0.014273,0.9996,9,0.3877
+lightgbm,,classique,36,2021-12,2021-12-31,ok,,30,21,0.334941,0.011708,0.9988,9,0.4321

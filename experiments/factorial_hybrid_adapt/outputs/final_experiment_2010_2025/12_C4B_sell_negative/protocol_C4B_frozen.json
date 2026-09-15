@@ -1,0 +1,24 @@
+{
+  "variant": "C4-B",
+  "frozen_before_backtest": true,
+  "frozen_at": "2026-08-15T12:11:18.663574+00:00",
+  "eval_window": "2018-07 → 2025-06",
+  "unchanged": {
+    "C1": true,
+    "C4_models_hyperparams": true,
+    "C4_scores": "same Hybrid+régime predicted_return / excess_return / tau",
+    "nsga": "NSGA-III 3 obj. max Alpha, min CVaR, max L ; pop=36 gen=30 ; w_max=0.40",
+    "selection": "knee / distance to utopia",
+    "sell_mode_stage2": "exclude",
+    "pref_BUY": 1.0,
+    "pref_NEUTRAL": 0.5,
+    "liquidity_mode": "pareto",
+    "vmq_eligibility_filter": false,
+    "transaction_cost": 0.003
+  },
+  "changed_only": {
+    "sell_rule": "SELL iff score < 0 ; BUY iff score > +tau (tau inchangé, expanding_past_quantile 0.33) ; else NEUTRAL",
+    "replaces": "SELL iff score < -tau (quantile τ=0.33 on |pred|)",
+    "score": "excess_return (= predicted_return, benchmark zero_alpha)"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "table": [
+    {
+      "Strategie": "C4 Hybrid+régime",
+      "Rendement": 0.3554,
+      "Volatilite": 0.1429,
+      "Sharpe": 2.201,
+      "Sortino": 3.719,
+      "CVaR": 0.0196,
+      "Max_DD": -0.1187,
+      "pct_mois_positifs": 0.8666666666666667,
+      "Turnover": 0.9192,
+      "Liquidite": 0.8982,
+      "Rendement_cumule": 1.5079658808430318,
+      "duree_DD_jours": 105,
+      "wealth_final_100": 250.79658808430318
+    },
+    {
+      "Strategie": "MASI",
+      "Rendement": 0.2077,
+      "Volatilite": 0.1144,
+      "Sharpe": 1.707,
+      "Sortino": 2.874,
+      "CVaR": 0.0157,
+      "Max_DD": -0.1025,
+      "pct_mois_positifs": 0.6333333333333333,
+      "Turnover": NaN,
+      "Liquidite": NaN,
+      "Rendement_cumule": 0.7696183329604944,
+      "duree_DD_jours": 152,
+      "wealth_final_100": 176.96183329604943
+    },
+    {
+      "Strategie": "Equal Weight",
+      "Rendement": 0.2854,
+      "Volatilite": 0.1242,
+      "Sharpe": 2.085,
+      "Sortino": 3.499,
+      "CVaR": 0.0173,
+      "Max_DD": -0.1116,
+      "pct_mois_positifs": 0.8666666666666667,
+      "Turnover": 0.4154,
+      "Liquidite": 0.809,
+      "Rendement_cumule": 1.1365599644979167,
+      "duree_DD_jours": 126,
+      "wealth_final_100": 213.65599644979167
+    }
+  ],
+  "comparisons": [
+    {
+      "Comparaison": "C4 - MASI",
+      "n_months": 30,
+      "diff_moyenne_mensuelle": 0.011411,
+      "diff_mediane": 0.009574,
+      "diff_ecart_type": 0.030535,
+      "pct_mois_C4_surperforme": 0.6333,
+      "IC95_bootstrap_lo": 0.000857,
+      "IC95_bootstrap_hi": 0.022403,
+      "t_stat": 2.0469,
+      "p_value_ttest": 0.0498,
+      "wilcoxon_stat": 138.0,
+      "p_value_wilcoxon": 0.0523,
+      "significatif_5pct_ttest": true,
+      "significatif_5pct_wilcoxon": false
+    },
+    {
+      "Comparaison": "C4 - Equal Weight",
+      "n_months": 30,
+      "diff_moyenne_mensuelle": 0.005656,
+      "diff_mediane": 0.003104,
+      "diff_ecart_type": 0.025682,
+      "pct_mois_C4_surperforme": 0.5667,
+      "IC95_bootstrap_lo": -0.003032,
+      "IC95_bootstrap_hi": 0.014882,
+      "t_stat": 1.2062,
+      "p_value_ttest": 0.2375,
+      "wilcoxon_stat": 179.0,
+      "p_value_wilcoxon": 0.2801,
+      "significatif_5pct_ttest": false,
+      "significatif_5pct_wilcoxon": false
+    }
+  ],
+  "controls": {
+    "same_decision_months": [
+      "2023-01",
+      "2023-02",
+      "2023-03",
+      "2023-04",
+      "2023-05",
+      "2023-06",
+      "2023-07",
+      "2023-08",
+      "2023-09",
+      "2023-10",
+      "2023-11",
+      "2023-12",
+      "2024-01",
+      "2024-02",
+      "2024-03",
+      "2024-04",
+      "2024-05",
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12",
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06"
+    ],
+    "n_months": 30,
+    "n_common_daily_dates": 762,
+    "first_date": "2023-02-02",
+    "last_date": "2026-05-18",
+    "transaction_cost_rate": 0.003,
+    "TC_applied_to_C4": true,
+    "TC_applied_to_EW": true,
+    "TC_applied_to_MASI": false,
+    "rebalance_convention": "Weights at month-end t; returns on (t, t_next]; TC on first holding day",
+    "EW_universe": "Stage1 C4 recommendations excluding SELL (investable universe of C4 NSGA)",
+    "C4_weights": "frozen knee portfolios from portfolios_C4_final",
+    "no_model_modification": true,
+    "no_reoptimization": true,
+    "all_first_returns_after_decision_C4": true
+  },
+  "conclusion": {
+    "A_C4_vs_MASI": {
+      "surperformance_economique": true,
+      "delta_ret_ann": 0.1477,
+      "pct_mois_surperf": 0.6333,
+      "reponse": "Oui, C4 surperforme le MASI sur la période (+14.8 pp annualisés ; 63% des mois)."
+    },
+    "B_C4_vs_EW": {
+      "surperformance_economique": true,
+      "delta_ret_ann": 0.07,
+      "pct_mois_surperf": 0.5667,
+      "reponse": "Oui, C4 surperforme l'Equal Weight (+7.0 pp annualisés ; 57% des mois)."
+    },
+    "C_significativite": {
+      "vs_MASI_ttest_p": 0.0498,
+      "vs_MASI_wilcoxon_p": 0.0523,
+      "vs_EW_ttest_p": 0.2375,
+      "vs_EW_wilcoxon_p": 0.2801,
+      "reponse": "La surperformance mensuelle vs MASI est statistiquement significative à 5%. Vs Equal Weight : non significative à 5% (n=30)."
+    },
+    "D_compromis_rendement_risque": {
+      "sharpe_C4": 2.201,
+      "sharpe_MASI": 1.707,
+      "sharpe_EW": 2.085,
+      "maxdd_C4": -0.1187,
+      "maxdd_MASI": -0.1025,
+      "maxdd_EW": -0.1116,
+      "reponse": "Oui, C4 offre le meilleur compromis rendement-risque du panel (Sharpe 2.201 vs MASI 1.707 / EW 2.085; Max DD -11.9% vs MASI -10.2% / EW -11.2%)."
+    },
+    "E_avantage_limite": {
+      "avantage": "Sélection multi-objectif (alpha, CVaR, liquidité) + Hybrid+régime produit une outperformance nette vs marché et vs univers équipondéré, avec Sharpe élevé et liquidité de portefeuille préservée (L≈0.90).",
+      "limite": "Turnover élevé (~0.92 L1) et coûts de transaction non nuls ; avec n=30 mois, les écarts mensuels ne sont pas toujours significatifs à 5% ; échantillon hors échantillon encore court et spécifique BVC."
+    }
+  },
+  "transaction_cost": 0.003
+}
